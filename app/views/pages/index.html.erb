@@ -1,66 +1,79 @@
 
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">EthereumGrowth</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">EthereumGrowth</a>
         </div>
-        <!-- /.container -->
-    </nav>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <!-- <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul> -->
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+  <div class="container-fluid">
     <div class="row">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-8" style="height: 700px;">
-            <!-- TradingView Widget BEGIN -->
-            <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
-            <script type="text/javascript">
-            new TradingView.widget({
-              "autosize": true,
-              "symbol": "COINBASE:ETHUSD",
-              "interval": "D",
-              "timezone": "Etc/UTC",
-              "theme": "White",
-              "style": "1",
-              "locale": "en",
-              "toolbar_bg": "#f1f3f6",
-              "enable_publishing": false,
-              "hideideas": true
-            });
-            </script>
+      <div class="col-md-8" >
+        <div class="well" style="height: 500px;">
+        <!-- TradingView Widget BEGIN -->
+        <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+        <script type="text/javascript">
+        new TradingView.widget({
+          "autosize": true,
+          "symbol": "COINBASE:ETHUSD",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "White",
+          "style": "1",
+          "locale": "en",
+          "toolbar_bg": "#f1f3f6",
+          "enable_publishing": false,
+          "hideideas": true
+        });
+        </script>
+      </div>
+        <!-- TradingView Widget END -->
             <!-- TradingView Widget END -->
-                <!-- TradingView Widget END -->
-          </div>
-          <div class="col-md-4">
-            <a class="twitter-timeline"  href="https://twitter.com/search?q=%24ETHUSD" data-widget-id="840990735855951872">Tweets about $ETHUSD</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+      <div class="col-md-4" >
+        <div class="well" style="height: 500px; overflow: hidden;">
+        <a class="twitter-timeline"  href="https://twitter.com/search?q=%24ETHUSD" data-widget-id="840990735855951872">Tweets about $ETHUSD</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        </script>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-md-12 text-center">
+   <%= link_to 'Get $10 Free Bitcoin with Coinbase', "https://www.coinbase.com/join/supplydemand", target: "_blank", class: "btn btn-primary btn-lg"%>
+ </div>
+
+   </div>
 
     </div>
+
   </div>
-</div>
+
 
 
 
