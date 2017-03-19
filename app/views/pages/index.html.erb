@@ -11,7 +11,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">EthereumGrowth</a>
+            <a class="navbar-brand" href="#">EthereumGrow</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -50,22 +50,7 @@
             <h3 class="panel-title">ETHEREUM VS US DOLLAR</h3>
           </div>
           <div class="panel-body" style="height: 475px; overflow:hidden;">
-        <!-- TradingView Widget BEGIN -->
-            <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
-            <script type="text/javascript">
-            new TradingView.widget({
-              "autosize": true,
-              "symbol": "COINBASE:ETHUSD",
-              "interval": "D",
-              "timezone": "Etc/UTC",
-              "theme": "White",
-              "style": "1",
-              "locale": "en",
-              "toolbar_bg": "#f1f3f6",
-              "enable_publishing": false,
-              "hideideas": true
-            });
-            </script>
+            <%= render 'layouts/trading_view_widget' %>
           </div>
         </div>
       </div>
