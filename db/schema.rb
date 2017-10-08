@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171008171640) do
+ActiveRecord::Schema.define(version: 20171008174223) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "charts", force: :cascade do |t|
+    t.integer  "company_id"
+    t.integer  "exchange_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["company_id"], name: "index_charts_on_company_id", using: :btree
+    t.index ["exchange_id"], name: "index_charts_on_exchange_id", using: :btree
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -33,15 +42,6 @@ ActiveRecord::Schema.define(version: 20171008171640) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "company_exchanges", force: :cascade do |t|
-    t.integer  "company_id"
-    t.integer  "exchange_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["company_id"], name: "index_company_exchanges_on_company_id", using: :btree
-    t.index ["exchange_id"], name: "index_company_exchanges_on_exchange_id", using: :btree
-  end
-
   create_table "exchanges", force: :cascade do |t|
     t.string   "name"
     t.string   "location"
@@ -54,6 +54,19 @@ ActiveRecord::Schema.define(version: 20171008171640) do
     t.index ["name"], name: "index_exchanges_on_name", unique: true, using: :btree
   end
 
-  add_foreign_key "company_exchanges", "companies"
-  add_foreign_key "company_exchanges", "exchanges"
+  create_table "tokens", force: :cascade do |t|
+    t.string   "name"
+    t.string   "chart_url"
+    t.integer  "company_id"
+    t.integer  "exchange_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["company_id"], name: "index_tokens_on_company_id", using: :btree
+    t.index ["exchange_id"], name: "index_tokens_on_exchange_id", using: :btree
+  end
+
+  add_foreign_key "charts", "companies"
+  add_foreign_key "charts", "exchanges"
+  add_foreign_key "tokens", "companies"
+  add_foreign_key "tokens", "exchanges"
 end
