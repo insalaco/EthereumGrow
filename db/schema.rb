@@ -10,9 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20171008165010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "location"
+    t.string   "website"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.string   "linkedin"
+    t.string   "slack"
+    t.string   "telegram"
+    t.string   "github"
+    t.string   "youtube"
+    t.string   "reddit"
+    t.string   "token"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "exchanges", force: :cascade do |t|
+    t.string   "name"
+    t.string   "location"
+    t.string   "website"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.string   "linkedin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_exchanges_on_name", unique: true, using: :btree
+  end
 
 end
