@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171008165310) do
+ActiveRecord::Schema.define(version: 20171008165010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,16 +45,4 @@ ActiveRecord::Schema.define(version: 20171008165310) do
     t.index ["name"], name: "index_exchanges_on_name", unique: true, using: :btree
   end
 
-  create_table "tokens", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "company_id"
-    t.integer  "exchange_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["company_id"], name: "index_tokens_on_company_id", using: :btree
-    t.index ["exchange_id"], name: "index_tokens_on_exchange_id", using: :btree
-  end
-
-  add_foreign_key "tokens", "companies"
-  add_foreign_key "tokens", "exchanges"
 end
