@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20171008174223) do
   create_table "companies", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
+    t.string   "asset"
     t.string   "location"
     t.string   "website"
     t.string   "twitter"
@@ -37,9 +38,12 @@ ActiveRecord::Schema.define(version: 20171008174223) do
     t.string   "github"
     t.string   "youtube"
     t.string   "reddit"
-    t.string   "token"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "white_paper"
+    t.string   "ico_open_date"
+    t.string   "ico_close_date"
+    t.string   "ico_size"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "exchanges", force: :cascade do |t|
