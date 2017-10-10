@@ -10,26 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171008174223) do
+ActiveRecord::Schema.define(version: 20171010101214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "charts", force: :cascade do |t|
-    t.integer  "company_id"
-    t.integer  "exchange_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["company_id"], name: "index_charts_on_company_id", using: :btree
-    t.index ["exchange_id"], name: "index_charts_on_exchange_id", using: :btree
-  end
-
   create_table "companies", force: :cascade do |t|
     t.string   "name"
+    t.string   "image"
     t.text     "description"
     t.string   "asset"
     t.string   "location"
     t.string   "website"
+    t.string   "email"
     t.string   "twitter"
     t.string   "facebook"
     t.string   "linkedin"
@@ -46,7 +39,34 @@ ActiveRecord::Schema.define(version: 20171008174223) do
     t.datetime "updated_at",     null: false
   end
 
+  create_table "company_exchanges", force: :cascade do |t|
+    t.integer  "company_id"
+    t.integer  "exchange_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["company_id"], name: "index_company_exchanges_on_company_id", using: :btree
+    t.index ["exchange_id"], name: "index_company_exchanges_on_exchange_id", using: :btree
+  end
+
+  create_table "currencies", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_currencies_on_company_id", using: :btree
+  end
+
+  create_table "currency_exchanges", force: :cascade do |t|
+    t.integer  "currency_id"
+    t.integer  "exchange_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["currency_id"], name: "index_currency_exchanges_on_currency_id", using: :btree
+    t.index ["exchange_id"], name: "index_currency_exchanges_on_exchange_id", using: :btree
+  end
+
   create_table "exchanges", force: :cascade do |t|
+    t.integer  "company_id"
     t.string   "name"
     t.string   "location"
     t.string   "website"
@@ -55,9 +75,14 @@ ActiveRecord::Schema.define(version: 20171008174223) do
     t.string   "linkedin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_exchanges_on_company_id", using: :btree
     t.index ["name"], name: "index_exchanges_on_name", unique: true, using: :btree
   end
 
-  add_foreign_key "charts", "companies"
-  add_foreign_key "charts", "exchanges"
+  add_foreign_key "company_exchanges", "companies"
+  add_foreign_key "company_exchanges", "exchanges"
+  add_foreign_key "currencies", "companies"
+  add_foreign_key "currency_exchanges", "currencies"
+  add_foreign_key "currency_exchanges", "exchanges"
+  add_foreign_key "exchanges", "companies"
 end
