@@ -2,10 +2,12 @@ class CreateCompanies < ActiveRecord::Migration[5.0]
   def change
     create_table :companies do |t|
       t.string :name
+      t.string :image
       t.text   :description
       t.string :asset
       t.string :location
       t.string :website
+      t.string :email
       t.string :twitter
       t.string :facebook
       t.string :linkedin

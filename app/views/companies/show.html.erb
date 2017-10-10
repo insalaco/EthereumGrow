@@ -45,10 +45,12 @@
   <%= @company.github %>
 </p>
 
-<p>
-  <strong>Trading view:</strong>
-  <%= @company.trading_view %>
-</p>
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>
+
+<p>
+<% @exchanges.each do |exchange| %>
+	<%= exchange.name %>
+<% end %>
+</p>

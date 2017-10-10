@@ -1,4 +1,5 @@
 class Company < ApplicationRecord
-  has_many :charts
-  has_many :exchanges, through: :charts
+  has_many :company_exchanges
+  has_many :exchanges, through: :company_exchanges
+  has_many :currencies
 end

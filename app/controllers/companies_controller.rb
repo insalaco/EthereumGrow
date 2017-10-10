@@ -4,12 +4,13 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
-    @companies = Company.all
+    @companies = Company.order(:ico_size => "desc")
   end
 
   # GET /companies/1
   # GET /companies/1.json
   def show
+    @exchanges = @company.exchanges.uniq
   end
 
   # GET /companies/new
