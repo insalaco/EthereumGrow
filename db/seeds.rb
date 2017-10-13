@@ -94,8 +94,8 @@ companies = Company.create!(
     #company 4
     {
       name: "TenX",
-      avatar: "tenx-avatar",
-      image: "tenx",
+      avatar: "tenx-avatar.jpg",
+      image: "tenx.jpg",
       description: "We make cryptocurrencies spendable anytime anywhere with the TenX wallet app and debit card system.",
       video: "https://www.youtube.com/embed/9xLVXhgZjL4",
       asset: "PAY",
@@ -166,8 +166,8 @@ companies = Company.create!(
     #company 6
     {
       name: "Status",
-      avatar: "status-avatar",
-      image: "status",
+      avatar: "status-avatar.jpg",
+      image: "status.jpg",
       description: "Status is an open source mobile DApp browser and messenger built for Ethereum.",
       video: "https://www.youtube.com/embed/Je7yErjEVt4",
       asset: "SNT",
