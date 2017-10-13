@@ -17,15 +17,19 @@ ActiveRecord::Schema.define(version: 20171010101214) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
+    t.string   "avatar"
     t.string   "image"
     t.text     "description"
+    t.string   "video"
     t.string   "asset"
     t.string   "location"
     t.string   "website"
-    t.string   "email"
+    t.string   "contact"
     t.string   "twitter"
     t.string   "facebook"
     t.string   "linkedin"
+    t.string   "medium"
+    t.string   "angellist"
     t.string   "slack"
     t.string   "telegram"
     t.string   "github"
@@ -34,9 +38,10 @@ ActiveRecord::Schema.define(version: 20171010101214) do
     t.string   "white_paper"
     t.string   "ico_open_date"
     t.string   "ico_close_date"
-    t.string   "ico_size"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.decimal  "ico_size",       precision: 8, scale: 2
+    t.boolean  "published",                              default: false
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
   end
 
   create_table "company_exchanges", force: :cascade do |t|
@@ -66,7 +71,6 @@ ActiveRecord::Schema.define(version: 20171010101214) do
   end
 
   create_table "exchanges", force: :cascade do |t|
-    t.integer  "company_id"
     t.string   "name"
     t.string   "location"
     t.string   "website"
@@ -75,7 +79,6 @@ ActiveRecord::Schema.define(version: 20171010101214) do
     t.string   "linkedin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["company_id"], name: "index_exchanges_on_company_id", using: :btree
     t.index ["name"], name: "index_exchanges_on_name", unique: true, using: :btree
   end
 
@@ -84,5 +87,4 @@ ActiveRecord::Schema.define(version: 20171010101214) do
   add_foreign_key "currencies", "companies"
   add_foreign_key "currency_exchanges", "currencies"
   add_foreign_key "currency_exchanges", "exchanges"
-  add_foreign_key "exchanges", "companies"
 end
