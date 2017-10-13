@@ -3,162 +3,104 @@
 		<div class="container">
 	    <div class="motto text-center">
 				<h1>EthereumGrow</h1>
-				<h3>Cryptocurrency Assets</h3>
+				<h3>Cryptocurrency Assets Built on Ethereum</h3>
 	    </div>
 		</div>
 	</div>
 	<div class="main">
 		<div class="section text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 offset-md-2">
-						<h2 class="title">Let's talk ICOs</h2>
-						<h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn't scroll to get here. Add a button if you want the user to see more.</h5>
-					</div>
-				</div>
-				<br/><br/>
-				<div class="row">
-					<% @companies.each do |company| %>
-					<div class="col-md-4">
-						<div class="info">
-							
-							<div class="card-deck">
-							  <div class="card">
-									<%= image_tag company.image, class: "card-img-top img-responsive", style: "width: 100%", alt: "" if company.image? %>
-							    <div class="card-block">
-							      <h4 class="card-title"><%= company.name %> (<%= company.asset %>) </h4>
 
-							      <p class="card-text"><%= company.description %></p>
-										<hr>
-							      <p class="card-text"><small class="text-muted">$<%= company.ico_size %> MM ICO</small></p>
-										<p class="card-text"><strong> <%= pluralize(company.exchange_count, "exchange") %></strong> </p>
-										<%= link_to "View Details", company_path(company), class: "btn btn-info btn-round mt-2"%>
-							    </div>
-							  </div>
-							</div>
-							
-						</div>
-    			</div>
-					<% end %>
-					
-				</div>
-				<%= link_to "View All", companies_path, class: "btn btn-danger btn-round text-center mb-4" %>
-			</div>
 			<div class="section section-dark text-center">
         <div class="container">
-            <h2 class="title">Let's talk about us</h2>
-						<div class="row">
-							<div class="col-md-4">
-                    <div class="card card-profile card-plain">
-                        <div class="card-avatar">
-                            <a href="#avatar"><img src="../assets/img/faces/clem-onojeghuo-3.jpg" alt="..."></a>
-                        </div>
-                        <div class="card-block">
-                            <a href="#paper-kit">
-                                <div class="author">
-                                    <h4 class="card-title">Henry Ford</h4>
-                                    <h6 class="card-category">Product Manager</h6>
-                                </div>
-                            </a>
-                            <p class="card-description text-center">
-                            Teamwork is so important that it is virtually impossible for you to reach the heights of your capabilities or make the money that you want without becoming very good at it.
-                            </p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
-                            <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a>
-                            <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-				</div>
-
-				<div class="col-md-4">
-                    <div class="card card-profile card-plain">
-                        <div class="card-avatar">
-                            <a href="#avatar"><img src="../assets/img/faces/joe-gardner-2.jpg" alt="..."></a>
-                        </div>
-                        <div class="card-block">
-                            <a href="#paper-kit">
-                                <div class="author">
-                                    <h4 class="card-title">Sophie West</h4>
-                                    <h6 class="card-category">Designer</h6>
-                                </div>
-                            </a>
-                            <p class="card-description text-center">
-                            A group becomes a team when each member is sure enough of himself and his contribution to praise the skill of the others. No one can whistle a symphony. It takes an orchestra to play it.
-                            </p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
-                            <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a>
-                            <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-				</div>
-
-				<div class="col-md-4">
-                    <div class="card card-profile card-plain">
-                        <div class="card-avatar">
-                            <a href="#avatar"><img src="../assets/img/faces/erik-lucatero-2.jpg" alt="..."></a>
-                        </div>
-                        <div class="card-block">
-                            <a href="#paper-kit">
-                                <div class="author">
-                                    <h4 class="card-title">Robert Orben</h4>
-                                    <h6 class="card-category">Developer</h6>
-                                </div>
-                            </a>
-                            <p class="card-description text-center">
-                            The strength of the team is each individual member. The strength of each member is the team. If you can laugh together, you can work together, silence isn’t golden, it’s deadly.
-                            </p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
-                            <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a>
-                            <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
+        <h2 class="title">Build unstoppable applications</h2>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card card-profile card-plain">
+							<div class="card-avatar">
+								<a href="#avatar"><img src="/assets/ethereum-foundation.jpg" alt="..."></a>
+							</div>
+							<div class="card-block">
+								<div class="author">
+									<h4 class="card-title">Ethereum Foundation</h4>
+								</div>
+								<p class="card-description text-center">
+									Ethereum is a decentralized platform that runs smart contracts: applications that run exactly as programmed without any possibility of downtime, censorship, fraud or third party interference.
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="card card-profile card-plain">
+              <div class="card-avatar">
+								<a href="#avatar"><img src="/assets/ether.jpg" alt="..."></a>
+              </div>
+							<div class="card-block">                  
+                <div class="author">
+									<h4 class="card-title">Ether Currency (ETH)</h4>
+                </div>
+								
+								<p class="card-description text-center">
+									Ether is a necessary element for operating the distributed application platform Ethereum. It is a form of payment made by the clients of the platform to the machines executing the requested operations.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card card-profile card-plain">
+							<div class="card-avatar">
+								<a href="#avatar"><img src="/assets/ethereum-token.jpg" alt="..."></a>
+							</div>
+							<div class="card-block">
+                       
+                <div class="author">
+									<h4 class="card-title">Ethereum Token</h4>
+                </div>
+                    
+                <p class="card-description text-center">
+                Anyone can take advantage of Ethereum to build their DAPPS (decentralized applications) through smart contracts. This is a very important distinction because this very thing shows you the true scope of what is possible in Ethereum.
+                </p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-    	</div>
-	</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<h2 class="title">What's an ICO?</h2>
+					<h5 class="description">An Initial Coin Offering (ICO) is used by startups to bypass the rigorous and regulated capital-raising process required by venture capitalists or banks. In an ICO campaign, a percentage of the cryptocurrency is sold to early backers of the project in exchange for legal tender or other cryptocurrencies.</h5>
+				</div>
+			</div>
+			<br/><br/>
+			<div class="row">
+				<% @companies.each do |company| %>
+				<div class="col-md-4">
+					<div class="info">
+					
+						<div class="card-deck">
+						  <div class="card">
+								<%= image_tag company.avatar, class: "card-img-top img-responsive", style: "width: 100%", alt: "" if company.avatar? %>
+						    <div class="card-block">
+						      <h4 class="card-title"><%= company.name %> (<%= company.asset %>) </h4>
 
-        <div class="section landing-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 offset-md-2">
-                        <h2 class="text-center">Keep in touch?</h2>
-                        <form class="contact-form">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label>Name</label>
-								<div class="input-group">
-                                      <span class="input-group-addon">
-                                          <i class="nc-icon nc-single-02"></i>
-                                      </span>
-                                      <input type="text" class="form-control" placeholder="Name">
-                                  </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label>Email</label>
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="nc-icon nc-email-85"></i>
-									</span>
-									<input type="text" class="form-control" placeholder="Email">
-								</div>
-                                </div>
-                            </div>
-                            <label>Message</label>
-                            <textarea class="form-control" rows="4" placeholder="Tell us your thoughts and feelings..."></textarea>
-                            <div class="row">
-                                <div class="col-md-4 offset-md-4">
-                                    <button class="btn btn-danger btn-lg btn-fill">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+						      <p class="card-text"><%= company.description %></p>
+									<hr>
+						      <p class="card-text"><small class="text-muted">ICO size: $<%= number_to_human(company.ico_size, strip_insignificant_zeros: true, precision: 5) %> MM </small></p>
+									<%= link_to "View Details", company_path(company), class: "btn btn-info btn-round mt-2"%>
+						    </div>
+						  </div>
+						</div>
+					
+					</div>
+  			</div>
+				<% end %>
+			
+			</div>
+			<%= link_to "View more", companies_path, class: "btn btn-danger btn-round text-center my-4" %>
+		</div>
+	</div>
+</div>
+
