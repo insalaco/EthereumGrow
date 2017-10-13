@@ -1,118 +1,106 @@
+<div class="page-header" data-parallax="true" style="background-image: url(http://assets.ethereumgrow.com/home.jpg);">
+	<div class="filter"></div>
+		<div class="container">
+	    <div class="motto text-center">
+				<h1>EthereumGrow</h1>
+				<h3>The Best Cryptocurrency Assets Built on Ethereum</h3>
+	    </div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="section text-center">
 
+			<div class="section section-dark text-center">
+        <div class="container">
+        <h2 class="title">Build unstoppable applications</h2>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card card-profile card-plain">
+							<div class="card-avatar">
+								<img src="http://assets.ethereumgrow.com/ethereum.jpg" alt="...">
+							</div>
+							<div class="card-block">
+								<div class="author">
+									<h4 class="card-title">Ethereum </h4>
+								</div>
+								<p class="card-description text-center">
+									Ethereum is a decentralized platform that runs smart contracts: applications that run exactly as programmed without any possibility of downtime, censorship, fraud or third party interference.
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="card card-profile card-plain">
+              <div class="card-avatar">
+								<img src="http://assets.ethereumgrow.com/ethereum-coin.jpg" alt="Ethereum coin">
+              </div>
+							<div class="card-block">                  
+                <div class="author">
+									<h4 class="card-title">Ether (ETH) </h4>
+                </div>
+								
+								<p class="card-description text-center">
+									Ether is a necessary element for operating the distributed application platform Ethereum. It is a form of payment (currency) made by the clients of the platform to the machines executing the requested operations.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card card-profile card-plain">
+							<div class="card-avatar">
+								<img src="http://assets.ethereumgrow.com/ethereum-token.jpg" alt="...">
+							</div>
+							<div class="card-block">
+                       
+                <div class="author">
+									<h4 class="card-title">Ethereum Token</h4>
+                </div>
+                    
+                <p class="card-description text-center">
+                Anyone can take advantage of Ethereum to build their DAPPS (decentralized applications) through smart contracts. This is a very important distinction because this very thing shows you the true scope of what is possible in Ethereum.
+                </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<h2 class="title">What's an ICO?</h2>
+					<h5 class="description">An Initial Coin Offering (ICO) is used by startups to bypass the rigorous and regulated capital-raising process required by venture capitalists or banks. In an ICO campaign, a percentage of the cryptocurrency is sold to early backers of the project in exchange for legal tender or other cryptocurrencies.</h5>
+				</div>
+			</div>
+			<br/><br/>
+			<div class="row">
+				<% @companies.each do |company| %>
+				<div class="col-md-4">
+					<div class="info">
+					
+						<div class="card-deck">
+						  <div class="card">
+								<%= image_tag "http://assets.ethereumgrow.com/#{company.avatar}", class: "card-img-top img-responsive", style: "width: 100%", alt: "" if company.avatar? %>
+						    <div class="card-block">
+						      <h4 class="card-title"><%= company.name %> (<%= company.asset %>) </h4>
 
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Ethereum Grow</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <!-- <ul class="nav navbar-nav">
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul> -->
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-
-  <div class="container first" style="padding-top: 20px; margin-bottom: 30px;">
-
-    <div class="row">
-      <div class="col-md-12 col-xs-12 text-center" style="margin-bottom: 20px;">
-        <%= link_to 'Get $10 Free Bitcoin with Coinbase', "https://www.coinbase.com/join/547db07eb3a636b45200002c", target: "_blank", class: "btn btn-primary btn-lg" %>
-      </div>
-
-    </div>
-
-
-
-    <div class="row">
-      <div class="col-md-8 col-xs-12">
-        <div class="panel panel-default">
-          <div class="panel-heading" style="m">
-            <h3 class="panel-title">ETHER VS US DOLLAR</h3>
-          </div>
-          <div class="panel-body" style="height: 475px; overflow:hidden;">
-            <%= render 'layouts/trading_view_widget' %>
-          </div>
-
-
-
-
-        </div>
-        <div class="row">
-        <div class="col-md-6">
-        <script type="text/javascript" src="https://www.cryptonator.com/ui/js/widget/calc_widget.js"></script>
-      </div>
-    </div>
-      </div>
-        <!-- TradingView Widget END -->
-            <!-- TradingView Widget END -->
-
-      <div class="col-md-4">
-        <div class="panel panel-default" style="height: 500px; overflow:hidden;">
-          <div class="panel-heading">
-            <h3 class="panel-title">ETHEREUM TWITTER CONVERSATIONS</h3>
-          </div>
-          <div class="panel-body">
-            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=Ethereum" data-widget-id="843081382830182403">Tweets about Ethereum</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-          </div>
-        </div>
-
-         <div class="panel panel-default">
-           <div class="panel-body">
-           <a id="tokenmarket-ico-calendar" href=https://tokenmarket.net/ico-calendar?partner_id=ca188a9fc4bc289c&mode=all>
-           TokenMarket ICO calendar
-           <script async src="https://tokenmarket.net/calendar-embed.js"></script>
-           </a>
-         </div>
-       </div>
-
-     </div>
-   </div>
-
-
-
-
-
-  <footer>
-    <div class="row">
-        <div class="col-lg-12">
-            <p>Copyright © Ethereum Grow <%= Time.current.year %>.</p>
-        </div>
-    </div>
-              <!-- /.row -->
-  </footer>
+						      <p class="card-text"><%= company.description %></p>
+									<hr>
+						      <p class="card-text"><small class="text-muted">ICO size: $<%= number_to_human(company.ico_size, strip_insignificant_zeros: true, precision: 5) %> MM </small></p>
+									<%= link_to "View Details", company_path(company), class: "btn btn-info btn-round mt-2"%>
+						    </div>
+						  </div>
+						</div>
+					
+					</div>
+  			</div>
+				<% end %>
+			
+			</div>
+			<%= link_to "View more", companies_path, class: "btn btn-danger btn-round text-center my-4" %>
+		</div>
+	</div>
 </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
 

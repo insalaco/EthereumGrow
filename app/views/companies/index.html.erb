@@ -1,0 +1,42 @@
+<div class="main">
+	<div class="section" style="padding-top: 60px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-4">
+					<h2>ICO Companies</h2>
+					<hr>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-9">
+					<div class="row">
+					<% @companies.each do |company| %>
+					<div class="col-md-12">
+						
+				    <div class="card">
+				      <div class="row ">
+				        <div class="col-md-4">
+				            <%= image_tag "http://assets.ethereumgrow.com/#{company.avatar}", class: "card-img-top w-100", alt: "" if company.image? %>
+				          </div>
+				          <div class="col-md-8 px-3">
+				            <div class="card-block px-3">
+				              <h4 class="card-title"><%= company.name %> <strong>(<%= company.asset %>)</strong> </h4>
+				              <p class="title"><%= company.description %> </p>
+             
+				              <%= link_to "View Details", company_path(company), class: "btn btn-primary"%>
+				            </div>
+				          </div>
+
+				        </div>
+				      </div>
+				    </div>	  	
+						<% end %>	
+					</div>
+				</div>
+				<div class="col-md-3">
+				
+				</div>				
+			</div>
+		</div>
+	</div>
+</div>

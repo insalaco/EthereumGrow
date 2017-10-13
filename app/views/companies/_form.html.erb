@@ -1,0 +1,67 @@
+<%= form_for(company) do |f| %>
+  <% if company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+      <% company.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :website %>
+    <%= f.text_field :website %>
+  </div>
+
+  <div class="field">
+    <%= f.label :twitter %>
+    <%= f.text_field :twitter %>
+  </div>
+
+  <div class="field">
+    <%= f.label :facebook %>
+    <%= f.text_field :facebook %>
+  </div>
+
+  <div class="field">
+    <%= f.label :linkedin %>
+    <%= f.text_field :linkedin %>
+  </div>
+
+  <div class="field">
+    <%= f.label :slack %>
+    <%= f.text_field :slack %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telegram %>
+    <%= f.text_field :telegram %>
+  </div>
+
+  <div class="field">
+    <%= f.label :github %>
+    <%= f.text_field :github %>
+  </div>
+
+  <div class="field">
+    <%= f.label :trading_view %>
+    <%= f.text_field :trading_view %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
