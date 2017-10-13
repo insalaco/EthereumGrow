@@ -4,7 +4,7 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
-    @companies = Company.order(:ico_size => "desc")
+    @companies = Company.select("companies.*, COUNT(exchanges.id) exchange_count").left_outer_joins(:exchanges).where(published: true).group("companies.id").order(ico_size: "desc")
   end
 
   # GET /companies/1

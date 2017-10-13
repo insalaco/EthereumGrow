@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  def index
-    @companies = Company.select("companies.*, COUNT(DISTINCT exchanges.id) exchange_count").joins(:exchanges).group("companies.id")
+  def index    
+    @companies = Company.with_comments_count.order(ico_open_date: "desc").limit(3)
   end
 end
