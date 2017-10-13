@@ -1,5 +1,5 @@
 <div class="main">
-	<div class="section">
+	<div class="section" style="padding-top: 60px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 mb-4">
@@ -13,44 +13,25 @@
 					<% @companies.each do |company| %>
 					<div class="col-md-12">
 						
-    <div class="card">
-      <div class="row ">
-        <div class="col-md-4">
-            <%= image_tag company.avatar, class: "card-img-top w-100", alt: "" if company.image? %>
-          </div>
-          <div class="col-md-8 px-3">
-            <div class="card-block px-3">
-              <h4 class="card-title"><%= company.name %> <strong>(<%= company.asset %>)</strong> </h4>
-              <p class="title"><%= company.description %> </p>
+				    <div class="card">
+				      <div class="row ">
+				        <div class="col-md-4">
+				            <%= image_tag "http://assets.ethereumgrow.com/#{company.avatar}", class: "card-img-top w-100", alt: "" if company.image? %>
+				          </div>
+				          <div class="col-md-8 px-3">
+				            <div class="card-block px-3">
+				              <h4 class="card-title"><%= company.name %> <strong>(<%= company.asset %>)</strong> </h4>
+				              <p class="title"><%= company.description %> </p>
              
-              <%= link_to "View Details", company_path(company), class: "btn btn-primary"%>
-            </div>
-          </div>
+				              <%= link_to "View Details", company_path(company), class: "btn btn-primary"%>
+				            </div>
+				          </div>
 
-        </div>
-      </div>
-    </div>
-						
-						
-						<!-- <div class="info">
-							<div class="card-deck">
-							  <div class="card">
-									<%#= image_tag company.image, class: "card-img-top img-responsive", style: "width: 100%", alt: "" if company.image? %>
-							    <div class="card-block">
-							      <h4 class="card-title"><%#= company.name %> (<%#= company.asset %>) </h4>
-							      <p class="card-text"><%#= company.description %></p>
-										<hr>
-							      <p class="card-text"><small class="text-muted">ICO size: $<%#= number_to_human(company.ico_size, strip_insignificant_zeros: true, precision: 5) %> MM </small></p>
-										<p class="card-text"><strong> <%#= pluralize(company.exchange_count, "exchange") %></strong> </p>
-										<%#= link_to "View Details", company_path(company), class: "btn btn-info btn-round mt-2"%>
-							    </div>
-							  </div>
-							</div>
-
-						</div> -->
-	  	
-					<% end %>	
-				</div>
+				        </div>
+				      </div>
+				    </div>	  	
+						<% end %>	
+					</div>
 				</div>
 				<div class="col-md-3">
 				
