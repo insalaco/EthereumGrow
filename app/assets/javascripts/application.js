@@ -14,8 +14,8 @@
 //= require jquery_ujs
 //= require tether.min
 //= require bootstrap.min
-//= require turbolinks
-//= require google_analytics
-
-
 //= require paper-kit
+// require google_analytics
+
+
+
