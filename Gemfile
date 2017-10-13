@@ -55,3 +55,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'google-analytics-rails', '1.1.1'
+gem 'friendly_id', '~> 5.1.0'
