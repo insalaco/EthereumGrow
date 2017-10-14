@@ -294,6 +294,12 @@ exchanges = Exchange.create!(
     {
       name: "BitMEX"
     }
+    
+    # exchange 4
+    {
+      name: "CoinExchange.io",
+      website: "https://coinexchange.io"
+    }
   ]
 )
 
