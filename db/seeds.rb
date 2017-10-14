@@ -44,7 +44,6 @@ companies = Company.create!(
       linkedin: "https://www.linkedin.com/company/humaniq",
       slack: "https://www.youtube.com/channel/UCXatRidLHbngYUtF8JXICPA",
       instagram: "https://www.instagram.com/humaniq_com/",
-      linkedin: "https://www.youtube.com/channel/UCXatRidLHbngYUtF8JXICPA",
       youtube: "https://www.youtube.com/channel/UCXatRidLHbngYUtF8JXICPA",
       github: "https://github.com/humaniq",
       white_paper: "https://humaniq.com",
@@ -82,8 +81,7 @@ companies = Company.create!(
       image: "tezos.jpg",
       description: "Self-amending cryptographic ledger. It achieves consensus not just about the state of a ledger, but about the state of its own protocol.",
       video: "https://www.youtube.com/embed/7m7EU4JWI88?rel=0",
-      asset: "XTZ",
-      location: nil,              
+      asset: "XTZ",           
       website: "https://www.tezos.com",
       twitter: "tez0s",
       slack: "https://www.tezos.com/slack.html",
@@ -105,7 +103,7 @@ companies = Company.create!(
       asset: "PAY",
       location: "Singapore",              
       website: "https://www.tenx.tech",
-      twitter: "https://twitter.com/tenxwallet",
+      twitter: "https://twitter.com/MobileGoToken",
       facebook: "https://www.facebook.com/tenxwallet/",
       linkedin: "https://www.linkedin.com/company/15263799/",
       youtube: "https://www.youtube.com/channel/UCrh49JX-9UQJbee6e4EGhog",
@@ -125,7 +123,7 @@ companies = Company.create!(
       description: "Storj is an open-source distributed cloud storage platform based on blockchain technology where anyone can sell their extra hard drive space.",
       video: "https://www.youtube.com/embed/vl3bUzfn2lg",
       asset: "STROJ",
-      location: "USA",              
+      location: "United States",              
       website: "https://storj.io/",
       contact: "https://storj.io/contact.html",
       twitter: "https://twitter.com/storjproject",
@@ -167,7 +165,7 @@ companies = Company.create!(
       published: true     
     },
     
-    #company 6
+    #company 7
     {
       name: "Status",
       avatar: "status-avatar.jpg",
@@ -189,8 +187,49 @@ companies = Company.create!(
       ico_close_date: "6/21/2017",
       ico_size: "95",
       published: true     
+    },
+    
+    # company 8 
+    {
+      name: "MobileGo",
+      avatar: "mobilego-avatar.jpg",
+      image: "mobilego.jpg",
+      description: "The MobileGo project will create a fund to expand marketing and development of the GameCredits Mobile Store.",
+      video: "https://www.youtube.com/embed/wpkpzs3M__g",
+      asset: "MOBILEGO",
+      location: "United States",              
+      website: "https://mobilego.io",
+      twitter: "https://twitter.com/MobileGoToken",
+      facebook: "https://www.facebook.com/MobileGo-ICO-1967836613444499/",
+      linkedin: "https://www.linkedin.com/company/15174105/",
+      slack: "https://gamecredits.com/slack.html",
+      telegram: "https://t.me/mobilego",
+      white_paper: "https://mobilego.io/pdf/MobileGo-Whitepaper.pdf",
+      ico_open_date: "4/25/2017",
+      ico_close_date: "5/25/2017",
+      ico_size: "53.07",
+      published: true
+    },
+    
+    #company 9
+    {
+      name: "Basic Attention Token",
+      avatar: "basic-attention-token-avatar.jpg",
+      image: "basic-attention-token.jpg",
+      description: "Blockchain-based digital advertising.",
+      video: "https://player.vimeo.com/video/209336437",
+      contact: "info@basicattentiontoken.org",
+      asset: "BAT",
+      location: "United States",              
+      website: "https://basicattentiontoken.org/",
+      twitter: "https://twitter.com/attentiontoken",
+      reddit: "https://www.reddit.com/r/BATProject/",
+      white_paper: "https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf",
+      ico_open_date: "5/31/2017",
+      ico_close_date: "5/31/2017",
+      ico_size: "35",
+      published: true     
     }
-
   ]
 )
 
@@ -293,12 +332,12 @@ exchanges = Exchange.create!(
     # exchange 3
     {
       name: "BitMEX"
-    }
+    },
     
     # exchange 4
     {
       name: "CoinExchange.io",
-      website: "https://coinexchange.io"
+      website: "https://www.coinexchange.io"
     }
   ]
 )
