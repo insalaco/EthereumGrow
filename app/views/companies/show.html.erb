@@ -10,7 +10,7 @@
 					<img src="http://assets.ethereumgrow.com/<%= @company.avatar %>" alt="<%= @company.name %> avatar" class="img-circle img-no-padding img-responsive">
 				</div>
 				<div class="name">
-					<h4 class="title"><%= @company.name %> <small><strong>(<%= @company.asset %>)</strong><br />$<%= number_to_human(@company.ico_size, strip_insignificant_zeros: true, precision: 5) %> MM ICO</small></h4>
+					<h4 class="title"><%= @company.name %> <small><strong>(<%= @company.token.name %>)</strong><br />$<%= number_to_human(@company.ico_size, strip_insignificant_zeros: true, precision: 5) %> MM ICO</small></h4>
 				</div>
 			</div>
 			<div class="row">

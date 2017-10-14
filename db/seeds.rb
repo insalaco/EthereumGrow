@@ -233,6 +233,69 @@ companies = Company.create!(
   ]
 )
 
+tokens = Token.create!(
+[
+  # company 0
+  {
+    name: "DRP",
+    company_id: companies[0].id
+  },
+  
+  # company 1
+  {
+    name: "HMQ",
+    company_id: companies[1].id
+  },
+  
+  # company 2
+  {
+    name: "REP",
+    company_id: companies[2].id
+  },
+  
+  # company 3
+  {
+    name: "XTZ",
+    company_id: companies[3].id
+  },
+  
+  # company 4
+  {
+    name: "PAY",
+    company_id: companies[4].id
+  },
+  
+  # company 5
+  {
+    name: "STORJ",
+    company_id: companies[5].id
+  },
+  
+  # company 6
+  {
+    name: "BNT",
+    company_id: companies[6].id
+  },
+  
+  # company 7
+  {
+    name: "SNT",
+    company_id: companies[7].id
+  },
+  
+  # company 8
+  {
+    name: "MOBILEGO",
+    company_id: companies[8].id
+  },
+  
+  # company 9
+  {
+    name: "BAT",
+    company_id: companies[9].id
+  }
+])
+
 currencies = Currency.create!(
   [
     # currency 0

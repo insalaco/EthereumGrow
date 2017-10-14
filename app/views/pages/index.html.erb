@@ -84,7 +84,7 @@
 						  <div class="card">
 								<%= image_tag "http://assets.ethereumgrow.com/#{company.avatar}", class: "card-img-top img-responsive", style: "width: 100%", alt: "" if company.avatar? %>
 						    <div class="card-block">
-						      <h4 class="card-title"><%= company.name %> (<%= company.asset %>) </h4>
+						      <h4 class="card-title"><%= company.name %> (<%= company.token.name %>) </h4>
 
 						      <p class="card-text"><%= company.description %></p>
 									<hr>
