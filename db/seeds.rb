@@ -229,6 +229,50 @@ companies = Company.create!(
       ico_close_date: "5/31/2017",
       ico_size: "35",
       published: true     
+    },
+    
+    #company 10
+    {
+      name: "Civic",
+      avatar: "civic-avatar.jpg",
+      image: "civic.jpg",
+      description: "Giving businesses and individuals the tools to control and protect identities.",
+      video: "https://www.youtube.com/embed/2XDGX41nr1o",
+      location: "United States",              
+      website: "https://www.civic.com",
+      twitter: "https://twitter.com/civickey",
+      facebook: "https://www.facebook.com/civictechnologiesinc",
+      linkedin: "https://www.linkedin.com/company/7595700/",
+      telegram: "t.me/civicplatform",
+      white_paper: "https://tokensale.civic.com/CivicTokenSaleWhitePaper.pdf",
+      ico_open_date: "5/31/2017",
+      ico_close_date: "5/31/2017",
+      ico_size: "33",
+      published: true     
+    },
+    
+    #company 11
+    {
+      name: "SONM",
+      avatar: "sonm-avatar.jpg",
+      image: "sonm.jpg",
+      description: "Supercomputer Organized by Network Mining. SONM is a decentralized worldwide fog supercomputer for general purpose computing.",
+      video: "https://www.youtube.com/embed/OS-BxuVRyy0",
+      location: "Russia",              
+      website: "https://sonm.io",
+      twitter: "https://twitter.com/sonmdevelopment",
+      facebook: "https://www.facebook.com/SONM-Supercomputer-Organized-by-Network-Mining-954849207981204",
+      linkedin: "https://www.linkedin.com/company/16274425/",
+      telegram: "https://t.me/sonm_eng",
+      reddit: "https://www.reddit.com/r/SONM/",
+      slack: "https://t.me/sonm_eng",
+      github: "https://github.com/sonm-io",
+      medium: "https://blog.sonm.io/",
+      white_paper: "https://blog.sonm.io/",
+      ico_open_date: "6/15/2017",
+      ico_close_date: "7/15/2017",
+      ico_size: "42",
+      published: true     
     }
   ]
 )
@@ -293,6 +337,18 @@ tokens = Token.create!(
   {
     name: "BAT",
     company_id: companies[9].id
+  },
+  
+  # company 10
+  {
+    name: "CVC",
+    company_id: companies[10].id
+  },
+  
+  # company 11
+  {
+    name: "SNM",
+    company_id: companies[11].id
   }
 ])
 
