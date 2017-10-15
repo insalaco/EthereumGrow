@@ -273,6 +273,45 @@ companies = Company.create!(
       ico_close_date: "7/15/2017",
       ico_size: "42",
       published: true     
+    },
+    
+    #company 12
+    {
+      name: "Polybius",
+      avatar: "polybius-avatar.jpg",
+      image: "polybius.jpg",
+      description: "Polybius is a project aimed to create a regulated bank for the digital generation.",
+      video: "https://www.youtube.com/embed/LEQoFuJ2Zx8",
+      contact: "info@polybius.io",
+      location: "Estonia",              
+      website: "https://polybius.io",
+      facebook: "https://www.facebook.com/projectpolybius/",
+      twitter: "https://twitter.com/PolybiusBank",
+      telegram: "https://twitter.com/PolybiusBank",
+      white_paper: "https://polybius.io/media/tw_en.pdf",
+      ico_open_date: "5/31/2017",
+      ico_close_date: "7/5/2017",
+      ico_size: "31.6",
+      published: true     
+    },
+    
+    #company 13
+    {
+      name: "OmiseGo",
+      avatar: "omisego-avatar.jpg",
+      image: "omisego.jpg",
+      description: "OmiseGO enables real-time, peer-to-peer value exchange and payment services agnostically across jurisdictions and organizational silos.",
+      video: "https://www.youtube.com/embed/neCaG0LoKQ0",
+      contact: "omg@omise.co",
+      location: "China",              
+      website: "https://omg.omise.co",
+      twitter: "https://twitter.com/omise_go",
+      reddit: "http://reddit.com/r/omise_go",
+      white_paper: "https://cdn.omise.co/omg/whitepaper.pdf",
+      ico_open_date: "6/22/2017",
+      ico_close_date: "6/23/2017",
+      ico_size: "21",
+      published: true     
     }
   ]
 )
@@ -349,6 +388,17 @@ tokens = Token.create!(
   {
     name: "SNM",
     company_id: companies[11].id
+  },
+  
+  # company 12
+  {
+    name: "PLBT",
+    company_id: companies[12].id
+  },
+  # company 13
+  {
+    name: "OMG",
+    company_id: companies[13].id
   }
 ])
 
