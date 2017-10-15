@@ -79,29 +79,24 @@
 			<div class="row">
 				<% @companies.each do |company| %>
 				<div class="col-md-4">
-					<div class="info">
-					
+					<div class="info">					
 						<div class="card-deck">
 						  <div class="card">
-								<%= image_tag "http://assets.ethereumgrow.com/#{company.avatar}", class: "card-img-top img-responsive", style: "width: 100%", alt: "" if company.avatar? %>
+								<%= image_tag "http://assets.ethereumgrow.com/#{company.avatar}", class: "card-img-top img-responsive", style: "width: 100%", alt: "#{company.name} avatar" if company.avatar? %>
 						    <div class="card-block">
 						      <h4 class="card-title"><%= company.name %> (<%= company.token.name %>) </h4>
-
 						      <p class="card-text"><%= company.description %></p>
 									<hr>
 						      <p class="card-text"><small class="text-muted">ICO size: $<%= number_to_human(company.ico_size, strip_insignificant_zeros: true, precision: 5) %> MM </small></p>
 									<%= link_to "View Details", company_path(company), class: "btn btn-info btn-round mt-2"%>
 						    </div>
 						  </div>
-						</div>
-					
+						</div>					
 					</div>
   			</div>
-				<% end %>
-			
+				<% end %>			
 			</div>
 			<%= link_to "View more", companies_path, class: "btn btn-danger btn-round text-center my-4" %>
 		</div>
 	</div>
 </div>
-
