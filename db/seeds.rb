@@ -480,6 +480,12 @@ currencies = Currency.create!(
     {
       name: "OMGETH",
       company_id: companies[13].id
+    },
+    
+    # currency 13
+    {
+      name: "CVCETH",
+      company_id: companies[10].id
     }
   ]
 )
@@ -577,6 +583,11 @@ currency_exchanges = CurrencyExchange.create!(
       currency_id: currencies[12].id,
       exchange_id: exchanges[5].id,
       profile:     true 
+    },
+    {
+      currency_id: currencies[13].id,
+      exchange_id: exchanges[1].id,
+      profile:     true 
     }
 
     
@@ -625,6 +636,12 @@ company_exchanges = CompanyExchange.create!(
     {
       company_id: companies[13].id,
       exchange_id: exchanges[5].id,
+    },
+    
+    #company 10
+    {
+      company_id: companies[10].id,
+      exchange_id: exchanges[1].id,
     }
   ]
 )
