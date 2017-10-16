@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171014212919) do
+ActiveRecord::Schema.define(version: 20171016122302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 20171014212919) do
     t.string   "youtube"
     t.string   "reddit"
     t.string   "white_paper"
-    t.string   "ico_open_date"
-    t.string   "ico_close_date"
+    t.date     "ico_open_date"
+    t.date     "ico_close_date"
     t.decimal  "ico_size",       precision: 8, scale: 2
     t.boolean  "published",                              default: false
     t.datetime "created_at",                                             null: false
