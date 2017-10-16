@@ -11,7 +11,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
-    @exchanges = @company.exchanges.uniq
+    @chart = @company.currencies.select("exchanges.name as exchange_name, currencies.name as currency_name").left_outer_joins(:exchanges).where(currency_exchanges: {profile: true})
   end
 
   # GET /companies/new
