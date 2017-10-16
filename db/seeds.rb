@@ -22,8 +22,8 @@ companies = Company.create!(
       white_paper: "https://www.dcorp.it/#whitepaper",
       slack: "https://dcorphq.herokuapp.com/",
       reddit: "https://www.reddit.com/r/dcorp/",
-      ico_open_date: "6/1/2017",
-      ico_close_date: "6/29/2017",
+      ico_open_date: "2017-06-01",
+      ico_close_date: "2017-06-29",
       ico_size: "5.05",
       published: true     
     },
@@ -47,8 +47,8 @@ companies = Company.create!(
       youtube: "https://www.youtube.com/channel/UCXatRidLHbngYUtF8JXICPA",
       github: "https://github.com/humaniq",
       white_paper: "https://humaniq.com",
-      ico_open_date: "4/6/2017",
-      ico_close_date: "4/27/2017",
+      ico_open_date: "2017-04-06",
+      ico_close_date: "2017-04-27",
       ico_size: "5.16",
       published: true    
     },
@@ -68,8 +68,8 @@ companies = Company.create!(
       youtube: "UCnQRWIWIT8ExlegLTajjhiQ",
       reddit: "Augur",
       white_paper: "http://docs.augur.net/",
-      ico_open_date: "8/17/2015",
-      ico_close_date: "10/1/2015",
+      ico_open_date: "2015-08-17",
+      ico_close_date: "2015-10-01",
       ico_size: "5.14",
       published: true
     },
@@ -87,8 +87,8 @@ companies = Company.create!(
       slack: "https://www.tezos.com/slack.html",
       github: "https://github.com/tezos/tezos",
       white_paper: "https://opus-foundation.org/whitepaper.pdf",
-      ico_open_date: "7/1/2017",
-      ico_close_date: "7/13/2017",
+      ico_open_date: "2017-07-01",
+      ico_close_date: "2017-07-13",
       ico_size: "232",
       published: true     
     },
@@ -109,8 +109,8 @@ companies = Company.create!(
       youtube: "https://www.youtube.com/channel/UCrh49JX-9UQJbee6e4EGhog",
       reddit: "https://www.reddit.com/r/TenX/",
       white_paper: "https://www.tenx.tech/whitepaper/tenx_whitepaper_final.pdf",
-      ico_open_date: "6/24/2017",
-      ico_close_date: "6/24/2017",
+      ico_open_date: "2017-06-24",
+      ico_close_date: "2017-06-24",
       ico_size: "83.11",
       published: true    
     },
@@ -134,8 +134,8 @@ companies = Company.create!(
       github: "https://github.com/Storj/",
       reddit: "https://www.reddit.com/r/storj/",
       white_paper: "https://storj.io/storj.pdf",
-      ico_open_date: "5/19/2017",
-      ico_close_date: "5/25/2017",
+      ico_open_date: "2017-05-19",
+      ico_close_date: "2017-05-25",
       ico_size: "29.22",
       published: true    
     },
@@ -159,8 +159,8 @@ companies = Company.create!(
       reddit: "https://www.reddit.com/r/Bancor/",
       slack: "https://bancor-slack-invite.herokuapp.com",
       white_paper: "https://www.bancor.network/static/bancor_protocol_whitepaper_en.pdf",
-      ico_open_date: "6/12/2017",
-      ico_close_date: "6/12/2017",
+      ico_open_date: "2017-06-12",
+      ico_close_date: "2017-06-12",
       ico_size: "153",
       published: true     
     },
@@ -183,8 +183,8 @@ companies = Company.create!(
       reddit: "https://www.reddit.com/r/statusim/",
       slack: "http://slack.status.im/",
       white_paper: "https://blog.status.im/introducing-status-ethereum-918b1447274",
-      ico_open_date: "6/17/2017",
-      ico_close_date: "6/21/2017",
+      ico_open_date: "2017-06-17",
+      ico_close_date: "2017-06-21",
       ico_size: "95",
       published: true     
     },
@@ -205,8 +205,8 @@ companies = Company.create!(
       slack: "https://gamecredits.com/slack.html",
       telegram: "https://t.me/mobilego",
       white_paper: "https://mobilego.io/pdf/MobileGo-Whitepaper.pdf",
-      ico_open_date: "4/25/2017",
-      ico_close_date: "5/25/2017",
+      ico_open_date: "2017-04-25",
+      ico_close_date: "2017-05-25",
       ico_size: "53.07",
       published: true
     },
@@ -225,9 +225,92 @@ companies = Company.create!(
       twitter: "https://twitter.com/attentiontoken",
       reddit: "https://www.reddit.com/r/BATProject/",
       white_paper: "https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf",
-      ico_open_date: "5/31/2017",
-      ico_close_date: "5/31/2017",
+      ico_open_date: "2017-05-31",
+      ico_close_date: "2017-05-31",
       ico_size: "35",
+      published: true     
+    },
+    
+    #company 10
+    {
+      name: "Civic",
+      avatar: "civic-avatar.jpg",
+      image: "civic.jpg",
+      description: "Giving businesses and individuals the tools to control and protect identities.",
+      video: "https://www.youtube.com/embed/2XDGX41nr1o",
+      location: "United States",              
+      website: "https://www.civic.com",
+      twitter: "https://twitter.com/civickey",
+      facebook: "https://www.facebook.com/civictechnologiesinc",
+      linkedin: "https://www.linkedin.com/company/7595700/",
+      telegram: "t.me/civicplatform",
+      white_paper: "https://tokensale.civic.com/CivicTokenSaleWhitePaper.pdf",
+      ico_open_date: "2017-05-31",
+      ico_close_date: "2017-05-31",
+      ico_size: "33",
+      published: true     
+    },
+    
+    #company 11
+    {
+      name: "SONM",
+      avatar: "sonm-avatar.jpg",
+      image: "sonm.jpg",
+      description: "Supercomputer Organized by Network Mining. SONM is a decentralized worldwide fog supercomputer for general purpose computing.",
+      video: "https://www.youtube.com/embed/OS-BxuVRyy0",
+      location: "Russia",              
+      website: "https://sonm.io",
+      twitter: "https://twitter.com/sonmdevelopment",
+      facebook: "https://www.facebook.com/SONM-Supercomputer-Organized-by-Network-Mining-954849207981204",
+      linkedin: "https://www.linkedin.com/company/16274425/",
+      telegram: "https://t.me/sonm_eng",
+      reddit: "https://www.reddit.com/r/SONM/",
+      slack: "https://t.me/sonm_eng",
+      github: "https://github.com/sonm-io",
+      medium: "https://blog.sonm.io/",
+      white_paper: "https://blog.sonm.io/",
+      ico_open_date: "2017-06-15",
+      ico_close_date: "2017-07-15",
+      ico_size: "42",
+      published: true     
+    },
+    
+    #company 12
+    {
+      name: "Polybius",
+      avatar: "polybius-avatar.jpg",
+      image: "polybius.jpg",
+      description: "Polybius is a project aimed to create a regulated bank for the digital generation.",
+      video: "https://www.youtube.com/embed/LEQoFuJ2Zx8",
+      contact: "info@polybius.io",
+      location: "Estonia",              
+      website: "https://polybius.io",
+      facebook: "https://www.facebook.com/projectpolybius/",
+      twitter: "https://twitter.com/PolybiusBank",
+      telegram: "https://twitter.com/PolybiusBank",
+      white_paper: "https://polybius.io/media/tw_en.pdf",
+      ico_open_date: "2017-05-31",
+      ico_close_date: "2017-07-05",
+      ico_size: "31.6",
+      published: true     
+    },
+    
+    #company 13
+    {
+      name: "OmiseGo",
+      avatar: "omisego-avatar.jpg",
+      image: "omisego.jpg",
+      description: "OmiseGO enables real-time, peer-to-peer value exchange and payment services agnostically across jurisdictions and organizational silos.",
+      video: "https://www.youtube.com/embed/neCaG0LoKQ0",
+      contact: "omg@omise.co",
+      location: "China",              
+      website: "https://omg.omise.co",
+      twitter: "https://twitter.com/omise_go",
+      reddit: "http://reddit.com/r/omise_go",
+      white_paper: "https://cdn.omise.co/omg/whitepaper.pdf",
+      ico_open_date: "2017-06-22",
+      ico_close_date: "2017-06-23",
+      ico_size: "21",
       published: true     
     }
   ]
@@ -293,6 +376,29 @@ tokens = Token.create!(
   {
     name: "BAT",
     company_id: companies[9].id
+  },
+  
+  # company 10
+  {
+    name: "CVC",
+    company_id: companies[10].id
+  },
+  
+  # company 11
+  {
+    name: "SNM",
+    company_id: companies[11].id
+  },
+  
+  # company 12
+  {
+    name: "PLBT",
+    company_id: companies[12].id
+  },
+  # company 13
+  {
+    name: "OMG",
+    company_id: companies[13].id
   }
 ])
 
