@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171016122302) do
+ActiveRecord::Schema.define(version: 20171016141635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,8 +42,9 @@ ActiveRecord::Schema.define(version: 20171016122302) do
     t.boolean  "published",                              default: false
     t.datetime "created_at",                                             null: false
     t.datetime "updated_at",                                             null: false
-    t.string   "slug"
     t.string   "instagram"
+    t.string   "slug"
+    t.index ["slug"], name: "index_companies_on_slug", unique: true, using: :btree
   end
 
   create_table "company_exchanges", force: :cascade do |t|
@@ -68,6 +69,7 @@ ActiveRecord::Schema.define(version: 20171016122302) do
     t.integer  "exchange_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.boolean  "profile"
     t.index ["currency_id"], name: "index_currency_exchanges_on_currency_id", using: :btree
     t.index ["exchange_id"], name: "index_currency_exchanges_on_exchange_id", using: :btree
   end
