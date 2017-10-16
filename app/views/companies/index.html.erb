@@ -33,7 +33,7 @@
 						<% end %>
 						
 					</div>
-					<%= will_paginate @companies, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center pt-3 text-center', :previous_label => 'Previous', :next_label => 'Next' %>	
+					<%= paginate(@companies, theme: 'twitter-bootstrap-4') %>
 				</div>
 				<div class="col-md-3">
 				

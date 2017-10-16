@@ -4,7 +4,13 @@ Rails.application.routes.draw do
   get 'pages/index'
 
   resources :exchanges
-  resources :companies
+  
+  concern :paginatable do
+    get '(page/:page)', action: :index, on: :collection, as: ''
+  end
+
+  resources :companies, concerns: :paginatable
+  
   root 'pages#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
