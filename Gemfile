@@ -58,4 +58,5 @@ gem 'google-analytics-rails', '1.1.1'
 gem 'friendly_id', '~> 5.1.0'
 gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
+gem 'newrelic_rpm'
 
