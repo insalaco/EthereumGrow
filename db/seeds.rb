@@ -486,6 +486,30 @@ currencies = Currency.create!(
     {
       name: "CVCETH",
       company_id: companies[10].id
+    },
+    
+    # currency 14
+    {
+      name: "PAYETH",
+      company_id: companies[4].id
+    },
+    
+    # currency 15
+    {
+      name: "SNTETH",
+      company_id: companies[7].id
+    },
+    
+    # currency 16
+    {
+      name: "BATETH",
+      company_id: companies[9].id
+    },
+    
+    # currency 17
+    {
+      name: "HMQETH",
+      company_id: companies[1].id
     }
   ]
 )
@@ -549,7 +573,8 @@ currency_exchanges = CurrencyExchange.create!(
     },
     {
       currency_id: currencies[6].id,
-      exchange_id: exchanges[0].id
+      exchange_id: exchanges[1].id,
+      profile:     true 
     },
     {
       currency_id: currencies[7].id,
@@ -573,7 +598,8 @@ currency_exchanges = CurrencyExchange.create!(
     },
     {
       currency_id: currencies[10].id,
-      exchange_id: exchanges[1].id
+      exchange_id: exchanges[1].id,
+      profile:     true
     },
     {
       currency_id: currencies[11].id,
@@ -588,6 +614,31 @@ currency_exchanges = CurrencyExchange.create!(
       currency_id: currencies[13].id,
       exchange_id: exchanges[1].id,
       profile:     true 
+    },
+    {
+      currency_id: currencies[4].id,
+      exchange_id: exchanges[1].id,
+      profile:     true 
+    },
+    {
+      currency_id: currencies[14].id,
+      exchange_id: exchanges[1].id,
+      profile:     true 
+    },
+    {
+      currency_id: currencies[15].id,
+      exchange_id: exchanges[1].id,
+      profile:     true 
+    },
+    {
+      currency_id: currencies[16].id,
+      exchange_id: exchanges[1].id,
+      profile:     true 
+    },
+    {
+      currency_id: currencies[17].id,
+      exchange_id: exchanges[1].id,
+      profile:     true 
     }
 
     
@@ -595,12 +646,20 @@ currency_exchanges = CurrencyExchange.create!(
 )
 
 company_exchanges = CompanyExchange.create!(
-  [
+  [ 
+    #company 1
+    {
+      company_id: companies[1].id,
+      exchange_id: exchanges[1].id,
+    },
+    
     #company 2
     {
       company_id: companies[2].id,
       exchange_id: exchanges[0].id,
     },
+    
+    #company 2
     {
       company_id: companies[2].id,
       exchange_id: exchanges[1].id,
@@ -611,9 +670,17 @@ company_exchanges = CompanyExchange.create!(
       company_id: companies[3].id,
       exchange_id: exchanges[2].id,
     },
+    
+    #company 3
     {
       company_id: companies[3].id,
       exchange_id: exchanges[2].id,
+    },
+    
+    #company 4
+    {
+      company_id: companies[4].id,
+      exchange_id: exchanges[1].id,
     },
     
     #company 5
@@ -621,6 +688,8 @@ company_exchanges = CompanyExchange.create!(
       company_id: companies[5].id,
       exchange_id: exchanges[0].id,
     },
+    
+    #company 5
     {
       company_id: companies[5].id,
       exchange_id: exchanges[1].id,
@@ -629,6 +698,18 @@ company_exchanges = CompanyExchange.create!(
     #company 6
     {
       company_id: companies[6].id,
+      exchange_id: exchanges[1].id,
+    },
+    
+    #company 7
+    {
+      company_id: companies[7].id,
+      exchange_id: exchanges[1].id,
+    },
+    
+    #company 9
+    {
+      company_id: companies[9].id,
       exchange_id: exchanges[1].id,
     },
     
@@ -643,5 +724,7 @@ company_exchanges = CompanyExchange.create!(
       company_id: companies[10].id,
       exchange_id: exchanges[1].id,
     }
+    
+
   ]
 )
