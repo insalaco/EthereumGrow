@@ -312,6 +312,45 @@ companies = Company.create!(
       ico_close_date: "2017-06-23",
       ico_size: "21",
       published: true     
+    },
+    
+    #company 14
+    {
+      name: "Waves",
+      avatar: "waves-avatar.jpg",
+      image: "waves.jpg",
+      description: "Crypto-platform for asset/custom token issuance, transfer and trading on blockchain.",
+      video: "https://www.youtube.com/embed/0Np-58p3OZQ",             
+      website: "https://wavesplatform.com",
+      twitter: "https://twitter.com/wavesplatform",
+      facebook: "https://www.facebook.com/wavesplatform",
+      slack: "http://wavesplatform.herokuapp.com",
+      medium: "https://blog.wavesplatform.com",
+      white_paper: "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/whitepaper_v0.pdf",
+      ico_open_date: "2016-04-12",
+      ico_close_date: "2016-05-31",
+      ico_size: "16",
+      published: true     
+    },
+    
+    #company 14
+    {
+      name: "Gnosis",
+      avatar: "gnosis-avatar.jpg",
+      image: "gnosis.jpg",
+      description: "Gnosis builds revolutionary market-driven forecasting technology to let you shape the future.",
+      video: "https://www.youtube.com/embed/4-94-JDLdiA",             
+      website: "https://gnosis.pm",
+      twitter: "https://twitter.com/gnosisPM",
+      facebook: "https://www.facebook.com/Gnosis.pm/",
+      slack: "https://slack.gnosis.pm",
+      medium: "https://blog.gnosis.pm",
+      white_paper: "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/whitepaper_v0.pdf",
+      reddit: "https://www.reddit.com/r/gnosisPM/",
+      ico_open_date: "2017-04-24",
+      ico_close_date: "2017-04-24",
+      ico_size: "12.25",
+      published: true     
     }
   ]
 )
@@ -395,11 +434,25 @@ tokens = Token.create!(
     name: "PLBT",
     company_id: companies[12].id
   },
+  
   # company 13
   {
     name: "OMG",
     company_id: companies[13].id
+  },
+  
+  # company 14
+  {
+    name: "WAVES",
+    company_id: companies[14].id
+  },
+  
+  # company 15
+  {
+    name: "GNO",
+    company_id: companies[15].id
   }
+
 ])
 
 currencies = Currency.create!(
@@ -510,6 +563,18 @@ currencies = Currency.create!(
     {
       name: "HMQETH",
       company_id: companies[1].id
+    },
+    
+    # currency 18
+    {
+      name: "WAVESETH",
+      company_id: companies[14].id
+    },
+    
+    # currency 19
+    {
+      name: "GNOETH",
+      company_id: companies[15].id
     }
   ]
 )
@@ -548,6 +613,11 @@ exchanges = Exchange.create!(
     # exchange 5
     {
       name: "Bitfinex"
+    },
+    
+    # exchange 6
+    {
+      name: "Kraken"
     }
   ]
 )
@@ -639,6 +709,16 @@ currency_exchanges = CurrencyExchange.create!(
       currency_id: currencies[17].id,
       exchange_id: exchanges[1].id,
       profile:     true 
+    },
+    {
+      currency_id: currencies[18].id,
+      exchange_id: exchanges[1].id,
+      profile:     true 
+    },
+    {
+      currency_id: currencies[19].id,
+      exchange_id: exchanges[6].id,
+      profile:     true 
     }
 
     
@@ -713,16 +793,28 @@ company_exchanges = CompanyExchange.create!(
       exchange_id: exchanges[1].id,
     },
     
+    #company 10
+    {
+      company_id: companies[10].id,
+      exchange_id: exchanges[1].id,
+    },
+    
     #company 13
     {
       company_id: companies[13].id,
       exchange_id: exchanges[5].id,
     },
     
-    #company 10
+    #company 14
     {
-      company_id: companies[10].id,
+      company_id: companies[14].id,
       exchange_id: exchanges[1].id,
+    },
+    
+    #company 15
+    {
+      company_id: companies[15].id,
+      exchange_id: exchanges[6].id,
     }
     
 
