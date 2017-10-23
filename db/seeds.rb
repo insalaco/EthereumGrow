@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 companies = Company.create!(
   [
     #company 0
@@ -333,7 +325,7 @@ companies = Company.create!(
       published: true     
     },
     
-    #company 14
+    #company 15
     {
       name: "Gnosis",
       avatar: "gnosis-avatar.jpg",
@@ -351,109 +343,192 @@ companies = Company.create!(
       ico_close_date: "2017-04-24",
       ico_size: "12.25",
       published: true     
+    },
+    
+    #company 16
+    {
+      name: "district0x",
+      avatar: "district0x-avatar.jpg",
+      image: "district0x.jpg",
+      description: "A network of decentralized markets and communities. Create, operate, and govern. Powered by Ethereum, Aragon, and IPFS.",
+      video: "https://www.youtube.com/embed/9imhD3EJGWE",             
+      website: "https://district0x.io",
+      contact: "hello@district0x.io",
+      twitter: "https://twitter.com/district0x?lang=en",
+      medium: "https://blog.district0x.io",
+      github: "https://github.com/district0x",
+      white_paper: "https://district0x.io/docs/district0x-whitepaper.pdf",
+      reddit: "https://www.reddit.com/r/district0x/",
+      ico_open_date: "2017-07-18",
+      ico_close_date: "2017-08-01",
+      ico_size: "13.19",
+      published: true     
+    },
+    
+    #company 17
+    {
+      name: "ChronoBank",
+      avatar: "chronobank-avatar.jpg",
+      image: "chronobank.jpg",
+      description: "ChronoBank.io is a blockchain project aimed at disrupting the HR/recruitment/finance industry, similar to the way Uber revolutionized the taxi business.",
+      video: "https://www.youtube.com/embed/Xp3u6G1VIjY",             
+      website: "https://chronobank.io/",
+      location: "Sydney, New South Wales",
+      contact: "info@chronobank.io",
+      twitter: "https://twitter.com/ChronobankNews",
+      facebook: "https://www.facebook.com/ChronoBank.io",
+      slack: "https://chronobank.herokuapp.com",
+      github: "https://github.com/ChronoBank",
+      instagram: "https://www.instagram.com/chronobank.io/",
+      white_paper: "https://chronobank.io/files/whitepaper.pdf",
+      reddit: "https://www.reddit.com/r/ChronoBank/",
+      ico_open_date: "2017-01-08",
+      ico_close_date: "2017-08-01",
+      ico_size: "5.4",
+      published: true     
+    },
+    
+    #company 18
+    {
+      name: "Lunyr",
+      avatar: "lunyr-avatar.jpg",
+      image: "lunyr.jpg",
+      description: "Decentralized World Knowledge Base",
+      location: "United States",
+      video: "https://www.youtube.com/embed/ZMprPsPx2-c",             
+      website: "https://lunyr.com",
+      twitter: "https://twitter.com/LunyrInc",
+      facebook: "https://www.facebook.com/lunyrinc/",
+      medium: "https://medium.com/lunyr",
+      reddit: "https://www.reddit.com/r/Lunyr/",
+      github: "https://github.com/lunyr",
+      white_paper: "https://bravenewcoin.com/assets/Whitepapers/Lunyr-White-Paper-ENG.pdf",
+      ico_open_date: "2017-03-29",
+      ico_close_date: "2017-04-28",
+      ico_size: "5.32",
+      published: false     
     }
   ]
 )
 
 tokens = Token.create!(
-[
-  # company 0
-  {
-    name: "DRP",
-    company_id: companies[0].id
-  },
+  [
+    # company 0
+    {
+      name: "DRP",
+      company_id: companies[0].id
+    },
   
-  # company 1
-  {
-    name: "HMQ",
-    company_id: companies[1].id
-  },
+    # company 1
+    {
+      name: "HMQ",
+      company_id: companies[1].id
+    },
   
-  # company 2
-  {
-    name: "REP",
-    company_id: companies[2].id
-  },
+    # company 2
+    {
+      name: "REP",
+      company_id: companies[2].id
+    },
   
-  # company 3
-  {
-    name: "XTZ",
-    company_id: companies[3].id
-  },
+    # company 3
+    {
+      name: "XTZ",
+      company_id: companies[3].id
+    },
   
-  # company 4
-  {
-    name: "PAY",
-    company_id: companies[4].id
-  },
+    # company 4
+    {
+      name: "PAY",
+      company_id: companies[4].id
+    },
   
-  # company 5
-  {
-    name: "STORJ",
-    company_id: companies[5].id
-  },
+    # company 5
+    {
+      name: "STORJ",
+      company_id: companies[5].id
+    },
   
-  # company 6
-  {
-    name: "BNT",
-    company_id: companies[6].id
-  },
+    # company 6
+    {
+      name: "BNT",
+      company_id: companies[6].id
+    },
   
-  # company 7
-  {
-    name: "SNT",
-    company_id: companies[7].id
-  },
+    # company 7
+    {
+      name: "SNT",
+      company_id: companies[7].id
+    },
   
-  # company 8
-  {
-    name: "MOBILEGO",
-    company_id: companies[8].id
-  },
+    # company 8
+    {
+      name: "MOBILEGO",
+      company_id: companies[8].id
+    },
   
-  # company 9
-  {
-    name: "BAT",
-    company_id: companies[9].id
-  },
+    # company 9
+    {
+      name: "BAT",
+      company_id: companies[9].id
+    },
   
-  # company 10
-  {
-    name: "CVC",
-    company_id: companies[10].id
-  },
+    # company 10
+    {
+      name: "CVC",
+      company_id: companies[10].id
+    },
   
-  # company 11
-  {
-    name: "SNM",
-    company_id: companies[11].id
-  },
+    # company 11
+    {
+      name: "SNM",
+      company_id: companies[11].id
+    },
   
-  # company 12
-  {
-    name: "PLBT",
-    company_id: companies[12].id
-  },
+    # company 12
+    {
+      name: "PLBT",
+      company_id: companies[12].id
+    },
   
-  # company 13
-  {
-    name: "OMG",
-    company_id: companies[13].id
-  },
+    # company 13
+    {
+      name: "OMG",
+      company_id: companies[13].id
+    },
   
-  # company 14
-  {
-    name: "WAVES",
-    company_id: companies[14].id
-  },
+    # company 14
+    {
+      name: "WAVES",
+      company_id: companies[14].id
+    },
   
-  # company 15
-  {
-    name: "GNO",
-    company_id: companies[15].id
-  }
+    # company 15
+    {
+      name: "GNO",
+      company_id: companies[15].id
+    },
+  
+    # company 16
+    {
+      name: "DNT",
+      company_id: companies[16].id
+    },
+  
+    # company 17
+    {
+      name: "TIME",
+      company_id: companies[17].id
+    },
+  
+    # company 18
+    {
+      name: "LUN",
+      company_id: companies[18].id
+    }
 
-])
+  ]
+)
 
 currencies = Currency.create!(
   [
@@ -575,6 +650,24 @@ currencies = Currency.create!(
     {
       name: "GNOETH",
       company_id: companies[15].id
+    },
+    
+    # currency 20
+    {
+      name: "DNTETH",
+      company_id: companies[16].id
+    },
+    
+    # currency 21
+    {
+      name: "TIMEETH",
+      company_id: companies[17].id
+    },
+    
+    # currency 22
+    {
+      name: "LUNETH",
+      company_id: companies[18].id
     }
   ]
 )
@@ -635,8 +728,7 @@ currency_exchanges = CurrencyExchange.create!(
     {
       currency_id: currencies[2].id,
       exchange_id: exchanges[1].id
-    },
-    
+    },    
     {
       currency_id: currencies[2].id,
       exchange_id: exchanges[1].id
@@ -644,7 +736,6 @@ currency_exchanges = CurrencyExchange.create!(
     {
       currency_id: currencies[6].id,
       exchange_id: exchanges[1].id,
-      profile:     true 
     },
     {
       currency_id: currencies[7].id,
@@ -719,6 +810,21 @@ currency_exchanges = CurrencyExchange.create!(
       currency_id: currencies[19].id,
       exchange_id: exchanges[6].id,
       profile:     true 
+    },    
+    {
+      currency_id: currencies[20].id,
+      exchange_id: exchanges[1].id,
+      profile:     true 
+    },
+    {
+      currency_id: currencies[21].id,
+      exchange_id: exchanges[1].id,
+      profile:     true 
+    },
+    {
+      currency_id: currencies[22].id,
+      exchange_id: exchanges[1].id,
+      profile:     true 
     }
 
     
@@ -726,7 +832,7 @@ currency_exchanges = CurrencyExchange.create!(
 )
 
 company_exchanges = CompanyExchange.create!(
-  [ 
+  [
     #company 1
     {
       company_id: companies[1].id,
@@ -815,6 +921,24 @@ company_exchanges = CompanyExchange.create!(
     {
       company_id: companies[15].id,
       exchange_id: exchanges[6].id,
+    },
+    
+    #company 16
+    {
+      company_id: companies[16].id,
+      exchange_id: exchanges[1].id,
+    },
+    
+    #company 17
+    {
+      company_id: companies[17].id,
+      exchange_id: exchanges[1].id,
+    },
+    
+    #company 18
+    {
+      company_id: companies[18].id,
+      exchange_id: exchanges[1].id,
     }
     
 
