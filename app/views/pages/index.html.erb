@@ -1,5 +1,5 @@
 <%= provide(:title, "Home") %>
-<div class="page-header" data-parallax="true" style="background-image: url(http://assets.ethereumgrow.com/home.jpg);">
+<div class="page-header" data-parallax="true" style="background-image: url(https://drgy3zruql9d7.cloudfront.net/home.jpg);">
 	<div class="filter"></div>
 		<div class="container">
 	    <div class="motto text-center">
@@ -18,7 +18,7 @@
 					<div class="col-md-4">
 						<div class="card card-profile card-plain">
 							<div class="card-avatar">
-								<img src="http://assets.ethereumgrow.com/ethereum.jpg" alt="Ethereum logo">
+								<img src="https://drgy3zruql9d7.cloudfront.net/ethereum.jpg" alt="Ethereum logo">
 							</div>
 							<div class="card-block">
 								<div class="author">
@@ -34,7 +34,7 @@
 					<div class="col-md-4">
 						<div class="card card-profile card-plain">
               <div class="card-avatar">
-								<img src="http://assets.ethereumgrow.com/ethereum-coin.jpg" alt="Ethereum coin">
+								<img src="/assets/ethereum-coin.jpg" alt="Ethereum coin">
               </div>
 							<div class="card-block">                  
                 <div class="author">
@@ -50,7 +50,7 @@
 					<div class="col-md-4">
 						<div class="card card-profile card-plain">
 							<div class="card-avatar">
-								<img src="http://assets.ethereumgrow.com/ethereum-token.jpg" alt="Ethereum smart contract">
+								<img src="/assets/ethereum-token.jpg" alt="Ethereum smart contract">
 							</div>
 							<div class="card-block">
                        
@@ -82,7 +82,7 @@
 					<div class="info">					
 						<div class="card-deck">
 						  <div class="card">
-								<%= image_tag "http://assets.ethereumgrow.com/#{company.avatar}", class: "card-img-top img-responsive", style: "width: 100%", alt: "#{company.name} avatar" if company.avatar? %>
+								<%= image_tag "/assets/#{company.avatar}", class: "card-img-top img-responsive", style: "width: 100%", alt: "#{company.name} avatar" if company.avatar? %>
 						    <div class="card-block">
 						      <h4 class="card-title"><%= company.name %> (<%= company.token.name %>) </h4>
 						      <p class="card-text"><%= company.description %></p>
