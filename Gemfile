@@ -59,4 +59,5 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
 gem 'newrelic_rpm'
+gem "font-awesome-rails"
 
