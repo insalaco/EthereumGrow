@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get '(page/:page)', action: :index, on: :collection, as: ''
   end
 
-  resources :companies, concerns: :paginatable
+  resources :companies, concerns: :paginatable, :path => 'dapps'
   
   root 'pages#index'
 

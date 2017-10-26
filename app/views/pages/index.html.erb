@@ -4,7 +4,7 @@
 		<div class="container">
 	    <div class="motto text-center">
 				<h1>EthereumGrow</h1>
-				<h3>Companies creating value in Ethereum</h3>
+				<h2>Companies creating value in Ethereum</h2>
 	    </div>
 		</div>
 	</div>
@@ -13,7 +13,7 @@
 
 			<div class="section section-dark text-center">
         <div class="container">
-        <h2 class="title">What is Ethereum?</h2>
+        <h3 class="title h2">What is Ethereum?</h3>
 				<div class="row">
 					<div class="col-md-4">
 						<div class="card card-profile card-plain">
@@ -69,14 +69,11 @@
 		</div>
 		
 		<div class="container">
-			<div class="row">
-				<div class="col-md-8 offset-md-2">
-					<h2 class="title">What's an ICO?</h2>
-					<h5 class="description">With the advent and success of “cryptocurrencies” and the “blockchain”, in an effort to quickly generate capital for a novel idea without the time and complexities of standard funding, some companies are now issuing their own cryptocurrency. Specifically, in an “Initial Coin Offering (ICO)”, a percentage of the newly issued cryptocurrency is sold to investors in exchange for legal tender or other cryptocurrencies such as Ethereum.</h5>
-				</div>
-			</div>
-			<br/><br/>
-			<div class="row">
+
+			<h3 class="title text-center pt-4 h2">Ethereum decentralized applications (dApps) </h3>
+			<p class="lead">Decentralized applications (dApps) are applications that run on a P2P network of computers rather than a single computer. dApps, have existed since the advent of P2P networks. They are a type of software program designed to exist on the Internet in a way that is not controlled by any single entity.</p>
+			<div class="row pt-5">
+				
 				<% @companies.each do |company| %>
 				<div class="col-md-4">
 					<div class="info">					
@@ -96,7 +93,7 @@
   			</div>
 				<% end %>			
 			</div>
-			<%= link_to "View more", companies_path, class: "btn btn-danger btn-round text-center my-4" %>
+			<%= link_to "View more dApps", companies_path, class: "btn btn-danger btn-round text-center my-4" %>
 		</div>
 	</div>
 </div>
