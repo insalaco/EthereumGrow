@@ -1,5 +1,6 @@
 class CompaniesController < ApplicationController
-  before_action :set_company, only: [:show]# , :edit, :update, :destroy]
+  before_action :set_company, only: [:show , :edit, :update, :destroy]
+  rescue_from ActiveRecord::RecordNotFound, with: :invalid_company
 
   # GET /companies
   # GET /companies.json
@@ -72,5 +73,11 @@ class CompaniesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def company_params
       params.require(:company).permit(:name, :location, :website, :twitter, :facebook, :linkedin, :slack, :telegram, :github, :trading_view)
+    end
+    
+    def invalid_company
+      logger.error "Attempted to access a dApp that doesn't exist"
+      redirect_to companies_path 
+      flash[:danger] = "The dApp you attempted to view doesn't exist on this site."
     end
 end

@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
-  resources :tokens
-  resources :currencies
-  get 'pages/index'
-
-  resources :exchanges
+  resources :pages, only: :index
   
   concern :paginatable do
     get '(page/:page)', action: :index, on: :collection, as: ''
   end
 
-  resources :companies, concerns: :paginatable, :path => 'dapps'
+  resources :companies, concerns: :paginatable, path: 'dapps', only: [:index, :show]
   
   root 'pages#index'
 
