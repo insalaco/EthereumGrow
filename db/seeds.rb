@@ -406,6 +406,22 @@ companies = Company.create!(
       ico_open_date: "2017-03-29",
       ico_close_date: "2017-04-28",
       ico_size: "5.32",
+      published: true     
+    },
+    
+    #company 19
+    {
+      name: "Filecoin",
+      avatar: "filecoin-avatar.jpg",
+      image: "filecoin.jpg",
+      description: "Filecoin is a data storage network backed by an application token.",
+      video: "https://www.youtube.com/embed/EClPAFPeXIQ",             
+      website: "https://filecoin.io",
+      twitter: "https://twitter.com/minefilecoin",
+      white_paper: "https://filecoin.io/filecoin.pdf",
+      ico_size: "252",
+      ico_open_date: "2017-08-10",
+      ico_close_date: "2017-08-10",
       published: false     
     }
   ]
@@ -525,6 +541,12 @@ tokens = Token.create!(
     {
       name: "LUN",
       company_id: companies[18].id
+    },
+    
+    # company 19
+    {
+      name: "FIL",
+      company_id: companies[19].id
     }
 
   ]
