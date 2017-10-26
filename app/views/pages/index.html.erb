@@ -4,7 +4,7 @@
 		<div class="container">
 	    <div class="motto text-center">
 				<h1>EthereumGrow</h1>
-				<h2>Companies creating value in Ethereum</h2>
+				<h2>Decentralized applications creating value in Ethereum</h2>
 	    </div>
 		</div>
 	</div>
@@ -25,7 +25,7 @@
 									<h4 class="card-title">Ethereum Platform</h4>
 								</div>
 								<p class="card-description text-center">
-									Ethereum is a decentralized platform that runs smart contracts: applications that run exactly as programmed without any possibility of downtime, censorship, fraud or third party interference.
+									Ethereum is a decentralized platform that runs smart contracts &mdash; applications that run exactly as programmed without any possibility of downtime, censorship, fraud or third party interference.
 								</p>
 							</div>
 						</div>
@@ -59,7 +59,7 @@
                 </div>
                     
                 <p class="card-description text-center">
-                Anyone can take advantage of Ethereum to build their DAPPS (decentralized applications) through smart contracts. This is a very important distinction because this very thing shows you the true scope of what is possible in Ethereum.
+                Anyone can take advantage of Ethereum to build their dApps (decentralized applications) through smart contracts. This is a very important distinction because this very thing shows you the true scope of what is possible in Ethereum.
                 </p>
 							</div>
 						</div>
@@ -70,10 +70,9 @@
 		
 		<div class="container">
 
-			<h3 class="title text-center pt-4 h2">Ethereum decentralized applications (dApps) </h3>
-			<p class="lead">Decentralized applications (dApps) are applications that run on a P2P network of computers rather than a single computer. dApps, have existed since the advent of P2P networks. They are a type of software program designed to exist on the Internet in a way that is not controlled by any single entity.</p>
-			<div class="row pt-5">
-				
+			<h3 class="text-center py-4 h2">Ethereum Network </h3>
+			<p>The intention of Ethereum is to create an alternative protocol for building decentralized applications with emphasis on development time, security, and scaling. Examples of successful Ethereum-based dApps that have achieved millions of dollars in market cap include Golem, Augur and Filecoin.</p>
+			<div class="row pt-4">				
 				<% @companies.each do |company| %>
 				<div class="col-md-4">
 					<div class="info">					
@@ -81,7 +80,7 @@
 						  <div class="card">
 								<%= image_tag "https://drgy3zruql9d7.cloudfront.net/#{company.avatar}", class: "card-img-top img-responsive", style: "width: 100%", alt: "#{company.name} avatar" if company.avatar? %>
 						    <div class="card-block">
-						      <h4 class="card-title"><%= company.name %> (<%= company.token.name %>) </h4>
+						      <h3 class="card-title"><%= company.name %> (<%= company.token.name %>) </h3>
 						      <p class="card-text"><%= company.description %></p>
 									<hr>
 						      <p class="card-text"><small class="text-muted">ICO size: $<%= number_to_human(company.ico_size, strip_insignificant_zeros: true, precision: 5) %> MM </small></p>
