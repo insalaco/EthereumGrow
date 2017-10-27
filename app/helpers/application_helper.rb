@@ -9,4 +9,14 @@ module ApplicationHelper
       page_title + " - " + base_title
     end
   end
+  
+  def full_description(page_description = '')
+    base_description = "Decentralized applications creating value in Ethereum"
+    if page_description.empty?
+      base_description
+    else
+      page_description
+    end
+  end
+  
 end
