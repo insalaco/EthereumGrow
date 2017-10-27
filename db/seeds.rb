@@ -422,7 +422,28 @@ companies = Company.create!(
       ico_size: "252",
       ico_open_date: "2017-08-10",
       ico_close_date: "2017-08-10",
-      published: false     
+      published: true     
+    },
+    
+    #company 20
+    {
+      name: "Golem",
+      avatar: "golem-avatar.jpg",
+      image: "golem.jpg",
+      description: "Airbnb for computers. Rent your CPU/GPUs, get paid in cryptocurrency. A #truecloud compute platform.",
+      contact: "contact@golem.network",
+      location: "Warsaw, Poland",
+      video: "https://www.youtube.com/embed/_Q888b0VRx8",             
+      website: "https://golem.network",
+      twitter: "https://twitter.com/golemproject",
+      facebook: "https://www.facebook.com/golemproject/",
+      reddit: "https://www.facebook.com/golemproject/",
+      medium: "https://blog.golemproject.net/",
+      white_paper: "https://filecoin.io/filecoin.pdf",
+      ico_size: "8.6",
+      ico_open_date: "2016-11-11",
+      ico_close_date: "2016-11-11 ",
+      published: true     
     }
   ]
 )
@@ -547,6 +568,12 @@ tokens = Token.create!(
     {
       name: "FIL",
       company_id: companies[19].id
+    },
+    
+    # company 20
+    {
+      name: "GNT",
+      company_id: companies[20].id
     }
 
   ]
@@ -690,6 +717,18 @@ currencies = Currency.create!(
     {
       name: "LUNETH",
       company_id: companies[18].id
+    },
+    
+    # currency 23
+    {
+      name: "REPETH",
+      company_id: companies[2].id
+    },
+    
+    # currency 24
+    {
+      name: "GNTETH",
+      company_id: companies[20].id
     }
   ]
 )
@@ -847,6 +886,16 @@ currency_exchanges = CurrencyExchange.create!(
       currency_id: currencies[22].id,
       exchange_id: exchanges[1].id,
       profile:     true 
+    },
+    {
+      currency_id: currencies[23].id,
+      exchange_id: exchanges[1].id,
+      profile:     true 
+    },
+    {
+      currency_id: currencies[24].id,
+      exchange_id: exchanges[1].id,
+      profile:     true 
     }
 
     
@@ -961,8 +1010,19 @@ company_exchanges = CompanyExchange.create!(
     {
       company_id: companies[18].id,
       exchange_id: exchanges[1].id,
+    },
+    
+    #company 19
+    {
+      company_id: companies[19].id,
+      exchange_id: exchanges[1].id,
+    },
+   
+    #company 20
+    {
+      company_id: companies[20].id,
+      exchange_id: exchanges[1].id,
     }
     
-
   ]
 )
