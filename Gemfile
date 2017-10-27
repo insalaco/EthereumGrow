@@ -60,4 +60,5 @@ gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
 gem 'newrelic_rpm'
 gem "font-awesome-rails"
+gem 'sitemap_generator'
 
