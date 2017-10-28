@@ -1,4 +1,4 @@
-<%= provide(:title, "#{@company.name} - #{@company.meta_title}") %>
+<%= provide(:title, "#{@company.name}") %>
 <%= provide(:description, "#{truncate(@company.meta_description, length: 140, separator: '...')}") %>
 <div class="wrapper">
 	<div class="page-header page-header-xs" data-parallax="true" style="background-image: url(http://drgy3zruql9d7.cloudfront.net/<%= @company.image %>);">
