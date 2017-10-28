@@ -3,6 +3,8 @@ companies = Company.create!(
     #company 0
     {
       name: "DCORP",
+      meta_title: "Democratizing Venture Capitalism",
+      meta_description: "DCORP is a derivatives exchange powered by Ethereum.",
       avatar: "dcorp-avatar.jpg",
       image: "dcorp.jpg",
       description: "We are a decentralized VC firm - bringing you the world's first derivatives exchange on the blockchain.",
@@ -23,6 +25,8 @@ companies = Company.create!(
     #company 1    
     {
       name: "Humaniq",
+      meta_title: "Empowering 3.5 Billion People in the World Economy",
+      meta_description: "Humaniq is a simple and secure mobile app, delivering financial inclusion solutions to the 2.5 billion unbanked / 1 billion underbanked globally.",
       description: "Fintech startup using blockchain & biometrics to connect 2b unbanked people, mainly without ID, to the global economy.",
       video: "https://www.youtube.com/embed/prEPErb82Mg",
       avatar: "humaniq-avatar.jpg",
@@ -48,6 +52,8 @@ companies = Company.create!(
     #company 2    
     {
       name: "Angur",
+      meta_title: "The Future of Forecasting",
+      meta_description: "Augur combines the magic of prediction markets with the power of a decentralized network.",
       avatar: "angur-avatar.jpg",
       image: "angur.jpg",
       description: "Angur is an open-source, decentralized, peer-to-peer prediction market platform built on Ethereum.",
@@ -69,6 +75,8 @@ companies = Company.create!(
     #company 3
     {
       name: "Tezos",
+      meta_title: "A New Digital Commonwealth",
+      meta_description: "Tezos is a new decentralized blockchain that governs itself by establishing a true digital commonwealth.",
       avatar: "tezos-avatar.jpg",
       image: "tezos.jpg",
       description: "Self-amending cryptographic ledger. It achieves consensus not just about the state of a ledger, but about the state of its own protocol.",
@@ -88,6 +96,8 @@ companies = Company.create!(
     #company 4
     {
       name: "TenX",
+      meta_title: "Convert and Spend your Virtual Currencies",
+      meta_description: "At TenX we work on making any blockchain asset spendable instantly.",
       avatar: "tenx-avatar.jpg",
       image: "tenx.jpg",
       description: "We make cryptocurrencies spendable anytime anywhere with the TenX wallet app and debit card system.",
@@ -95,7 +105,6 @@ companies = Company.create!(
       asset: "PAY",
       location: "Singapore",              
       website: "https://www.tenx.tech",
-      twitter: "https://twitter.com/MobileGoToken",
       facebook: "https://www.facebook.com/tenxwallet/",
       linkedin: "https://www.linkedin.com/company/15263799/",
       youtube: "https://www.youtube.com/channel/UCrh49JX-9UQJbee6e4EGhog",
@@ -110,6 +119,8 @@ companies = Company.create!(
     #company 5
     {
       name: "Storj",
+      meta_title: "The Future of Cloud Storage",
+      meta_description: "Blockchain-based, end-to-end encrypted, distributed object storage, where only you have access to your data.",
       avatar: "storj-avatar.jpg",
       image: "storj.jpg",
       description: "Storj is an open-source distributed cloud storage platform based on blockchain technology where anyone can sell their extra hard drive space.",
@@ -132,9 +143,11 @@ companies = Company.create!(
       published: true    
     },
     
-    #company 6
+    #company 6 
     {
       name: "Bancor",
+      meta_title: "A Protocol for the Creation of Smart Tokens",
+      meta_description: "Decentralized networks for smart contract based tokens.",
       avatar: "bancor-avatar.jpg",
       image: "bancor.jpg",
       description: "Bancor is a protocol for the creation of Smart Tokens, a new standard for cryptocurrencies exchangeable directly through their smart contracts.",
@@ -160,6 +173,8 @@ companies = Company.create!(
     #company 7
     {
       name: "Status",
+      meta_title: "A Mobile Ethereum OS",
+      meta_description: "Browse, chat and make payments securely on the decentralized web",
       avatar: "status-avatar.jpg",
       image: "status.jpg",
       description: "Status is an open source mobile DApp browser and messenger built for Ethereum.",
@@ -184,9 +199,11 @@ companies = Company.create!(
     # company 8 
     {
       name: "MobileGo",
+      meta_title: "Crypto-centric Mobile Gaming Platform",
+      meta_description: "The first crypto-centric mobile gaming platform and store for in-game purchases",
       avatar: "mobilego-avatar.jpg",
       image: "mobilego.jpg",
-      description: "The MobileGo project will create a fund to expand marketing and development of the GameCredits Mobile Store.",
+      description: "MobileGo is a new Ethereum ERC 20 token being created to allow for smart contract technology and development within the Gamecredits Mobile Store.",
       video: "https://www.youtube.com/embed/wpkpzs3M__g",
       asset: "MOBILEGO",
       location: "United States",              
@@ -206,9 +223,11 @@ companies = Company.create!(
     #company 9
     {
       name: "Basic Attention Token",
+      meta_title: "Digital Advertising on the Blockchain.",
+      meta_description: "Introducing blockchain-based digital advertising",
       avatar: "basic-attention-token-avatar.jpg",
       image: "basic-attention-token.jpg",
-      description: "Blockchain-based digital advertising.",
+      description: "Basic Attention Token radically improves the efficiency of digital advertising by creating a new token that can be exchanged between publishers, advertisers, and users.",
       video: "https://player.vimeo.com/video/209336437",
       contact: "info@basicattentiontoken.org",
       asset: "BAT",
@@ -226,6 +245,8 @@ companies = Company.create!(
     #company 10
     {
       name: "Civic",
+      meta_title: "Secure Identity Platform",
+      meta_description: "Civic is an ecosystem that is designed to faciliate access to identity verification.",
       avatar: "civic-avatar.jpg",
       image: "civic.jpg",
       description: "Giving businesses and individuals the tools to control and protect identities.",
@@ -246,6 +267,8 @@ companies = Company.create!(
     #company 11
     {
       name: "SONM",
+      meta_title: "Supercomputer Organized by Network Mining",
+      meta_description: "SONM is the universal fog supercomputer powered by the Ethereum blockchain.",
       avatar: "sonm-avatar.jpg",
       image: "sonm.jpg",
       description: "Supercomputer Organized by Network Mining. SONM is a decentralized worldwide fog supercomputer for general purpose computing.",
@@ -270,6 +293,8 @@ companies = Company.create!(
     #company 12
     {
       name: "Polybius",
+      meta_title: "Contemporary Banking with a Progressive Approach",
+      meta_description: "Polybius is a project aimed to create a regulated bank for the digital generation.",
       avatar: "polybius-avatar.jpg",
       image: "polybius.jpg",
       description: "Polybius is a project aimed to create a regulated bank for the digital generation.",
@@ -290,6 +315,8 @@ companies = Company.create!(
     #company 13
     {
       name: "OmiseGo",
+      meta_title: "Unbank the Banked with Ethereum",
+      meta_description: "OmiseGO is a public Ethereum-based financial technology for use in mainstream digital wallets, that enables real-time, peer-to-peer value exchange and payment services agnostically across jurisdictions and organizational silos.",
       avatar: "omisego-avatar.jpg",
       image: "omisego.jpg",
       description: "OmiseGO enables real-time, peer-to-peer value exchange and payment services agnostically across jurisdictions and organizational silos.",
@@ -309,6 +336,8 @@ companies = Company.create!(
     #company 14
     {
       name: "Waves",
+      meta_title: "",
+      meta_description: "",
       avatar: "waves-avatar.jpg",
       image: "waves.jpg",
       description: "Crypto-platform for asset/custom token issuance, transfer and trading on blockchain.",
@@ -321,13 +350,14 @@ companies = Company.create!(
       white_paper: "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/whitepaper_v0.pdf",
       ico_open_date: "2016-04-12",
       ico_close_date: "2016-05-31",
-      ico_size: "16",
-      published: true     
+      ico_size: "16"   
     },
     
     #company 15
     {
       name: "Gnosis",
+      meta_title: "Meet the Future",
+      meta_description: "Gnosis is the easiest way to aggregate relevant information from both human and AI agents into one number.",
       avatar: "gnosis-avatar.jpg",
       image: "gnosis.jpg",
       description: "Gnosis builds revolutionary market-driven forecasting technology to let you shape the future.",
@@ -337,7 +367,7 @@ companies = Company.create!(
       facebook: "https://www.facebook.com/Gnosis.pm/",
       slack: "https://slack.gnosis.pm",
       medium: "https://blog.gnosis.pm",
-      white_paper: "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/whitepaper_v0.pdf",
+      white_paper: "https://gnosis.pm/resources/default/pdf/gnosis_whitepaper.pdf",
       reddit: "https://www.reddit.com/r/gnosisPM/",
       ico_open_date: "2017-04-24",
       ico_close_date: "2017-04-24",
@@ -348,6 +378,8 @@ companies = Company.create!(
     #company 16
     {
       name: "district0x",
+      meta_title: "A Cooperative of Decentralized Marketplaces and Communities.",
+      meta_description: "distric0x is a collective of decentralized marketplaces and communities.",
       avatar: "district0x-avatar.jpg",
       image: "district0x.jpg",
       description: "A network of decentralized markets and communities. Create, operate, and govern. Powered by Ethereum, Aragon, and IPFS.",
@@ -368,6 +400,8 @@ companies = Company.create!(
     #company 17
     {
       name: "ChronoBank",
+      meta_title: "Blockchain Revolution for the Recruitment Industry",
+      meta_description: "ChronoBank.io is an ambitious and wide-ranging blockchain project, aimed at disrupting the HR/recruitment/finance industries.",
       avatar: "chronobank-avatar.jpg",
       image: "chronobank.jpg",
       description: "ChronoBank.io is a blockchain project aimed at disrupting the HR/recruitment/finance industry, similar to the way Uber revolutionized the taxi business.",
@@ -391,6 +425,8 @@ companies = Company.create!(
     #company 18
     {
       name: "Lunyr",
+      meta_title: "The Future of Knowledge Sharing",
+      meta_description: "Earn rewards for contributing and peer-reviewing knowledge.",
       avatar: "lunyr-avatar.jpg",
       image: "lunyr.jpg",
       description: "Decentralized World Knowledge Base",
@@ -412,6 +448,8 @@ companies = Company.create!(
     #company 19
     {
       name: "Filecoin",
+      meta_title: "A Decentralized Storage Network",
+      meta_description: "Filecoin is a decentralized storage network that turns cloud storage into an algorithmic market.",
       avatar: "filecoin-avatar.jpg",
       image: "filecoin.jpg",
       description: "Filecoin is a data storage network backed by an application token.",
@@ -428,9 +466,11 @@ companies = Company.create!(
     #company 20
     {
       name: "Golem",
+      meta_title: "Worldwide Super Computer",
+      meta_description: "Golem is a global, open sourced, decentralized supercomputer that anyone can access.",
       avatar: "golem-avatar.jpg",
       image: "golem.jpg",
-      description: "Airbnb for computers. Rent your CPU/GPUs, get paid in cryptocurrency. A #truecloud compute platform.",
+      description: "Airbnb for computers. Rent your CPU/GPUs, get paid in cryptocurrency.",
       contact: "contact@golem.network",
       location: "Warsaw, Poland",
       video: "https://www.youtube.com/embed/_Q888b0VRx8",             
@@ -536,8 +576,8 @@ tokens = Token.create!(
   
     # company 14
     {
-      name: "WAVES",
-      company_id: companies[14].id
+      name: "",
+      company_id: ""
     },
   
     # company 15
