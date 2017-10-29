@@ -3,7 +3,7 @@ companies = Company.create!(
     #company 0
     {
       name: "DCORP",
-      meta_title: "Democratizing Venture Capitalism",
+      meta_title: "",
       meta_description: "DCORP is a derivatives exchange powered by Ethereum.",
       avatar: "dcorp-avatar.jpg",
       image: "dcorp.jpg",
@@ -25,7 +25,7 @@ companies = Company.create!(
     #company 1    
     {
       name: "Humaniq",
-      meta_title: "Empowering 3.5 Billion People in the World Economy",
+      meta_title: "Humaniq",
       meta_description: "Humaniq is a simple and secure mobile app, delivering financial inclusion solutions to the 2.5 billion unbanked / 1 billion underbanked globally.",
       description: "Fintech startup using blockchain & biometrics to connect 2b unbanked people, mainly without ID, to the global economy.",
       video: "https://www.youtube.com/embed/prEPErb82Mg",
@@ -335,22 +335,24 @@ companies = Company.create!(
     
     #company 14
     {
-      name: "Waves",
-      meta_title: "",
+      name: "Adapt Forward",
+      meta_title: "Adapt Forward",
       meta_description: "",
-      avatar: "waves-avatar.jpg",
-      image: "waves.jpg",
-      description: "Crypto-platform for asset/custom token issuance, transfer and trading on blockchain.",
-      video: "https://www.youtube.com/embed/0Np-58p3OZQ",             
-      website: "https://wavesplatform.com",
-      twitter: "https://twitter.com/wavesplatform",
-      facebook: "https://www.facebook.com/wavesplatform",
-      slack: "http://wavesplatform.herokuapp.com",
-      medium: "https://blog.wavesplatform.com",
-      white_paper: "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/whitepaper_v0.pdf",
-      ico_open_date: "2016-04-12",
-      ico_close_date: "2016-05-31",
-      ico_size: "16"   
+      avatar: "adapt-forward-avatar.jpg",
+      image: "adapt-forward.jpg",
+      description: "",
+      video: "",             
+      website: "",
+      alliance: true,
+      twitter: "",
+      facebook: "",
+      linkedin: "https://www.linkedin.com/company/adapt-forward/",
+      medium: "",
+      white_paper: "",
+      ico_open_date: "",
+      ico_close_date: "",
+      ico_size: "",
+      published: true   
     },
     
     #company 15
@@ -378,7 +380,7 @@ companies = Company.create!(
     #company 16
     {
       name: "district0x",
-      meta_title: "A Cooperative of Decentralized Marketplaces and Communities.",
+      meta_title: "A Cooperative of Decentralized Marketplaces",
       meta_description: "distric0x is a collective of decentralized marketplaces and communities.",
       avatar: "district0x-avatar.jpg",
       image: "district0x.jpg",
@@ -447,20 +449,13 @@ companies = Company.create!(
     
     #company 19
     {
-      name: "Filecoin",
-      meta_title: "A Decentralized Storage Network",
-      meta_description: "Filecoin is a decentralized storage network that turns cloud storage into an algorithmic market.",
-      avatar: "filecoin-avatar.jpg",
-      image: "filecoin.jpg",
-      description: "Filecoin is a data storage network backed by an application token.",
-      video: "https://www.youtube.com/embed/EClPAFPeXIQ",             
-      website: "https://filecoin.io",
-      twitter: "https://twitter.com/minefilecoin",
-      white_paper: "https://filecoin.io/filecoin.pdf",
-      ico_size: "252",
-      ico_open_date: "2017-08-10",
-      ico_close_date: "2017-08-10",
-      published: true     
+      name: "",
+      meta_title: "",
+      meta_description: "",
+      avatar: "",
+      image: "",
+      description: "",
+  
     },
     
     #company 20
