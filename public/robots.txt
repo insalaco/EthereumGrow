@@ -4,4 +4,4 @@
 # User-agent: *
 # Disallow: /
 
-Sitemap: http://ethereumgrow.com/sitemap.xml.gz
+Sitemap: https://ethereumgrow.com/sitemap.xml.gz
