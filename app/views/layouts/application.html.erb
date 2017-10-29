@@ -10,7 +10,7 @@
 		<meta name="msvalidate.01" content="925EA929F930A8D2B99431C9E9903169" />
     <meta name="viewport" content="width=device-width" />		
 		<meta name="description" content="<%= full_description(yield(:description)) %>">
-		
+		<%= canonical_tag -%>
 		<title><%= full_title(yield(:title)) %></title>
 		
 		<%= stylesheet_link_tag 'application', media: 'all' %>

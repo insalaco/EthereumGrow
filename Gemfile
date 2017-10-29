@@ -61,4 +61,4 @@ gem 'bootstrap4-kaminari-views'
 gem 'newrelic_rpm'
 gem "font-awesome-rails"
 gem 'sitemap_generator'
-
+gem 'canonical-rails', github: 'jumph4x/canonical-rails'
