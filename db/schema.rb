@@ -38,10 +38,10 @@ ActiveRecord::Schema.define(version: 20171030143326) do
     t.string   "white_paper"
     t.date     "ico_open_date"
     t.date     "ico_close_date"
-    t.decimal  "ico_size",         precision: 8, scale: 2
-    t.boolean  "published",                                default: false
-    t.datetime "created_at",                                               null: false
-    t.datetime "updated_at",                                               null: false
+    t.decimal  "ico_size",       precision: 8, scale: 2
+    t.boolean  "published",                              default: false
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
     t.string   "instagram"
     t.string   "slug"
     t.string   "meta_title"

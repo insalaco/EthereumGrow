@@ -1,0 +1,20 @@
+<%= provide(:title, "Ethereum DApps") %>
+<div class="main">
+	<div class="section" style="padding-top: 60px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-4">
+					<h1 class="h2">Enterprise Ethereum Alliance List</h1>
+					<hr>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<% @companies.each do |company| %>
+						<p><%= company.name %></p>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
