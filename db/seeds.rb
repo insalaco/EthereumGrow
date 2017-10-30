@@ -90,7 +90,7 @@ companies = Company.create!(
       ico_open_date: "2017-07-01",
       ico_close_date: "2017-07-13",
       ico_size: "232",
-      published: true     
+      published: false     
     },
     
     #company 4
@@ -474,7 +474,7 @@ companies = Company.create!(
       facebook: "https://www.facebook.com/golemproject/",
       reddit: "https://www.facebook.com/golemproject/",
       medium: "https://blog.golemproject.net/",
-      white_paper: "https://filecoin.io/filecoin.pdf",
+      white_paper: "http://golemproject.net/doc/DraftGolemProjectWhitepaper.pdf",
       ico_size: "8.6",
       ico_open_date: "2016-11-11",
       ico_close_date: "2016-11-11 ",

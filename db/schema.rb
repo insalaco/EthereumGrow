@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171028125315) do
+ActiveRecord::Schema.define(version: 20171016141635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,14 +38,12 @@ ActiveRecord::Schema.define(version: 20171028125315) do
     t.string   "white_paper"
     t.date     "ico_open_date"
     t.date     "ico_close_date"
-    t.decimal  "ico_size",         precision: 8, scale: 2
-    t.boolean  "published",                                default: false
-    t.datetime "created_at",                                               null: false
-    t.datetime "updated_at",                                               null: false
+    t.decimal  "ico_size",       precision: 8, scale: 2
+    t.boolean  "published",                              default: false
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
     t.string   "instagram"
     t.string   "slug"
-    t.string   "meta_title"
-    t.string   "meta_description"
     t.index ["slug"], name: "index_companies_on_slug", unique: true, using: :btree
   end
 

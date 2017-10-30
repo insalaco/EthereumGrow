@@ -6,7 +6,7 @@ class CompaniesController < ApplicationController
   # GET /companies.json
   def index
     # @companies = Company.select("companies.*, COUNT(exchanges.id) exchange_count").left_outer_joins(:exchanges).where(published: true).group("companies.id").order(ico_size: "desc")
-    @companies = Company.includes(:token).where(published: true).order("ico_open_date DESC").page(params[:page]).per(10)
+    @companies = Company.includes(:token).where(published: true, dapp: true).order("ico_open_date DESC").page(params[:page]).per(10)
   end
 
   # GET /companies/1
@@ -63,6 +63,10 @@ class CompaniesController < ApplicationController
   #     format.json { head :no_content }
   #   end
   # end
+  
+  def alliance
+    @companies = Company.where(published: true, alliance: true)
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
