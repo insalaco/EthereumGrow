@@ -336,6 +336,7 @@ companies = Company.create!(
     #company 14
     {
       name: "Adapt Forward",
+      alliance: true,
       meta_title: "Adapt Forward",
       meta_description: "",
       avatar: "adapt-forward-avatar.jpg",
@@ -343,7 +344,6 @@ companies = Company.create!(
       description: "",
       video: "",             
       website: "",
-      alliance: true,
       twitter: "",
       facebook: "",
       linkedin: "https://www.linkedin.com/company/adapt-forward/",
@@ -449,8 +449,9 @@ companies = Company.create!(
     
     #company 19
     {
-      name: "",
-      meta_title: "",
+      name: "brainbot",
+      alliance: true,
+      meta_title: "brainbot",
       meta_description: "",
       avatar: "",
       image: "",
