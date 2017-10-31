@@ -80,7 +80,7 @@
 						  <div class="card">
 								<%= image_tag "https://drgy3zruql9d7.cloudfront.net/#{company.avatar}", class: "card-img-top img-responsive", style: "width: 100%", alt: "#{company.name} avatar" if company.avatar? %>
 						    <div class="card-block">
-						      <h3 class="card-title"><%= company.name %> (<%= company.token.name if company.token.present? %>) </h3>
+						      <h3 class="card-title"><%= company.name %> <small>(<%= company.token.name if company.token.present? %>) </small></h3>
 						      <p class="card-text"><%= company.description %></p>
 									<hr>
 						      <p class="card-text"><small class="text-muted">ICO size: $<%= number_to_human(company.ico_size, strip_insignificant_zeros: true, precision: 5) %> MM </small></p>

@@ -446,7 +446,7 @@ companies = Company.create!(
     #company 18
     {
       name: "Lunyr",
-      meta_title: "The Future of Knowledge Sharing",
+      meta_title: "Lunyr - The Future of Knowledge Sharing",
       meta_description: "Earn rewards for contributing and peer-reviewing knowledge.",
       avatar: "lunyr-avatar.jpg",
       image: "lunyr.jpg",
@@ -483,7 +483,7 @@ companies = Company.create!(
     #company 20
     {
       name: "Golem",
-      meta_title: "Worldwide Super Computer",
+      meta_title: "Golem - Worldwide Super Computer",
       meta_description: "Golem is a global, open sourced, decentralized supercomputer that anyone can access.",
       avatar: "golem-avatar.jpg",
       image: "golem.jpg",
@@ -502,6 +502,29 @@ companies = Company.create!(
       ico_close_date: "2016-11-11 ",
       published: true,
       google_keyword: "Golem"     
+    },
+    
+    #company 21
+    {
+      name: "Swarm Fund",
+      meta_title: "Swarm Fund - Cooperative Ownership Platform for Real Assets",
+      meta_description: "Cooperative Ownership Platform for Real Assets",
+      avatar: "swarm-fund-avatar.jpg",
+      image: "swarm-fund.jpg",
+      description: "The world's first cooperative ownership platform that bridges digital currency and real assets.",
+      location: "United States",
+      video: "https://www.youtube.com/embed/sW17ETznjl8",             
+      website: "https://www.swarm.fund",
+      twitter: "https://twitter.com/TheSwarmFund",
+      linkedin: "https://www.linkedin.com/company-beta/5229919/",
+      reddit: "https://github.com/swarmfund",
+      white_paper: "https://swarmfund.blob.core.windows.net/swarmassets/swarm-whitepaper-v081.pdf",
+      ico_size: "5.5",
+      ico_open_date: "2016-10-21",
+      ico_close_date: "2016-10-27 ",
+      published: true,
+      google_keyword: "Swarm Fund",
+      video_thumb: "swarm-video.jpg"    
     }
   ]
 )
@@ -592,12 +615,6 @@ tokens = Token.create!(
       company_id: companies[13].id
     },
   
-    # company 14
-    {
-      name: "",
-      company_id: ""
-    },
-  
     # company 15
     {
       name: "GNO",
@@ -622,16 +639,16 @@ tokens = Token.create!(
       company_id: companies[18].id
     },
     
-    # company 19
-    {
-      name: "FIL",
-      company_id: companies[19].id
-    },
-    
     # company 20
     {
       name: "GNT",
       company_id: companies[20].id
+    },
+    
+    # company 21
+    {
+      name: "SUN",
+      company_id: companies[21].id
     }
 
   ]
