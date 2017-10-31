@@ -19,7 +19,8 @@ companies = Company.create!(
       ico_open_date: "2017-06-01",
       ico_close_date: "2017-06-29",
       ico_size: "5.05",
-      published: true     
+      published: true,
+      google_keyword: "DCorp"     
     },
     
     #company 1    
@@ -46,7 +47,8 @@ companies = Company.create!(
       ico_open_date: "2017-04-06",
       ico_close_date: "2017-04-27",
       ico_size: "5.16",
-      published: true    
+      published: true,
+      google_keyword: "Humaniq"    
     },
     
     #company 2    
@@ -69,7 +71,8 @@ companies = Company.create!(
       ico_open_date: "2015-08-17",
       ico_close_date: "2015-10-01",
       ico_size: "5.14",
-      published: true
+      published: true,
+      google_keyword: "Angur"
     },
       
     #company 3
@@ -90,7 +93,8 @@ companies = Company.create!(
       ico_open_date: "2017-07-01",
       ico_close_date: "2017-07-13",
       ico_size: "232",
-      published: false     
+      published: false,
+      google_keyword: "Tezos"
     },
     
     #company 4
@@ -113,7 +117,8 @@ companies = Company.create!(
       ico_open_date: "2017-06-24",
       ico_close_date: "2017-06-24",
       ico_size: "83.11",
-      published: true    
+      published: true,
+      google_keyword: "TenX"    
     },
     
     #company 5
@@ -140,7 +145,8 @@ companies = Company.create!(
       ico_open_date: "2017-05-19",
       ico_close_date: "2017-05-25",
       ico_size: "29.22",
-      published: true    
+      published: true,
+      google_keyword: "Storj"    
     },
     
     #company 6 
@@ -151,7 +157,7 @@ companies = Company.create!(
       avatar: "bancor-avatar.jpg",
       image: "bancor.jpg",
       description: "Bancor is a protocol for the creation of Smart Tokens, a new standard for cryptocurrencies exchangeable directly through their smart contracts.",
-      video: "https://www.youtube.com/embed/ySeir-M2nj0",
+      video: "https://www.youtube.com/embed/P8EoAvWfFnY",
       asset: "BNT",
       location: "Switzerland",              
       website: "https://www.bancor.network",
@@ -167,7 +173,8 @@ companies = Company.create!(
       ico_open_date: "2017-06-12",
       ico_close_date: "2017-06-12",
       ico_size: "153",
-      published: true     
+      published: true,
+      google_keyword: "Bancor"     
     },
     
     #company 7
@@ -193,7 +200,8 @@ companies = Company.create!(
       ico_open_date: "2017-06-17",
       ico_close_date: "2017-06-21",
       ico_size: "95",
-      published: true     
+      published: true,
+      google_keyword: "Status Ethereum"     
     },
     
     # company 8 
@@ -217,7 +225,8 @@ companies = Company.create!(
       ico_open_date: "2017-04-25",
       ico_close_date: "2017-05-25",
       ico_size: "53.07",
-      published: true
+      published: true,
+      google_keyword: "MobileGo Ethereum"
     },
     
     #company 9
@@ -239,7 +248,8 @@ companies = Company.create!(
       ico_open_date: "2017-05-31",
       ico_close_date: "2017-05-31",
       ico_size: "35",
-      published: true     
+      published: true,
+      google_keyword: "Basic Attention Token"     
     },
     
     #company 10
@@ -261,7 +271,8 @@ companies = Company.create!(
       ico_open_date: "2017-05-31",
       ico_close_date: "2017-05-31",
       ico_size: "33",
-      published: true     
+      published: true,
+      google_keyword: "Civic Ethereum"     
     },
     
     #company 11
@@ -287,7 +298,8 @@ companies = Company.create!(
       ico_open_date: "2017-06-15",
       ico_close_date: "2017-07-15",
       ico_size: "42",
-      published: true     
+      published: true,
+      google_keyword: "SONM"     
     },
     
     #company 12
@@ -309,7 +321,8 @@ companies = Company.create!(
       ico_open_date: "2017-05-31",
       ico_close_date: "2017-07-05",
       ico_size: "31.6",
-      published: true     
+      published: true,
+      google_keyword: "Polybius"     
     },
     
     #company 13
@@ -330,7 +343,8 @@ companies = Company.create!(
       ico_open_date: "2017-06-22",
       ico_close_date: "2017-06-23",
       ico_size: "21",
-      published: true     
+      published: true,
+      google_keyword: "OmiseGo"    
     },
     
     #company 14
@@ -353,7 +367,8 @@ companies = Company.create!(
       ico_open_date: "",
       ico_close_date: "",
       ico_size: "",
-      published: true   
+      published: true,
+      google_keyword: "AdaptForward"   
     },
     
     #company 15
@@ -375,7 +390,8 @@ companies = Company.create!(
       ico_open_date: "2017-04-24",
       ico_close_date: "2017-04-24",
       ico_size: "12.25",
-      published: true     
+      published: true,
+      google_keyword: "Gnosis"     
     },
     
     #company 16
@@ -397,7 +413,8 @@ companies = Company.create!(
       ico_open_date: "2017-07-18",
       ico_close_date: "2017-08-01",
       ico_size: "13.19",
-      published: true     
+      published: true,
+      google_keyword: "district0x"     
     },
     
     #company 17
@@ -422,7 +439,8 @@ companies = Company.create!(
       ico_open_date: "2017-01-08",
       ico_close_date: "2017-08-01",
       ico_size: "5.4",
-      published: true     
+      published: true,
+      google_keyword: "ChronoBank"   
     },
     
     #company 18
@@ -445,7 +463,8 @@ companies = Company.create!(
       ico_open_date: "2017-03-29",
       ico_close_date: "2017-04-28",
       ico_size: "5.32",
-      published: true     
+      published: true,
+      google_keyword: "Lunyr"    
     },
     
     #company 19
@@ -457,6 +476,7 @@ companies = Company.create!(
       avatar: "",
       image: "",
       description: "",
+      google_keyword: "brainbot"
   
     },
     
@@ -480,7 +500,8 @@ companies = Company.create!(
       ico_size: "8.6",
       ico_open_date: "2016-11-11",
       ico_close_date: "2016-11-11 ",
-      published: true     
+      published: true,
+      google_keyword: "Golem"     
     }
   ]
 )

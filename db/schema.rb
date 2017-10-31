@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171030170913) do
+ActiveRecord::Schema.define(version: 20171031120830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20171030170913) do
     t.boolean  "alliance",                                 default: false
     t.boolean  "dapp",                                     default: true
     t.string   "google_keyword"
+    t.string   "video_thumb"
     t.index ["google_keyword"], name: "index_companies_on_google_keyword", unique: true, using: :btree
     t.index ["slug"], name: "index_companies_on_slug", unique: true, using: :btree
   end
