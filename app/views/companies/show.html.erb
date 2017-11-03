@@ -1,5 +1,38 @@
 <%= provide(:title, "#{@company.name}") %>
 <%= provide(:description, "#{truncate(@company.meta_description, length: 140, separator: '...')}") %>
+<% content_for :javascript do %>
+<script type='text/javascript'>
+
+var youtube = document.querySelectorAll( ".youtube" );
+
+	for (var i = 0; i < youtube.length; i++) {
+    // thumbnail image source.
+    var source = "/assets/<%= @company.video_thumb %>"; 
+	
+    // Load the image asynchronously
+    var image = new Image();
+        image.src = source;
+        image.addEventListener( "load", function() {
+            youtube[ i ].appendChild( image );
+        }( i ) 
+			);
+			
+	    youtube[i].addEventListener( "click", function() {
+				
+				var iframe = document.createElement( "iframe" );
+
+          iframe.setAttribute( "frameborder", "0" );
+          iframe.setAttribute( "allowfullscreen", "" );
+          iframe.setAttribute( "src", "https://www.youtube.com/embed/<%= @company.video %>?rel=0&showinfo=0&autoplay=1");
+          this.innerHTML = "";
+          this.appendChild( iframe );
+	    } 
+	);
+
+}
+</script>
+<!-- https://drgy3zruql9d7.cloudfront.net/ -->
+<% end %>
 <div class="wrapper">
 	<div class="page-header page-header-xs" data-parallax="true" style="background-image: url(https://drgy3zruql9d7.cloudfront.net/<%= @company.image %>);">
 		<div class="filter"></div>
@@ -34,19 +67,19 @@
 			</div>
 			<% if @company.video.present? %>
 			<div class="row">
-				<div class="col-md-8 offset-md-2 pt-4">
-					<div class="embed-responsive embed-responsive-16by9">					
-  					<iframe class="embed-responsive-item" src="<%= @company.video %>" allowfullscreen></iframe>
+				<div class="col-md-8 offset-md-2 pt-4">					
+					<div class="youtube" data-embed="AqcjdkPMPJA"> 
+						<div class="play-button"></div>
 					</div>
 				</div>
 			</div>
 			<% end %>
 			
 			<% if @charts.present? %>			
-			<div class="row">
+			<div class="row" style="height: 470px;">
 				<% @charts.each do |chart| %>				
 				<div class="pt-3 pb-5" style="height: 415px; width: 100%;">	
-					<div class="col-md-8 offset-md-2 h-100 d-inline-block text-center">				
+					<div class="col-md-8 offset-md-2 h-100 d-inline-block">				
 						<h3 class="pb-2">Pair: <strong><%= chart.currency_name.upcase.insert(-4, '/') %></strong></h3>
 						</span>
 						<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
@@ -65,14 +98,23 @@
 						  "save_image": false,
 						  "hideideas": true
 						});
-						</script>	
-					
-					</div>			
+						</script>						
+					</div>		
 				</div>
 				<% end %>
 			</div>
 			<% end %>
+			<% if @company.google_keyword.present? %>
 		
+			<div class="row">
+				<div style="height: 415px; width: 100%;">	
+					<div class="col-md-8 offset-md-2">
+						<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1173_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"<%= @company.google_keyword %>","geo":"","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"q=district0x&date=today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+					</div>
+				</div>
+			</div>
+			<% end %>
 		</div>
 	</div>
 </div>
+

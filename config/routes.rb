@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :companies, concerns: :paginatable, path: 'dapps', only: [:index, :show]
-  # get 'enterprise-ethereum-alliance', to: 'companies#alliance'
+  get 'enterprise-ethereum-alliance', to: 'companies#alliance'
   root 'pages#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
