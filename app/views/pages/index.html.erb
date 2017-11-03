@@ -83,7 +83,7 @@
 						      <h3 class="card-title"><%= company.name %> <small>(<%= company.token.name if company.token.present? %>) </small></h3>
 						      <p class="card-text"><%= company.description %></p>
 									<hr>
-						      <p class="card-text"><small class="text-muted">ICO size: $<%= number_to_human(company.ico_size, strip_insignificant_zeros: true, precision: 5) %> MM </small></p>
+						      <p class="card-text"><small class="text-muted">$<%= number_to_human(company.ico_size, strip_insignificant_zeros: true, precision: 5) %> MM Crowdsale </small></p>
 									<%= link_to "View Details", company_path(company), class: "btn btn-info btn-round mt-2"%>
 						    </div>
 						  </div>
