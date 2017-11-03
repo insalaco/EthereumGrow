@@ -7,7 +7,7 @@ var youtube = document.querySelectorAll( ".youtube" );
 
 	for (var i = 0; i < youtube.length; i++) {
     // thumbnail image source.
-    var source = "/assets/<%= @company.video_thumb %>"; 
+    var source = "https://drgy3zruql9d7.cloudfront.net/<%= @company.video_thumb %>"; 
 	
     // Load the image asynchronously
     var image = new Image();
