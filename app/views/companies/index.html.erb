@@ -16,7 +16,9 @@
 				    <div class="card">
 				      <div class="row ">
 				        <div class="col-md-4">
-				            <%= image_tag "https://drgy3zruql9d7.cloudfront.net/#{company.avatar}", class: "card-img-top w-100", alt: "#{company.name} avatar" if company.image? %>
+									<%= link_to company_path(company) do %>
+										<%= image_tag "https://drgy3zruql9d7.cloudfront.net/#{company.avatar}", class: "card-img-top w-100", alt: "#{company.name} avatar" if company.image? %>
+									<% end %>
 				          </div>
 				          <div class="col-md-8 px-3">
 				            <div class="card-block px-3">
