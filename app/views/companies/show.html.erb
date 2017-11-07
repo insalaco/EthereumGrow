@@ -94,7 +94,7 @@ var youtube = document.querySelectorAll( ".youtube" );
 						  "locale": "en",
 						  "toolbar_bg": "#f1f3f6",
 						  "enable_publishing": false,
-						  "hide_top_toolbar": true,
+						  "hide_top_toolbar": false,
 						  "save_image": false,
 						  "hideideas": true
 						});
@@ -109,6 +109,7 @@ var youtube = document.querySelectorAll( ".youtube" );
 			<div class="row">
 				<div style="height: 415px; width: 100%;">	
 					<div class="col-md-8 offset-md-2">
+						<h3 class="pb-2"><%= @company.name %> Interest Over Time</h3>
 						<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1173_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"<%= @company.google_keyword %>","geo":"","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"q=district0x&date=today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 					</div>
 				</div>
