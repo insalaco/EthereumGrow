@@ -15,16 +15,74 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
+	
+  <div class="field">
+    <%= f.label :published %>
+    <%= f.check_box :published %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+	<div class="field">
+	<%= f.fields_for :token do |token| %>
+	
+		<%= token.label :name, "Token:" %>
+	  <%= token.text_field :name %>
+		<% end %>
+	</div>
+	
+	
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.text_field :avatar %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :alliance %>
+    <%= f.check_box :alliance %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :dapp %>
+    <%= f.check_box :dapp %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :google_keyword %>
+    <%= f.text_field :google_keyword %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :meta_description %>
+    <%= f.text_field :meta_description %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :website %>
+    <%= f.text_field :website %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :white_paper %>
+    <%= f.text_field :white_paper %>
+  </div>
 
   <div class="field">
     <%= f.label :location %>
     <%= f.text_field :location %>
   </div>
-
   <div class="field">
-    <%= f.label :website %>
-    <%= f.text_field :website %>
+    <%= f.label :contact %>
+    <%= f.text_field :contact %>
   </div>
+
 
   <div class="field">
     <%= f.label :twitter %>
@@ -55,7 +113,54 @@
     <%= f.label :github %>
     <%= f.text_field :github %>
   </div>
+	
+  <div class="field">
+    <%= f.label :medium %>
+    <%= f.text_field :medium %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :angellist %>
+    <%= f.text_field :angellist %>
+  </div>
 
+  <div class="field">
+    <%= f.label :youtube %>
+    <%= f.text_field :youtube %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :reddit %>
+    <%= f.text_field :reddit %>
+  </div>
+	
+
+	
+	<div class="field">
+		<%= f.label :ico_open_date %>
+	  <%= f.date_field :ico_open_date %>
+	</div>
+	
+	
+  <div class="field">
+    <%= f.label :ico_close_date %>
+    <%= f.date_field :ico_close_date %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :ico_size %>
+    <%= f.date_field :ico_size %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :video %>
+    <%= f.text_field :video %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :video_thumb %>
+    <%= f.text_field :video_thumb %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>
