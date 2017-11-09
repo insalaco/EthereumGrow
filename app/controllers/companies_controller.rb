@@ -16,13 +16,13 @@ class CompaniesController < ApplicationController
   end
 
   # GET /companies/new
-  # def new
-  #   @company = Company.new
-  # end
+  def new
+    @company = Company.new
+  end
 
   # GET /companies/1/edit
-  # def edit
-  # end
+  def edit
+  end
 
   # POST /companies
   # POST /companies.json

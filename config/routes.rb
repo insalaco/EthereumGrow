@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     get '(page/:page)', action: :index, on: :collection, as: ''
   end
 
-  resources :companies, concerns: :paginatable, path: 'dapps', only: [:index, :show]
+  resources :companies, concerns: :paginatable, path: 'dapps'
   get 'enterprise-ethereum-alliance', to: 'companies#alliance'
   root 'pages#index'
 
