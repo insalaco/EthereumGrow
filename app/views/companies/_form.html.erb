@@ -10,74 +10,101 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
 	
-  <div class="field">
+	
+  <div class="form-group">
+    <%= f.label :name, "Company Name" %>
+    <%= f.text_field :name, class: "form-control", placeholder: "Enter company name" %>
+  </div>
+  
+	<div class="form-check">
     <%= f.label :published %>
-    <%= f.check_box :published %>
+ 	 	<%= f.check_box :published %>
   </div>
 	
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
-	<div class="field">
-	<%= f.fields_for :token do |token| %>
-	
-		<%= token.label :name, "Token:" %>
-	  <%= token.text_field :name %>
-		<% end %>
-	</div>
-	
-	
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.text_field :image %>
-  </div>
-	
-  <div class="field">
-    <%= f.label :avatar %>
-    <%= f.text_field :avatar %>
-  </div>
-	
-  <div class="field">
-    <%= f.label :alliance %>
-    <%= f.check_box :alliance %>
-  </div>
-	
-  <div class="field">
+  <div class="form-check">
     <%= f.label :dapp %>
     <%= f.check_box :dapp %>
   </div>
 	
-  <div class="field">
-    <%= f.label :google_keyword %>
-    <%= f.text_field :google_keyword %>
+  <div class="form-check">
+    <%= f.label :alliance, "Ethereum Enterprise Alliance" %>
+    <%= f.check_box :alliance %>
+  </div>
+		
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: 5, class: "form-control" %>
   </div>
 	
-  <div class="field">
+  <div class="form-group">
     <%= f.label :meta_description %>
-    <%= f.text_field :meta_description %>
+    <%= f.text_area :meta_description, rows: 5, class: "form-control" %>
   </div>
 	
-  <div class="field">
+  <div class="form-group">
+    <%= f.label :white_paper, "White paper url" %>
+    <%= f.text_field :white_paper, class: "form-control" %>
+  </div>
+	
+  <div class="form-group">
     <%= f.label :website %>
-    <%= f.text_field :website %>
+    <%= f.text_field :website, class: "form-control" %>
   </div>
 	
-  <div class="field">
-    <%= f.label :white_paper %>
-    <%= f.text_field :white_paper %>
+  <div class="form-group">
+    <%= f.label :image, "Header image url" %>
+    <%= f.text_field :image, class: "form-control col-md-8" %>
   </div>
-
-  <div class="field">
+	
+  <div class="form-group">
+    <%= f.label :avatar, "Avatar image url" %>
+    <%= f.text_field :avatar, class: "form-control col-md-8" %>
+  </div>
+	
+  <div class="form-group">
+    <%= f.label :video_thumb, "Video image url" %>
+    <%= f.text_field :video_thumb, class: "form-control col-md-8" %>
+  </div>
+	
+  <div class="form-group">
     <%= f.label :location %>
-    <%= f.text_field :location %>
+    <%= f.text_field :location, class: "form-control" %>
   </div>
+	
+  <div class="form-group">
+    <%= f.label :google_keyword %>
+    <%= f.text_field :google_keyword, class: "form-control" %>
+  </div>
+	
+	<div class="form-group">
+	<%= f.fields_for :token do |token| %>	
+		<%= token.label :name, "Token name:" %>
+	  <%= token.text_field :name, class: "form-control col-md-4" %>
+		<% end %>
+	</div>
+	
+	
+	<div class="form-group">
+	<%= f.fields_for :company_exchanges do |exchange| %>	
+		<%= render 'companies/exchange_fields', f: exchange %>
+	<% end %>
+	
+	<%= link_to_add_association 'add exchange', f, :company_exchanges, class: "btn btn-primary btn-sm" %>
+	</div>
+	
+	<hr>
+
+	
+
+	
+
+	
+
+	
+
+
+
   <div class="field">
     <%= f.label :contact %>
     <%= f.text_field :contact %>
@@ -157,10 +184,7 @@
     <%= f.text_field :video %>
   </div>
 	
-  <div class="field">
-    <%= f.label :video_thumb %>
-    <%= f.text_field :video_thumb %>
-  </div>
+
 
   <div class="actions">
     <%= f.submit %>

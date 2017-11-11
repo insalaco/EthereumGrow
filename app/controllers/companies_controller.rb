@@ -105,7 +105,8 @@ class CompaniesController < ApplicationController
                                       :ico_open_date,
                                       :ico_close_date,
                                       :ico_size,                                                                        
-                                      token_attributes: [:id, :name])
+                                      token_attributes: [:id, :name],
+                                      company_exchanges_attributes: [:id, :exchange_id, :_destroy])
     end
     
     def invalid_company
