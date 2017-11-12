@@ -1,4 +1,4 @@
-companies = Company.create!(
+companies = Company.create(
   [
     #company 0
     {
@@ -678,152 +678,148 @@ currencies = Currency.create!(
     # currency 0
     {
       name: "REPUSD",
-      company_id: companies[2].id
+      token_id: tokens[2].id
     },
     
     # currency 1
     {
       name: "REPUSDT",
-      company_id: companies[2].id
+      token_id: tokens[2].id
     },
     
     # currency 2
     {
       name: "REPBTC",
-      company_id: companies[2].id
+      token_id: tokens[2].id
     },
     
     # currency 3
     {
       name: "STORJBTC",
-      company_id: companies[5].id
+      token_id: tokens[5].id
     },
     
     # currency 4
     {
       name: "STORJETH",
-      company_id: companies[5].id
+      token_id: tokens[5].id
     },
     
     # currency 5
     {
       name: "STORJUSD",
-      company_id: companies[5].id
+      token_id: tokens[5].id
     },
     
     # currency 6
     {
       name: "SJCXUSD",
-      company_id: companies[5].id
+      token_id: tokens[5].id
     },
     
     # currency 7
     {
       name: "SJCXBTC",
-      company_id: companies[5].id
+      token_id: tokens[5].id
     },
     
     # currency 8
     {
       name: "XTZBTC",
-      company_id: companies[3].id
+      token_id: tokens[3].id
     },
     
     # currency 9
     {
       name: "BNTUSD",
-      company_id: companies[6].id
+      token_id: tokens[6].id
     },
     
     # currency 10
     {
       name: "BNTETH",
-      company_id: companies[6].id
+      token_id: tokens[6].id
     },
     
     # currency 11
     {
       name: "BNTBTC",
-      company_id: companies[6].id
+      token_id: tokens[6].id
     },
     
     # currency 12
     {
       name: "OMGETH",
-      company_id: companies[13].id
+      token_id: tokens[13].id
     },
     
     # currency 13
     {
       name: "CVCETH",
-      company_id: companies[10].id
+      token_id: tokens[10].id
     },
     
     # currency 14
     {
       name: "PAYETH",
-      company_id: companies[4].id
+      token_id: tokens[4].id
     },
     
     # currency 15
     {
       name: "SNTETH",
-      company_id: companies[7].id
+      token_id: tokens[7].id
     },
     
     # currency 16
     {
       name: "BATETH",
-      company_id: companies[9].id
+      token_id: tokens[9].id
     },
     
     # currency 17
     {
       name: "HMQETH",
-      company_id: companies[1].id
+      token_id: tokens[1].id
     },
     
     # currency 18
     {
       name: "WAVESETH",
-      company_id: companies[14].id
+      token_id: tokens[14].id
     },
     
     # currency 19
     {
       name: "GNOETH",
-      company_id: companies[15].id
+      token_id: tokens[15].id
     },
     
     # currency 20
     {
       name: "DNTETH",
-      company_id: companies[16].id
+      token_id: tokens[16].id
     },
     
     # currency 21
     {
       name: "TIMEETH",
-      company_id: companies[17].id
+      token_id: tokens[17].id
     },
     
     # currency 22
     {
       name: "LUNETH",
-      company_id: companies[18].id
+      token_id: tokens[18].id
     },
     
     # currency 23
     {
       name: "REPETH",
-      company_id: companies[2].id
-    },
-    
-    # currency 24
-    {
-      name: "GNTETH",
-      company_id: companies[20].id
+      token_id: tokens[2].id
     }
+    
+
   ]
 )
 
@@ -985,138 +981,6 @@ currency_exchanges = CurrencyExchange.create!(
       currency_id: currencies[23].id,
       exchange_id: exchanges[1].id,
       profile:     true 
-    },
-    {
-      currency_id: currencies[24].id,
-      exchange_id: exchanges[1].id,
-      profile:     true 
-    }
-
-    
-  ]
-)
-
-company_exchanges = CompanyExchange.create!(
-  [
-    #company 1
-    {
-      company_id: companies[1].id,
-      exchange_id: exchanges[1].id,
-    },
-    
-    #company 2
-    {
-      company_id: companies[2].id,
-      exchange_id: exchanges[0].id,
-    },
-    
-    #company 2
-    {
-      company_id: companies[2].id,
-      exchange_id: exchanges[1].id,
-    },
-    
-    #company 3
-    {
-      company_id: companies[3].id,
-      exchange_id: exchanges[2].id,
-    },
-    
-    #company 3
-    {
-      company_id: companies[3].id,
-      exchange_id: exchanges[2].id,
-    },
-    
-    #company 4
-    {
-      company_id: companies[4].id,
-      exchange_id: exchanges[1].id,
-    },
-    
-    #company 5
-    {
-      company_id: companies[5].id,
-      exchange_id: exchanges[0].id,
-    },
-    
-    #company 5
-    {
-      company_id: companies[5].id,
-      exchange_id: exchanges[1].id,
-    },
-    
-    #company 6
-    {
-      company_id: companies[6].id,
-      exchange_id: exchanges[1].id,
-    },
-    
-    #company 7
-    {
-      company_id: companies[7].id,
-      exchange_id: exchanges[1].id,
-    },
-    
-    #company 9
-    {
-      company_id: companies[9].id,
-      exchange_id: exchanges[1].id,
-    },
-    
-    #company 10
-    {
-      company_id: companies[10].id,
-      exchange_id: exchanges[1].id,
-    },
-    
-    #company 13
-    {
-      company_id: companies[13].id,
-      exchange_id: exchanges[5].id,
-    },
-    
-    #company 14
-    {
-      company_id: companies[14].id,
-      exchange_id: exchanges[1].id,
-    },
-    
-    #company 15
-    {
-      company_id: companies[15].id,
-      exchange_id: exchanges[6].id,
-    },
-    
-    #company 16
-    {
-      company_id: companies[16].id,
-      exchange_id: exchanges[1].id,
-    },
-    
-    #company 17
-    {
-      company_id: companies[17].id,
-      exchange_id: exchanges[1].id,
-    },
-    
-    #company 18
-    {
-      company_id: companies[18].id,
-      exchange_id: exchanges[1].id,
-    },
-    
-    #company 19
-    {
-      company_id: companies[19].id,
-      exchange_id: exchanges[1].id,
-    },
-   
-    #company 20
-    {
-      company_id: companies[20].id,
-      exchange_id: exchanges[1].id,
-    }
-    
+    }    
   ]
 )
