@@ -1,13 +1,7 @@
 class Company < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: :slugged
-  
-  has_many :company_exchanges, dependent: :destroy
-  has_many :exchanges, through: :company_exchanges
-  accepts_nested_attributes_for :company_exchanges, allow_destroy: true
-  
-  has_many :currencies, dependent: :destroy
-  
+
   has_one :token, dependent: :destroy
   accepts_nested_attributes_for :token
   

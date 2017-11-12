@@ -12,7 +12,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
-    @charts = @company.currencies.select("exchanges.name as exchange_name, currencies.name as currency_name").left_outer_joins(:exchanges).where(currency_exchanges: {profile: true})
+    @charts = @company.token.currencies.select("exchanges.name as exchange_name, currencies.name as currency_name").left_outer_joins(:exchanges).where(currency_exchanges: {profile: true})
   end
 
   # GET /companies/new
@@ -106,7 +106,8 @@ class CompaniesController < ApplicationController
                                       :ico_close_date,
                                       :ico_size,                                                                        
                                       token_attributes: [:id, :name],
-                                      company_exchanges_attributes: [:id, :exchange_id, :_destroy])
+                                      company_exchanges_attributes: [:id, :exchange_id, :_destroy],
+                                      currencies_attributes: [:id, :name, :_destory])
     end
     
     def invalid_company
