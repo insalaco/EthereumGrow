@@ -16,6 +16,14 @@
     <%= f.label :name, "Company Name" %>
     <%= f.text_field :name, class: "form-control", placeholder: "Enter company name" %>
   </div>
+	
+	<div class="form-group">
+		<%= f.fields_for :token do |token| %>	
+		<%= token.label :name, "Token ticker name:" %>
+	  <%= token.text_field :name, class: "form-control col-md-4" %>
+		<% end %>
+	</div>
+	
   
 	<div class="form-check">
     <%= f.label :published %>
@@ -54,22 +62,25 @@
 	
   <div class="form-group">
     <%= f.label :image, "Header image url" %>
-    <%= f.text_field :image, class: "form-control col-md-8" %>
+    <%= f.text_field :image, class: "form-control col-md-8", placeholder: "angur.jpg" %>
   </div>
 	
   <div class="form-group">
     <%= f.label :avatar, "Avatar image url" %>
-    <%= f.text_field :avatar, class: "form-control col-md-8" %>
+    <%= f.text_field :avatar, class: "form-control col-md-8", placeholder: "angur-avatar.jpg" %>
   </div>
 	
   <div class="form-group">
     <%= f.label :video_thumb, "Video image url" %>
-    <%= f.text_field :video_thumb, class: "form-control col-md-8" %>
+    <%= f.text_field :video_thumb, class: "form-control col-md-8", placeholder: "angur-video-thumb.jpg" %>
   </div>
 	
   <div class="form-group">
-    <%= f.label :location %>
-    <%= f.text_field :location, class: "form-control" %>
+    <%= f.label :video %>
+    <%= f.text_field :video, class: "form-control" %>
+		<small class="form-text text-muted">
+		  Youtube video id from embed url (example: 8ue3ks73e)
+		</small>
   </div>
 	
   <div class="form-group">
@@ -78,115 +89,95 @@
   </div>
 	
 	<div class="form-group">
-	<%= f.fields_for :token do |token| %>	
-		<%= token.label :name, "Token name:" %>
-	  <%= token.text_field :name, class: "form-control col-md-4" %>
-		<% end %>
+		<%= f.label :ico_open_date %>
+	  <%= f.date_field :ico_open_date, class: "form-control", placeholder: "2017-03-24" %>
 	</div>
 	
 	
-	<div class="form-group">
-	<%= f.fields_for :company_exchanges do |exchange| %>	
-		<%= render 'companies/exchange_fields', f: exchange %>
-	<% end %>
+  <div class="form-group">
+    <%= f.label :ico_close_date %>
+    <%= f.date_field :ico_close_date, class: "form-control", placeholder: "2017-03-24" %>
+  </div>
 	
-	<%= link_to_add_association 'add exchange', f, :company_exchanges, class: "btn btn-primary btn-sm" %>
-	</div>
-	
+  <div class="form-group">
+    <%= f.label :ico_size %>
+    <%= f.text_field :ico_size, class: "form-control col-md-4", placeholder: "15.4"%>
+  </div>
+		
 	<hr>
 
+  <div class="form-group">
+    <%= f.label :location %>
+    <%= f.text_field :location, class: "form-control" %>
+  </div>
 	
-
-	
-
-	
-
-	
-
-
-
-  <div class="field">
+  <div class="form-group">
     <%= f.label :contact %>
-    <%= f.text_field :contact %>
+    <%= f.text_field :contact, placeholder: "info@example.com", class: "form-control" %>
   </div>
 
+	
 
-  <div class="field">
+	
+
+	
+
+
+
+	<hr>
+
+
+  <div class="form-group">
     <%= f.label :twitter %>
-    <%= f.text_field :twitter %>
+    <%= f.text_field :twitter, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :facebook %>
-    <%= f.text_field :facebook %>
+    <%= f.text_field :facebook, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :linkedin %>
-    <%= f.text_field :linkedin %>
+    <%= f.text_field :linkedin, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :slack %>
-    <%= f.text_field :slack %>
+    <%= f.text_field :slack, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :telegram %>
-    <%= f.text_field :telegram %>
+    <%= f.text_field :telegram, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :github %>
-    <%= f.text_field :github %>
+    <%= f.text_field :github, class: "form-control" %>
   </div>
 	
-  <div class="field">
+  <div class="form-group">
     <%= f.label :medium %>
-    <%= f.text_field :medium %>
+    <%= f.text_field :medium, class: "form-control" %>
   </div>
 	
-  <div class="field">
+  <div class="form-group">
     <%= f.label :angellist %>
-    <%= f.text_field :angellist %>
+    <%= f.text_field :angellist, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :youtube %>
-    <%= f.text_field :youtube %>
+    <%= f.text_field :youtube, class: "form-control" %>
   </div>
 	
-  <div class="field">
+  <div class="form-group">
     <%= f.label :reddit %>
-    <%= f.text_field :reddit %>
+    <%= f.text_field :reddit, class: "form-control" %>
   </div>
-	
-
-	
-	<div class="field">
-		<%= f.label :ico_open_date %>
-	  <%= f.date_field :ico_open_date %>
-	</div>
-	
-	
-  <div class="field">
-    <%= f.label :ico_close_date %>
-    <%= f.date_field :ico_close_date %>
-  </div>
-	
-  <div class="field">
-    <%= f.label :ico_size %>
-    <%= f.text_field :ico_size %>
-  </div>
-	
-  <div class="field">
-    <%= f.label :video %>
-    <%= f.text_field :video %>
-  </div>
-	
-
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create Company", class: "btn btn-success" %>
   </div>
 <% end %>

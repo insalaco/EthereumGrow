@@ -714,13 +714,13 @@ currencies = Currency.create!(
     # currency 6
     {
       name: "SJCXUSD",
-      token_id: tokens[5].id
+
     },
     
     # currency 7
     {
       name: "SJCXBTC",
-      token_id: tokens[5].id
+
     },
     
     # currency 8
@@ -884,14 +884,7 @@ currency_exchanges = CurrencyExchange.create!(
       currency_id: currencies[2].id,
       exchange_id: exchanges[1].id
     },
-    {
-      currency_id: currencies[6].id,
-      exchange_id: exchanges[1].id,
-    },
-    {
-      currency_id: currencies[7].id,
-      exchange_id: exchanges[0].id
-    },
+
     {
       currency_id: currencies[8].id,
       exchange_id: exchanges[2].id

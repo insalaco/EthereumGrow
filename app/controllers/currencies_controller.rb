@@ -10,6 +10,8 @@ class CurrenciesController < ApplicationController
   # GET /currencies/1
   # GET /currencies/1.json
   def show
+    @exchanges = @currency.currency_exchanges.includes(:exchange)
+    @chart = @currency.exchanges.where(currency_exchanges: {profile: true}).first
   end
 
   # GET /currencies/new
@@ -69,6 +71,6 @@ class CurrenciesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def currency_params
-      params.require(:currency).permit(:name, :company_id, :exchange_id)
+      params.require(:currency).permit(:name, :token_id, currency_exchanges: [:profile, :currency_id])
     end
 end

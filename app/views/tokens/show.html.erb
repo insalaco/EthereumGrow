@@ -1,9 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Company:</strong>
-  <%= @token.company %>
-</p>
-
-<%= link_to 'Edit', edit_token_path(@token) %> |
-<%= link_to 'Back', tokens_path %>
+<%= provide(:title, "Ethereum DApps") %>
+<div class="main">
+	<div class="section" style="padding-top: 60px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-4">
+					<h1 class="h2"><%= @token.name %> Token</h1>
+					<hr>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-9">
+					<h2>Currencies</h2>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
