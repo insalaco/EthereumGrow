@@ -10,6 +10,7 @@ class ExchangesController < ApplicationController
   # GET /exchanges/1
   # GET /exchanges/1.json
   def show
+    @currencies = @exchange.currencies
   end
 
   # GET /exchanges/new

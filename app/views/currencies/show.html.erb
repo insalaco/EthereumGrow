@@ -6,6 +6,7 @@
 				
 				<div class="col-md-12 mb-4" style="height: 400px;">
 					<h1 class="h2"><%= @currency.name %> </h1>
+					<% if @chart.present? %>
 					<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 					<script type="text/javascript">
 					new TradingView.widget({
@@ -23,6 +24,7 @@
 					  "hideideas": true
 					});
 					</script>
+					<% end %>
 				</div>
 				<div class="col-md-12">
 					<h3>Company Profile</h3>
@@ -31,9 +33,10 @@
 					<h3>Exchanges</h3>
 					<% if @exchanges.present? %>
 					<% @exchanges.each do |currency_exchange| %>
-					<%= currency_exchange.exchange.name %> 
+					<%= link_to currency_exchange.exchange.name, exchange_path(currency_exchange.exchange)%> 
 					<% end %>
 					<% end %>
+
 				</div>
 			</div>
 		</div>

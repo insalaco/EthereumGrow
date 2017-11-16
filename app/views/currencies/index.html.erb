@@ -16,7 +16,7 @@
     <% @currencies.each do |currency| %>
       <tr>
         <td><%= currency.name %></td>
-
+				<td><%= currency.exchanges.size %></td>
         <td><%= link_to 'Show', currency %></td>
         <td><%= link_to 'Edit', edit_currency_path(currency) %></td>
         <td><%= link_to 'Destroy', currency, method: :delete, data: { confirm: 'Are you sure?' } %></td>
