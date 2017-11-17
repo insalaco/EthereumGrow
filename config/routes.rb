@@ -8,6 +8,13 @@ Rails.application.routes.draw do
   resources :currencies
   resources :companies, concerns: :paginatable, path: 'dapps'
   get 'enterprise-ethereum-alliance', to: 'companies#alliance'
+  
+  Rails.application.routes.draw do
+    namespace :admin do
+      resources :companies
+    end
+  end
+  
   root 'pages#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
