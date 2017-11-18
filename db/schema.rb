@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 20171117184636) do
     t.boolean  "published",                                default: false
     t.datetime "created_at",                                               null: false
     t.datetime "updated_at",                                               null: false
-    t.string   "instagram"
     t.string   "slug"
+    t.string   "instagram"
     t.string   "meta_title"
     t.string   "meta_description"
     t.boolean  "alliance",                                 default: false
@@ -52,15 +52,6 @@ ActiveRecord::Schema.define(version: 20171117184636) do
     t.string   "video_thumb"
     t.index ["google_keyword"], name: "index_companies_on_google_keyword", unique: true, using: :btree
     t.index ["slug"], name: "index_companies_on_slug", unique: true, using: :btree
-  end
-
-  create_table "company_exchanges", force: :cascade do |t|
-    t.integer  "company_id"
-    t.integer  "exchange_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["company_id"], name: "index_company_exchanges_on_company_id", using: :btree
-    t.index ["exchange_id"], name: "index_company_exchanges_on_exchange_id", using: :btree
   end
 
   create_table "currencies", force: :cascade do |t|
@@ -122,8 +113,6 @@ ActiveRecord::Schema.define(version: 20171117184636) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
-  add_foreign_key "company_exchanges", "companies"
-  add_foreign_key "company_exchanges", "exchanges"
   add_foreign_key "currency_exchanges", "currencies"
   add_foreign_key "currency_exchanges", "exchanges"
   add_foreign_key "tokens", "companies"
