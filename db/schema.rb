@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171112011949) do
+ActiveRecord::Schema.define(version: 20171117184636) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,15 @@ ActiveRecord::Schema.define(version: 20171112011949) do
     t.string   "video_thumb"
     t.index ["google_keyword"], name: "index_companies_on_google_keyword", unique: true, using: :btree
     t.index ["slug"], name: "index_companies_on_slug", unique: true, using: :btree
+  end
+
+  create_table "company_exchanges", force: :cascade do |t|
+    t.integer  "company_id"
+    t.integer  "exchange_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["company_id"], name: "index_company_exchanges_on_company_id", using: :btree
+    t.index ["exchange_id"], name: "index_company_exchanges_on_exchange_id", using: :btree
   end
 
   create_table "currencies", force: :cascade do |t|
@@ -104,6 +113,17 @@ ActiveRecord::Schema.define(version: 20171112011949) do
     t.index ["company_id"], name: "index_tokens_on_company_id", using: :btree
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string   "email"
+    t.boolean  "admin"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+  end
+
+  add_foreign_key "company_exchanges", "companies"
+  add_foreign_key "company_exchanges", "exchanges"
   add_foreign_key "currency_exchanges", "currencies"
   add_foreign_key "currency_exchanges", "exchanges"
   add_foreign_key "tokens", "companies"

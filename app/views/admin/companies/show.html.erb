@@ -1,0 +1,48 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <%= link_to 'Dapps', admin_companies_path %>
+  </li>
+  <li class="breadcrumb-item active"><%= @company.name %></li>
+</ol>
+
+<h1><%= @company.name %></h1>
+<hr>
+<div class="row">		
+	<div class="col-md-6 pb-4">
+		<h2>Token Ticker</h2>
+		<p class="lead"><%= @company.token.name %>
+		<h2>Description</h2>
+		<p class="lead"><%= @company.description %></p>
+		<h2>Website</h2>
+		<p><%= link_to @company.website, @company.website, target: "_blank" %></p>
+		<h2>White paper</h2>
+		<p><%= link_to @company.white_paper, @company.white_paper, target: "_blank" %></p>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-md-9 pb-4">
+		<h2>Header Image</h2>
+		<img src="https://drgy3zruql9d7.cloudfront.net/<%= @company.image %>" alt="<%= @company.name %>" class="img-fluid img-thumbnail">
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-3 pb-4">
+		<h2>Avatar Image</h2>
+		<img src="https://drgy3zruql9d7.cloudfront.net/<%= @company.avatar %>" alt="<%= @company.name %> avatar" class="img-fluid img-thumbnail">
+	</div>
+</div>
+<div class="row">		
+	<div class="col-md-4">
+		<h2>Video Image</h2>
+		<img src="https://drgy3zruql9d7.cloudfront.net/<%= @company.video_thumb %>" alt="<%= @company.name %> avatar" class="img-fluid img-thumbnail">
+	</div>
+</div>
+<hr>
+<div class="row">		
+	<div class="col-md-6">
+		<%= link_to 'Edit', edit_admin_company_path, class: "btn btn-info btn-lg my-3 col-md-3"%> <%= link_to 'Back', :back, class: "btn btn-danger btn-lg my-3 col-md-3"%>
+	</div>
+</div>
+
+

@@ -45,7 +45,6 @@ var youtube = document.querySelectorAll( ".youtube" );
 				</div>
 				<div class="name">
 					<h1><%= @company.name %> <small><strong>(<%= @company.token.name %>)</strong></small></h1>
-					<%= link_to 'Destroy', @company, method: :delete, data: { confirm: 'Are you sure?' } %>
 					<% unless @company.ico_size.blank? %>
 					<h2 class="h3 pb-2">$<%= number_to_human(@company.ico_size, strip_insignificant_zeros: true, precision: 5) %>MM token sale</h2>
 					<% end %>

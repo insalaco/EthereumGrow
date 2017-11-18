@@ -1,0 +1,15 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <%= link_to 'Dapps', admin_companies_path %>
+  </li>
+  <li class="breadcrumb-item">
+		<%= link_to @company.name, admin_company_path(@company) %></li>
+	<li class="breadcrumb-item active">edit</li>
+</ol>	
+<h1>Edit <%= @company.name %></h1>
+<hr>
+<div class="row">		
+	<div class="col-md-4">
+		<%= render 'form', company: @company %>
+	</div>
+</div>

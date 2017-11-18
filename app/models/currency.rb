@@ -5,5 +5,5 @@ class Currency < ApplicationRecord
   has_many :exchanges, through: :currency_exchanges
   belongs_to :token, optional: true
   
-  validates :token_id, :name, presence: true
+  # validates :token_id, :name, presence: true
 end
