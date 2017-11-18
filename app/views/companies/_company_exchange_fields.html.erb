@@ -1,0 +1,7 @@
+<li class="control-group nested-fields pb-4">
+	<div class="controls">
+		<%= f.collection_select :exchange_id, Exchange.order(:name), :id, :name, {}, { :class => 'form-control' } %>
+		
+	</div>
+	<%= link_to_remove_association "remove exchange", f, class: "btn btn-danger btn-sm"%>
+</li>

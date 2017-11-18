@@ -1,34 +1,21 @@
-<p id="notice"><%= notice %></p>
+<%= provide(:title, "Exchange") %>
+<div class="main">
+	<div class="section" style="padding-top: 60px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-4">
+					<h1 class="h2"><%= @exchange.name %></h1>
+					
+				  
+					<ul class="list-unstyled">
+					<% @currencies.each do |currency| %>
+						<li><%= link_to currency.name, currency_path(currency) %></li>
+					<% end %>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @exchange.name %>
-</p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @exchange.location %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @exchange.website %>
-</p>
-
-<p>
-  <strong>Twitter:</strong>
-  <%= @exchange.twitter %>
-</p>
-
-<p>
-  <strong>Facebook:</strong>
-  <%= @exchange.facebook %>
-</p>
-
-<p>
-  <strong>Linkedin:</strong>
-  <%= @exchange.linkedin %>
-</p>
-
-<%= link_to 'Edit', edit_exchange_path(@exchange) %> |
-<%= link_to 'Back', exchanges_path %>

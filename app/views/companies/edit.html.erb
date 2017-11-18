@@ -1,6 +1,22 @@
-<h1>Editing Company</h1>
+<%= provide(:title, "Edit Company") %>
+<div class="main">
+	<div class="section" style="padding-top: 60px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-4">
+					<h1 class="h2">Edit <%= @company.name %></h1>
+					<hr>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
 
-<%= render 'form', company: @company %>
+					<%= render 'form', company: @company %>
 
-<%= link_to 'Show', @company %> |
-<%= link_to 'Back', companies_path %>
+					<%= link_to 'Show', @company %> |
+					<%= link_to 'Back', companies_path %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

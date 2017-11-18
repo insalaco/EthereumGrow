@@ -1,0 +1,189 @@
+<%= form_for [:admin, company] do |f| %>
+  <% if company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+      <% company.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	
+	
+  <div class="form-group">
+    <%= f.label :name, "Dapp Name" %>
+    <%= f.text_field :name, class: "form-control", placeholder: "Enter company name" %>
+  </div>
+	
+	<div class="form-group">
+		<%= f.fields_for :token do |token| %>	
+		<%= token.label :name, "Token ticker name:" %>
+	  <%= token.text_field :name, class: "form-control col-md-4" %>
+		<% end %>
+	</div>
+	
+  
+	<div class="form-check">
+    <%= f.label :published %>
+ 	 	<%= f.check_box :published %>
+  </div>
+	
+  <div class="form-check">
+    <%= f.label :dapp %>
+    <%= f.check_box :dapp %>
+  </div>
+	
+  <div class="form-check">
+    <%= f.label :alliance, "Ethereum Enterprise Alliance" %>
+    <%= f.check_box :alliance %>
+  </div>
+		
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: 5, class: "form-control" %>
+  </div>
+	
+  <div class="form-group">
+    <%= f.label :meta_description %>
+    <%= f.text_area :meta_description, rows: 5, class: "form-control" %>
+  </div>
+	
+  <div class="form-group">
+    <%= f.label :white_paper, "White paper url" %>
+    <%= f.text_field :white_paper, class: "form-control" %>
+  </div>
+	
+  <div class="form-group">
+    <%= f.label :website %>
+    <%= f.text_field :website, class: "form-control" %>
+  </div>
+	
+  <div class="form-group">
+    <%= f.label :image, "Header image url" %>
+    <%= f.text_field :image, class: "form-control col-md-8", placeholder: "angur.jpg" %>
+  </div>
+	
+  <div class="form-group">
+    <%= f.label :avatar, "Avatar image url" %>
+    <%= f.text_field :avatar, class: "form-control col-md-8", placeholder: "angur-avatar.jpg" %>
+  </div>
+	
+  <div class="form-group">
+    <%= f.label :video_thumb, "Video image url" %>
+    <%= f.text_field :video_thumb, class: "form-control col-md-8", placeholder: "angur-video-thumb.jpg" %>
+  </div>
+	
+  <div class="form-group">
+    <%= f.label :video %>
+    <%= f.text_field :video, class: "form-control" %>
+		<small class="form-text text-muted">
+		  Youtube video id from embed url (example: 8ue3ks73e)
+		</small>
+  </div>
+	
+  <div class="form-group">
+    <%= f.label :google_keyword %>
+    <%= f.text_field :google_keyword, class: "form-control" %>
+  </div>
+	
+	<div class="form-group">
+		<%= f.label :ico_open_date %>
+	  <%= f.date_field :ico_open_date, class: "form-control", placeholder: "2017-03-24" %>
+	</div>
+	
+	
+  <div class="form-group">
+    <%= f.label :ico_close_date %>
+    <%= f.date_field :ico_close_date, class: "form-control", placeholder: "2017-03-24" %>
+  </div>
+	
+  <div class="form-group">
+    <%= f.label :ico_size %>
+    <%= f.text_field :ico_size, class: "form-control col-md-4", placeholder: "15.4"%>
+  </div>
+		
+	<hr>
+
+  <div class="form-group">
+    <%= f.label :location %>
+    <%= f.text_field :location, class: "form-control" %>
+  </div>
+	
+  <div class="form-group">
+    <%= f.label :contact %>
+    <%= f.text_field :contact, placeholder: "info@example.com", class: "form-control" %>
+  </div>
+
+	
+
+	
+
+	
+
+
+
+	<hr>
+  <div class="form-group">
+    <%= f.label :angellist %>
+    <%= f.text_field :angellist, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :facebook %>
+    <%= f.text_field :facebook, class: "form-control" %>
+  </div>
+	
+  <div class="form-group">
+    <%= f.label :github %>
+    <%= f.text_field :github, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :linkedin %>
+    <%= f.text_field :linkedin, class: "form-control" %>
+  </div>
+	
+  <div class="form-group">
+    <%= f.label :medium %>
+    <%= f.text_field :medium, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :twitter %>
+    <%= f.text_field :twitter, class: "form-control" %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :reddit %>
+    <%= f.text_field :reddit, class: "form-control" %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :slack %>
+    <%= f.text_field :slack, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :telegram %>
+    <%= f.text_field :telegram, class: "form-control" %>
+  </div>
+
+
+	
+
+	
+
+
+  <div class="form-group">
+    <%= f.label :youtube %>
+    <%= f.text_field :youtube, class: "form-control" %>
+  </div>
+	
+
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-success btn-lg my-3" %> <%= link_to 'Back', :back, class: "btn btn-danger btn-lg my-3 col-md-4"%>
+  </div>
+<% end %>
