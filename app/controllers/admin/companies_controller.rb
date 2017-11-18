@@ -2,7 +2,7 @@ class Admin::CompaniesController < AdminController
   before_action :set_company, only: [:show , :edit, :update, :destroy]
   
   def index
-    @companies = Company.includes(:token).where(dapp: true).order("lower(name)")
+    @companies = Company.joins(:token).where(dapp: true).order("lower(companies.name)")
   end
   
   def show
