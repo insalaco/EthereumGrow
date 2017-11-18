@@ -9,6 +9,8 @@
 <hr>
 <div class="row">		
 	<div class="col-md-6 pb-4">
+		<h2>Published</h2>
+		<p class="lead"><%= @company.published %>
 		<h2>Token Ticker</h2>
 		<p class="lead"><%= @company.token.name %>
 		<h2>Description</h2>
@@ -40,8 +42,20 @@
 </div>
 <hr>
 <div class="row">		
+	<div class="col-md-4">
+		<h2>Social Media</h2>
+		<ul class="list-unstyled">
+			<li class="list-item"><strong>Facebook:</strong> <%= link_to @company.facebook, @company.facebook, target: "_blank" if @company.facebook %></li>
+			<li class="list-item"><strong>Medium:</strong> <%= link_to @company.medium, @company.medium, target: "_blank" if @company.medium %></li>
+			<li class="list-item"><strong>Twitter:</strong> <%= link_to @company.twitter, @company.twitter, target: "_blank" if @company.twitter %></li>
+			
+		</ul>	
+	</div>
+</div>
+<hr>
+<div class="row">		
 	<div class="col-md-6">
-		<%= link_to 'Edit', edit_admin_company_path, class: "btn btn-info btn-lg my-3 col-md-3"%> <%= link_to 'Back', :back, class: "btn btn-danger btn-lg my-3 col-md-3"%>
+		<%= link_to 'Edit', edit_admin_company_path, class: "btn btn-info btn-lg my-3 col-md-3"%> <%= link_to 'Back', admin_companies_path, class: "btn btn-danger btn-lg my-3 col-md-3"%>
 	</div>
 </div>
 

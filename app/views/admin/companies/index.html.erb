@@ -11,20 +11,16 @@
       <thead>
         <tr>
           <th>Name</th>
-          <th>Website</th>
-          <th>White paper</th>
-          <th>Age</th>
-          <th>Start date</th>
+					<th>Token</th>
+          <th>Description</th>
           <th>Published</th>
         </tr>
       </thead>
       <tfoot>
         <tr>
           <th>Name</th>
-          <th>Position</th>
-          <th>Office</th>
-          <th>Age</th>
-          <th>Start date</th>
+					<th>Token</th>
+          <th>Description</th>
           <th>Published</th>
         </tr>
       </tfoot>
@@ -32,10 +28,8 @@
 				<% @companies.each do |company|%>
         <tr>
           <td><%= link_to company.name, admin_company_path(company) %></td>
-          <td><%= link_to company.website, company.website, target: "_blank" %></td>
-          <td><%= link_to company.white_paper, company.white_paper, target: "_blank" %></td>
-          <td></td>
-          <td></td>
+					<td><%= company.token.name %>
+          <td><%= company.description %></td>
           <td><%= company.published %></td>
         </tr>
 				<% end %>
