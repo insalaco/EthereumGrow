@@ -1,0 +1,35 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <%= link_to 'Exchanges', admin_exchanges_path %>
+  </li>
+  <li class="breadcrumb-item active"><%= @exchange.name %></li>
+</ol>
+
+<h1><%= @exchange.name %></h1>
+<hr>
+<div class="row">
+	<div class="col-md-12">
+		<% if @currencies.present? %>
+		<h2>Currencies</h2>
+		<table class="table table-bordered table-striped table-hover" width="100%" cellspacing="0">
+			<tr>
+				<th> Name</th>
+				<th> Token Ticker</th>
+				<th> Company Name</th>
+				<th> Chart</th>
+			</tr>
+			
+			<% @currencies.each do |currency| %>
+			<tr>
+				<td><%= currency.name %></td>
+				<td><%= currency.token.name if currency.token %></td>
+				<td><%= currency.token.company.name if currency.token %></td>
+				<td><%= currency.currency_exchanges.map(&:profile).first %></td>
+			</tr>
+			<% end %>
+
+			
+		</table>
+		<% end %>
+	</div>
+</div>

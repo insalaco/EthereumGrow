@@ -1,0 +1,15 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <%= link_to 'Companies', admin_exchanges_path %>
+  </li>
+  <li class="breadcrumb-item">
+		<%= link_to @exchange.name, admin_exchange_path(@exchange) %></li>
+	<li class="breadcrumb-item active">edit</li>
+</ol>	
+<h1>Edit <%= @exchange.name %></h1>
+<hr>
+<div class="row">		
+	<div class="col-md-4">
+		<%= render 'form', exchange: @exchange %>
+	</div>
+</div>

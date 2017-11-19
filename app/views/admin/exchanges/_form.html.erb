@@ -1,0 +1,47 @@
+<%= form_for [:admin, exchange] do |f| %>
+  <% if exchange.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(exchange.errors.count, "error") %> prohibited this exchange from being saved:</h2>
+
+      <ul>
+      <% exchange.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :location %>
+    <%= f.text_field :location, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :website %>
+    <%= f.text_field :website, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :twitter %>
+    <%= f.text_field :twitter, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :facebook %>
+    <%= f.text_field :facebook, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :linkedin %>
+    <%= f.text_field :linkedin, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit 'submit', class: "form-control btn btn-success" %>
+  </div>
+<% end %>
