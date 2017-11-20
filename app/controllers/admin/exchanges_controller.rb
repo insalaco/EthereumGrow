@@ -2,7 +2,7 @@ class Admin::ExchangesController < AdminController
   before_action :set_exchange, only: [:show , :edit, :update, :destroy]
   
   def index
-    @exchanges = Exchange.order("lower(exchanges.name)")
+    @exchanges = Exchange.left_joins(:currencies).group(:id).order("lower(exchanges.name)")
   end
   
   def show
