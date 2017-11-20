@@ -23,7 +23,7 @@
 			<tr>
 				<td><%= currency.name %></td>
 				<td><%= currency.token.name if currency.token %></td>
-				<td><%= currency.token.company.name if currency.token %></td>
+				<td><%= link_to currency.token.company.name, admin_company_path(currency.token.company) if currency.token %></td>
 				<td><%= currency.currency_exchanges.map(&:profile).first %></td>
 			</tr>
 			<% end %>

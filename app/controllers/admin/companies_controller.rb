@@ -2,7 +2,7 @@ class Admin::CompaniesController < AdminController
   before_action :set_company, only: [:show , :edit, :update, :destroy]
   
   def index
-    @companies = Company.joins(:token).where(dapp: true).order("lower(companies.name)")
+    @companies = Company.joins(:token).order("lower(companies.name)")
   end
   
   def show
@@ -32,6 +32,11 @@ class Admin::CompaniesController < AdminController
   end
   
   def destroy
+    @company.destroy
+    respond_to do |format|
+      format.html { redirect_to admin_companies_url, notice: 'Company was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
   
   private
