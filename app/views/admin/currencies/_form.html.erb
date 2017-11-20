@@ -1,0 +1,27 @@
+<%= form_for [:admin, currency] do |f| %>
+  <% if currency.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(currency.errors.count, "error") %> prohibited this currency from being saved:</h2>
+
+      <ul>
+      <% currency.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, "Currency Pair" %>
+    <%= f.text_field :name, class: "form-control", placeholder: "Enter Currency Pair i.e. CVCUSD" %>
+  </div>
+	
+	<div class="form-group">
+		<%= f.label :name, "Token ticker name" %>
+		<%= f.collection_select :token_id, Token.order(:name), :id, :name, {:prompt => 'Please choose a Token'}, { class: 'col-md-6 form-control' } %>
+	</div>
+		
+  <div class="form-group">
+    <%= f.submit "submit", class: "btn btn-success" %>
+  </div>
+<% end %>

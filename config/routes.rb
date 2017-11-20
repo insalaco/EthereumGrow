@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   
   Rails.application.routes.draw do
     namespace :admin do
-      resources :users, :companies, :exchanges, :tokens
+      resources :users, :companies, :exchanges, :currencies
     end
   end
   

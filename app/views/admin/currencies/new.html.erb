@@ -1,0 +1,13 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <%= link_to 'Currencies', admin_currencies_path %>
+  </li>
+	<li class="breadcrumb-item active">New</li>
+</ol>	
+<h1>New Currency</h1>
+<hr>
+<div class="row">		
+	<div class="col-md-4">
+		<%= render 'form', currency: @currency %>
+	</div>
+</div>

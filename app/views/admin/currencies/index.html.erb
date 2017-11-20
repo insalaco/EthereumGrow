@@ -1,0 +1,38 @@
+
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <%= link_to 'Currency Pairs', admin_currencies_path %>
+    </li>
+    <li class="breadcrumb-item active">Currency Pairs</li>
+  </ol>
+	<%= link_to 'New Currency', new_admin_currency_path, class: "btn btn-success mb-3" %>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover" width="100%" cellspacing="0">
+		  <thead>
+		    <tr>
+		      <th>Name</th>
+		      <th>Token</th>
+					<th>Company</th>
+					<th>Exchanges</th>
+					<th>Actions</th>
+		    </tr>
+		  </thead>
+
+		  <tbody>
+		    <% @currencies.each do |currency| %>
+		      <tr>
+		        <td><%= currency.name %></td>
+						<td><%= currency.token.name %></td>
+						<td><%= link_to currency.token.company.name, admin_company_path(currency.token.company) %></td>
+						<td><%= currency.exchanges.size %></td>
+		        <td><%= link_to 'View', admin_currency_url(currency) %> | <%= link_to 'Edit', edit_admin_currency_path(currency) %> | <%= link_to 'Delete', admin_currency_url(currency), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+
+
+
+
+			
