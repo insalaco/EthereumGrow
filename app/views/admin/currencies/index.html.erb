@@ -24,7 +24,7 @@
 		        <td><%= currency.name %></td>
 						<td><%= currency.token.name %></td>
 						<td><%= link_to currency.token.company.name, admin_company_path(currency.token.company) %></td>
-						<td><%= currency.exchanges.size %></td>
+						<td><%= currency.exchanges.uniq.size %></td>
 		        <td><%= link_to 'View', admin_currency_url(currency) %> | <%= link_to 'Edit', edit_admin_currency_path(currency) %> | <%= link_to 'Delete', admin_currency_url(currency), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
 		      </tr>

@@ -9,22 +9,26 @@
 <hr>
 <div class="row">
 	<div class="col-md-12">
-		<% if @currencies.present? %>
+		<h2>Website</h2>
+		<p><%= @exchange.website %>
+		<hr>
+		<% if @exchange.currencies.present? %>
 		<h2>Currency Pairs</h2>
 		<table class="table table-bordered table-striped table-hover" width="100%" cellspacing="0">
 			<tr>
 				<th> Name</th>
 				<th> Token Ticker</th>
 				<th> Company Name</th>
-				<th> Chart</th>
+
 			</tr>
 			
 			<% @currencies.each do |currency| %>
 			<tr>
 				<td><%= currency.name %></td>
 				<td><%= currency.token.name if currency.token %></td>
+
 				<td><%= link_to currency.token.company.name, admin_company_path(currency.token.company) if currency.token %></td>
-				<td><%= currency.currency_exchanges.map(&:profile).first %></td>
+
 			</tr>
 			<% end %>
 

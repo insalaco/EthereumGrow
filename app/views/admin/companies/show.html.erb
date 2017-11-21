@@ -11,8 +11,10 @@
 	<div class="col-md-6 pb-4">
 		<h2>Published</h2>
 		<p class="lead"><%= @company.published %>
+		<% if @company.dapp == true %>
 		<h2>Token Ticker</h2>
 		<p class="lead"><%= @company.token.name %>
+		<% end %>
 		<h2>Description</h2>
 		<p class="lead"><%= @company.description %></p>
 		<h2>Website</h2>

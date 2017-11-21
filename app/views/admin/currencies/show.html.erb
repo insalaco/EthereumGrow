@@ -1,18 +1,53 @@
 <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <%= link_to 'Currency', admin_currencies_path %>
+    <%= link_to 'Currency Pairs', admin_currencies_path %>
   </li>
   <li class="breadcrumb-item active"><%= @currency.name %></li>
 </ol>
 
 <h1><%= @currency.name %></h1>
 <hr>
-<div class="row">		
+<div class="row">
+	<div class="col-md-12">
+		<h2>Token Ticker</h2>
+		<p><%= @currency.token.name %></p>
+		<h2>Company Name</h2>
+		<p><%= @currency.token.company.name %></p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h2>Exchanges</h2>
+    <table class="table table-bordered table-striped table-hover" width="100%" cellspacing="0">
+		  <thead>
+		    <tr>
+		      <th>Name</th>					
+		      <th>Location</th>
+		      <th>Website</th>
+					<th>Currency Pairs</th>
+		      <th>Actions</th>
+		    </tr>
+		  </thead>
 
+		  <tbody>
+		    <% @currency.exchanges.each do |exchange| %>
+		      <tr>
+		        <td><%= exchange.name %></td>
+		        <td><%= exchange.location %></td>
+		        <td><%= link_to exchange.website, exchange.website, target: "_blank" if exchange.website %></td>
+						<td><%= exchange.currencies.uniq.size %></td>
+		        <td><%= link_to 'View', admin_exchange_url(exchange) %> | <%= link_to 'Edit', edit_admin_exchange_path(exchange) %> | <%= link_to 'Delete', admin_exchange_url(exchange), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+	</div>
+</div>
 <hr>
 <div class="row">		
 	<div class="col-md-6">
-		<%= link_to 'Edit', edit_admin_company_path, class: "btn btn-info btn-lg my-3 col-md-3"%>  <%= link_to 'Delete', admin_company_url(@currency), class: "btn btn-danger btn-lg my-3 col-md-3", method: :delete, data: { confirm: 'Are you sure?' } %> <%= link_to 'Back', :back, class: "btn btn-secondary btn-lg my-3 col-md-3"%>
+		<%= link_to 'Edit', edit_admin_currency_path, class: "btn btn-info btn-lg my-3 col-md-3"%>  <%= link_to 'Delete', admin_company_url(@currency), class: "btn btn-danger btn-lg my-3 col-md-3", method: :delete, data: { confirm: 'Are you sure?' } %> <%= link_to 'Back', :back, class: "btn btn-secondary btn-lg my-3 col-md-3"%>
 	</div>
 </div>
 

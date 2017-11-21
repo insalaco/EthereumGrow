@@ -10,13 +10,24 @@ class Admin::CompaniesController < AdminController
   
   def new
     @company = Company.new
+    @company.build_token
   end
   
   def edit
   end
   
   def create
-    
+    @company = Company.new(company_params)
+
+    respond_to do |format|
+      if @company.save
+        format.html { redirect_to admin_company_path(@company), notice: 'Company was successfully created.' }
+        format.json { render :show, status: :created, location: admin_company_path(@company) }
+      else
+        format.html { render :new }
+        format.json { render json: @company.errors, status: :unprocessable_entity }
+      end
+    end
   end
   
   def update
