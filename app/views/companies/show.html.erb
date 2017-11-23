@@ -55,14 +55,19 @@ var youtube = document.querySelectorAll( ".youtube" );
 				<div class="col-md-6 offset-md-3 text-center">
           <p class="pb-2"><%= @company.description %> </p>
           <ul class="list-unstyled list-inline">
-						<li class="list-inline-item">
+						<li class="list-inline-item mb-3">
+							<%= link_to "#{@company.website}", class: "btn btn-outline-default btn-round", target: "_blank", title: "#{@company.name} website" do %>
+								<i class="fa fa-globe"></i> Website
+							<% end %>
+						</li>
+						<li class="list-inline-item mb-3">
 							<%= link_to "#{@company.white_paper}", class: "btn btn-outline-default btn-round", target: "_blank", title: "#{@company.name} white paper" do %>
 								<i class="fa fa-file-pdf-o"></i> White paper
 							<% end %>
 						</li>
 						<li class="list-inline-item">
-							<%= link_to "#{@company.website}", class: "btn btn-outline-default btn-round", target: "_blank", title: "#{@company.name} website" do %>
-								<i class="fa fa-globe"></i> Website
+							<%= link_to "https://etherscan.io/token/#{@company.token.address}", class: "btn btn-outline-default btn-round", target: "_blank", title: "#{@company.name} token activity on etherscan.io" do %>
+								<i class="fa fa-qrcode"></i> etherscan.io
 							<% end %>
 						</li>
 					</ul>
