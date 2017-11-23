@@ -565,19 +565,22 @@ tokens = Token.create!(
     # token 0, company 0
     {
       name: "DRP",
-      company_id: companies[0].id
+      company_id: companies[0].id,
+      address: "0x621d78f2ef2fd937bfca696cabaf9a779f59b3ed"
     },
   
     # token 1, company 1
     {
       name: "HMQ",
-      company_id: companies[1].id
+      company_id: companies[1].id,
+      address: "Humaniq"
     },
   
     # token 2, company 2
     {
       name: "REP",
-      company_id: companies[2].id
+      company_id: companies[2].id,
+      address: "REP"
     },
   
     # token 3 company 3
@@ -589,49 +592,57 @@ tokens = Token.create!(
     # token 4 company 4
     {
       name: "PAY",
-      company_id: companies[4].id
+      company_id: companies[4].id,
+      address: "TenXPay"
     },
   
     # token 5, company 5
     {
       name: "STORJ",
-      company_id: companies[5].id
+      company_id: companies[5].id,
+      address: "Storj"
     },
   
     # token 6, company 6
     {
       name: "BNT",
-      company_id: companies[6].id
+      company_id: companies[6].id,
+      address: "Bancor"
     },
   
     # token 7, company 7
     {
       name: "SNT",
-      company_id: companies[7].id
+      company_id: companies[7].id,
+      address: "StatusNetwork"
     },
   
     # token 8, company 8
     {
-      name: "MOBILEGO",
-      company_id: companies[8].id
+      name: "MGO",
+      company_id: companies[8].id,
+      address: "0x40395044Ac3c0C57051906dA938B54BD6557F212"
     },
   
     # token 9, company 9
     {
       name: "BAT",
-      company_id: companies[9].id
+      company_id: companies[9].id,
+      address: "BAT"
     },
   
     # token 10, company 10
     {
       name: "CVC",
-      company_id: companies[10].id
+      company_id: companies[10].id,
+      address: "Civic"
     },
   
     # token 11, company 11
     {
       name: "SNM",
-      company_id: companies[11].id
+      company_id: companies[11].id,
+      address: "0x983f6d60db79ea8ca4eb9968c6aff8cfa04b3c63"
     },
   
     # token 12, company 12
@@ -643,43 +654,50 @@ tokens = Token.create!(
     # token 13, company 13
     {
       name: "OMG",
-      company_id: companies[13].id
+      company_id: companies[13].id,
+      address: "OmiseGo"
     },
   
     # token 14, company 15
     {
       name: "GNO",
-      company_id: companies[15].id
+      company_id: companies[15].id,
+      address: "Gnosis"
     },
   
     # token 15, company 16
     {
       name: "DNT",
-      company_id: companies[16].id
+      company_id: companies[16].id,
+      address: "district0x"
     },
   
     # token 16, company 17
     {
       name: "TIME",
-      company_id: companies[17].id
+      company_id: companies[17].id,
+      address: "TIME"
     },
   
     # token 17, company 18
     {
       name: "LUN",
-      company_id: companies[18].id
+      company_id: companies[18].id,
+      address: "Lunyr"
     },
     
     # token 18, company 20
     {
       name: "GNT",
-      company_id: companies[20].id
+      company_id: companies[20].id,
+      address: "Golem"
     },
     
     # token 19, company 21
     {
       name: "SUN",
-      company_id: companies[21].id
+      company_id: companies[21].id,
+      address: "0x9e88613418cf03dca54d6a2cf6ad934a78c7a17a"
     }
 
   ]

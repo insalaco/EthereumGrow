@@ -14,6 +14,11 @@
 		<% if @company.dapp == true %>
 		<h2>Token Ticker</h2>
 		<p class="lead"><%= @company.token.name %>
+		<h2>Token Address<small> (etherscan.io)</small></h2>
+		<p>
+			<span class="text-muted">https://etherscan.io/token/</span>
+			<a href="https://etherscan.io/token/<%= @company.token.address %>" target="_blank"><%= @company.token.address %></a>
+		</p>
 		<% end %>
 		<h2>Description</h2>
 		<p class="lead"><%= @company.description %></p>
@@ -43,6 +48,37 @@
 	</div>
 </div>
 <hr>
+<div class="row">
+	<div class="col-md-6">
+		<h2>Token Activity</h2>
+		<div id="token-history-grouped-1"></div>		
+		<script type="text/javascript">
+		if (typeof (eWgs) === 'undefined') {
+		    document.write('<scr' + 'ipt src="https://api.ethplorer.io/widget.js?' + new Date().getTime().toString().substr(0, 7) + '" async></scr' + 'ipt>');
+		    var eWgs = [];
+		}
+		eWgs.push(function () {
+		    ethplorerWidget.init(
+		        '#token-history-grouped-1', // Placeholder element
+		        'tokenHistoryGrouped', // Widget type
+		        {
+		            // token address
+		            'address': '<%= @company.token.address %>',
+		            options: {
+		                'title': '<%= @company.name %>',
+		                'pointSize': 7,
+		                'vAxis': {
+		                    'title': 'Token operations',
+		                }
+		            }
+		        }
+
+		    );
+		});
+		</script>
+	</div>
+</div>
+
 <div class="row">		
 	<div class="col-md-4">
 		<h2>Social Media</h2>
