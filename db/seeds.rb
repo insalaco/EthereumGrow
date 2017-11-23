@@ -573,14 +573,14 @@ tokens = Token.create!(
     {
       name: "HMQ",
       company_id: companies[1].id,
-      address: "Humaniq"
+      address: "0xcbcc0f036ed4788f63fc0fee32873d6a7487b908"
     },
   
     # token 2, company 2
     {
       name: "REP",
       company_id: companies[2].id,
-      address: "REP"
+      address: "0xe94327d07fc17907b4db788e5adf2ed424addff6"
     },
   
     # token 3 company 3
@@ -593,28 +593,28 @@ tokens = Token.create!(
     {
       name: "PAY",
       company_id: companies[4].id,
-      address: "TenXPay"
+      address: "0xB97048628DB6B661D4C2aA833e95Dbe1A905B280"
     },
   
     # token 5, company 5
     {
       name: "STORJ",
       company_id: companies[5].id,
-      address: "Storj"
+      address: "0xb64ef51c888972c908cfacf59b47c1afbc0ab8ac"
     },
   
     # token 6, company 6
     {
       name: "BNT",
       company_id: companies[6].id,
-      address: "Bancor"
+      address: "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c"
     },
   
     # token 7, company 7
     {
       name: "SNT",
       company_id: companies[7].id,
-      address: "StatusNetwork"
+      address: "0x744d70fdbe2ba4cf95131626614a1763df805b9e"
     },
   
     # token 8, company 8
@@ -628,14 +628,14 @@ tokens = Token.create!(
     {
       name: "BAT",
       company_id: companies[9].id,
-      address: "BAT"
+      address: "0x0d8775f648430679a709e98d2b0cb6250d2887ef"
     },
   
     # token 10, company 10
     {
       name: "CVC",
       company_id: companies[10].id,
-      address: "Civic"
+      address: "0x41e5560054824ea6b0732e656e3ad64e20e94e45"
     },
   
     # token 11, company 11
@@ -655,42 +655,42 @@ tokens = Token.create!(
     {
       name: "OMG",
       company_id: companies[13].id,
-      address: "OmiseGo"
+      address: "0xd26114cd6EE289AccF82350c8d8487fedB8A0C07"
     },
   
     # token 14, company 15
     {
       name: "GNO",
       company_id: companies[15].id,
-      address: "Gnosis"
+      address: "0x6810e776880c02933d47db1b9fc05908e5386b96"
     },
   
     # token 15, company 16
     {
       name: "DNT",
       company_id: companies[16].id,
-      address: "district0x"
+      address: "0x0abdace70d3790235af448c88547603b945604ea"
     },
   
     # token 16, company 17
     {
       name: "TIME",
       company_id: companies[17].id,
-      address: "TIME"
+      address: "0x6531f133e6deebe7f2dce5a0441aa7ef330b4e53"
     },
   
     # token 17, company 18
     {
       name: "LUN",
       company_id: companies[18].id,
-      address: "Lunyr"
+      address: "0xfa05A73FfE78ef8f1a739473e462c54bae6567D9"
     },
     
     # token 18, company 20
     {
       name: "GNT",
       company_id: companies[20].id,
-      address: "Golem"
+      address: "0xa74476443119A942dE498590Fe1f2454d7D4aC0d"
     },
     
     # token 19, company 21
