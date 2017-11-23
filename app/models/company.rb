@@ -3,6 +3,7 @@ class Company < ApplicationRecord
   friendly_id :name, use: :slugged
 
   has_one :token, dependent: :destroy
+  has_many :currencies, through: :token
   accepts_nested_attributes_for :token
   
   validates_presence_of :name, :image, :avatar, :meta_description, :google_keyword, uniqueness: true
