@@ -18,15 +18,15 @@
 			<tr>
 				<th> Name</th>
 				<th> Token Ticker</th>
+				<th> Profile Chart</th>
 				<th> Company Name</th>
 
 			</tr>
-			
 			<% @currencies.each do |currency| %>
 			<tr>
 				<td><%= currency.name %></td>
 				<td><%= currency.token.name if currency.token %></td>
-
+				<td><%= currency.profile %>
 				<td><%= link_to currency.token.company.name, admin_company_path(currency.token.company) if currency.token %></td>
 
 			</tr>

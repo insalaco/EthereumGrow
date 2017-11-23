@@ -6,9 +6,9 @@ class Admin::ExchangesController < AdminController
   end
   
   def show
-    currency_ids = @exchange.currency_exchanges.select(:currency_id).map(&:currency_id)
-    @currencies = Currency.includes(:currency_exchanges).find currency_ids
-    # @currencies = @exchange.currencies.includes(:currency_exchanges).uniq.order("currencies.name ASC")
+    # currency_ids = @exchange.currency_exchanges.select(:currency_id).map(&:currency_id)
+    # @currencies = Currency.includes(:currency_exchanges).find currency_ids
+    @currencies = @exchange.currencies.select('currencies.*, currency_exchanges.profile')
   end
   
   def new
@@ -57,7 +57,7 @@ class Admin::ExchangesController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exchange_params
-      params.require(:exchange).permit(:name, :location, :website, :twitter, :facebook, :linkedin)
+      params.require(:exchange).permit(:name, :location, :website, :twitter, :facebook, :linkedin, currency_exchanges_attributes: [:id, :profile, :currency_id, :_destroy],)
     end
   
   
