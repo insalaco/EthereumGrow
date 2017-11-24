@@ -10,7 +10,7 @@
 <div class="row">
 	<div class="col-md-12">
 		<h2>Token Ticker</h2>
-		<p><%= @currency.token.name %></p>
+		<p><%= link_to @currency.token.name, admin_token_path(@currency.token) %></p>
 		<h2>Company Name</h2>
 		<p><%= link_to @currency.token.company.name, admin_company_path(@currency.token.company) %></p>
 	</div>
@@ -21,12 +21,12 @@
     <table class="table table-bordered table-striped table-hover" width="100%" cellspacing="0">
 		  <thead>
 		    <tr>
-		      <th>Name</th>					
+		      <th>Exchange</th>					
 		      <th>Location</th>
 		      <th>Website</th>
 					<th>Currency Pairs</th>
 					<th>Profile Chart</th>
-		      <th>Actions</th>
+		      <th>Exchange Actions</th>
 		    </tr>
 		  </thead>
 
@@ -38,7 +38,7 @@
 		        <td><%= link_to exchange.website, exchange.website, target: "_blank" if exchange.website %></td>
 						<td><%= exchange.currencies.uniq.size %></td>
 						<td><%= exchange.profile %></td>
-		        <td><%= link_to 'View', admin_exchange_url(exchange) %> | <%= link_to 'Edit', edit_admin_exchange_path(exchange) %> | <%= link_to 'Delete', admin_exchange_url(exchange), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		        <td><%= link_to 'View', admin_exchange_url(exchange) %> | <%= link_to 'Edit', edit_admin_exchange_path(exchange) %> | <%= link_to 'Delete', admin_exchange_path(exchange), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
 		      </tr>
 		    <% end %>
