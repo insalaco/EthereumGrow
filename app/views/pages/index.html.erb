@@ -10,7 +10,6 @@
 	</div>
 	<div class="main">
 		<div class="section text-center">
-
 			<div class="section section-dark text-center">
         <div class="container">
         <h3 class="title h2">What is Ethereum?</h3>
@@ -39,8 +38,7 @@
 							<div class="card-block">                  
                 <div class="author">
 									<h4 class="card-title">Ethereum Currency </h4>
-                </div>
-								
+                </div>								
 								<p class="card-description text-center">
 									Ethereum provides a cryptocurrency token called "ether", which can be transferred between accounts and used to compensate participant nodes for computations performed.
 								</p>
@@ -52,12 +50,10 @@
 							<div class="card-avatar">
 								<img src="https://drgy3zruql9d7.cloudfront.net/ethereum-token.jpg" alt="Ethereum smart contract">
 							</div>
-							<div class="card-block">
-                       
+							<div class="card-block">                       
                 <div class="author">
 									<h4 class="card-title">Ethereum Token</h4>
-                </div>
-                    
+                </div>                    
                 <p class="card-description text-center">
                 Anyone can take advantage of Ethereum to build their DApps (decentralized applications) through smart contracts. This is a very important distinction because this very thing shows you the true scope of what is possible in Ethereum.
                 </p>
@@ -66,12 +62,10 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		
+		</div>		
 		<div class="container">
-
 			<h3 class="text-center py-4 h2">Ethereum DApps </h3>
-			<p>The intention of Ethereum is to create an alternative protocol for building decentralized applications with emphasis on development time, security, and scaling. Examples of successful Ethereum-based DApps that have achieved millions of dollars in market cap include <%= link_to 'Golem', company_path(Company.find_by_name("Golem")) %>, <%= link_to 'Angur', company_path(Company.find_by_name("Angur")) %> and <%= link_to 'OmiseGo', company_path(Company.find_by_name("OmiseGo")) %>.</p>
+			<p class="pb-3">The intention of Ethereum is to create an alternative protocol for building decentralized applications with emphasis on development time, security, and scaling. Examples of successful Ethereum-based DApps that have achieved millions of dollars in market cap include <%= link_to 'Golem', company_path(Company.find_by_name("Golem")) %>, <%= link_to 'Angur', company_path(Company.find_by_name("Angur")) %> and <%= link_to 'OmiseGo', company_path(Company.find_by_name("OmiseGo")) %>.</p>
 			<div class="row pt-4">				
 				<% @companies.each do |company| %>
 				<div class="col-md-4">
@@ -95,6 +89,29 @@
 				<% end %>			
 			</div>
 			<%= link_to "View more DApps", companies_path, class: "btn btn-danger btn-round text-center my-4" %>
-		</div>
-	</div>
+					
+			<h3 class="text-center py-4 h2">Ether vs. US Dollar </h3>
+			<div class="row pb-3" style="height: 480px; width: 100%;">	
+				<div class="col-md-12 h-100 d-inline-block">	
+					<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+					<script type="text/javascript">
+					new TradingView.widget({
+					  "autosize": true,
+					  "symbol": "COINBASE:ETHUSD",
+					  "interval": "D",
+					  "timezone": "Etc/UTC",
+					  "theme": "Light",
+					  "style": "1",
+					  "locale": "en",
+					  "toolbar_bg": "#f1f3f6",
+					  "enable_publishing": false,
+					  "hide_top_toolbar": true,
+					  "save_image": false,
+					  "hideideas": true
+					});
+					</script>						
+				</div>		
+			</div>
+		</div>		
+	</div>	
 </div>
