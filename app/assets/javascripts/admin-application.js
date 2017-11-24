@@ -14,4 +14,4 @@
 //= require jquery_ujs
 //= require bootstrap.bundle.min
 //= require sb-admin.min
-
+//= require cocoon

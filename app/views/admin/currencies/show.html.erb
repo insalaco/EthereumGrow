@@ -12,7 +12,7 @@
 		<h2>Token Ticker</h2>
 		<p><%= @currency.token.name %></p>
 		<h2>Company Name</h2>
-		<p><%= @currency.token.company.name %></p>
+		<p><%= link_to @currency.token.company.name, admin_company_path(@currency.token.company) %></p>
 	</div>
 </div>
 <div class="row">
@@ -25,17 +25,19 @@
 		      <th>Location</th>
 		      <th>Website</th>
 					<th>Currency Pairs</th>
+					<th>Profile Chart</th>
 		      <th>Actions</th>
 		    </tr>
 		  </thead>
 
 		  <tbody>
-		    <% @currency.exchanges.each do |exchange| %>
+		    <% @exchanges.each do |exchange| %>
 		      <tr>
 		        <td><%= exchange.name %></td>
 		        <td><%= exchange.location %></td>
 		        <td><%= link_to exchange.website, exchange.website, target: "_blank" if exchange.website %></td>
 						<td><%= exchange.currencies.uniq.size %></td>
+						<td><%= exchange.profile %></td>
 		        <td><%= link_to 'View', admin_exchange_url(exchange) %> | <%= link_to 'Edit', edit_admin_exchange_path(exchange) %> | <%= link_to 'Delete', admin_exchange_url(exchange), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
 		      </tr>
@@ -47,7 +49,7 @@
 <hr>
 <div class="row">		
 	<div class="col-md-6">
-		<%= link_to 'Edit', edit_admin_currency_path, class: "btn btn-info btn-lg my-3 col-md-3"%>  <%= link_to 'Delete', admin_company_url(@currency), class: "btn btn-danger btn-lg my-3 col-md-3", method: :delete, data: { confirm: 'Are you sure?' } %> <%= link_to 'Back', :back, class: "btn btn-secondary btn-lg my-3 col-md-3"%>
+		<%= link_to 'Edit', edit_admin_currency_path, class: "btn btn-info btn-lg my-3 col-md-3"%>  <%= link_to 'Delete', admin_currency_url(@currency), class: "btn btn-danger btn-lg my-3 col-md-3", method: :delete, data: { confirm: 'Are you sure?' } %> <%= link_to 'Back', :back, class: "btn btn-secondary btn-lg my-3 col-md-3"%>
 	</div>
 </div>
 

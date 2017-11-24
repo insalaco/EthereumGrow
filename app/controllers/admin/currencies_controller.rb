@@ -6,7 +6,8 @@ class Admin::CurrenciesController < AdminController
   end
   
   def show
-    
+    @exchanges = @currency.exchanges.select('exchanges.*, currency_exchanges.profile')
+    # @currencies = @exchange.currencies.select('currencies.*, currency_exchanges.profile')
   end
   
   def new
@@ -31,6 +32,15 @@ class Admin::CurrenciesController < AdminController
   end
   
   def update
+    respond_to do |format|
+      if @currency.update(currency_params)
+        format.html { redirect_to admin_currency_url(@currency), notice: 'Currency was successfully updated.' }
+        format.json { render :show, status: :ok, location: admin_currency_url(@currency) }
+      else
+        format.html { render :edit }
+        format.json { render json: @currency.errors, status: :unprocessable_entity }
+      end
+    end
 
   end
   
@@ -50,7 +60,7 @@ class Admin::CurrenciesController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def currency_params
-      params.require(:currency).permit(:name, :token_id)
+      params.require(:currency).permit(:name, :token_id, currency_exchanges_attributes: [:id, :profile, :exchange_id, :_destroy] )
     end
   
   

@@ -18,10 +18,22 @@
 	
 	<div class="form-group">
 		<%= f.label :name, "Token ticker name" %>
-		<%= f.collection_select :token_id, Token.order(:name), :id, :name, {:prompt => 'Please choose a Token'}, { class: 'col-md-6 form-control' } %>
+		<%= f.collection_select :token_id, Token.order(:name), :id, :name, {:prompt => 'Choose Token'}, { class: 'col-md-6 form-control' } %>
 	</div>
+	
+	<h2>Exchanges</h2>
+  <fieldset id="currency-exchanges">
+    <div id="exchanges" class="form-group list-group">
+      <%= f.fields_for :currency_exchanges do |currency_exchange| %>
+        <%= render 'currency_exchange_fields', f: currency_exchange %>
+      <% end %>
+		</div>
+		<%= link_to_add_association f, :currency_exchanges, 'data-association-insertion-node' => "#currency-exchanges #exchanges", 'data-association-insertion-method' => "append", :wrap_object => Proc.new {|currency_exchange| currency_exchange.build_exchange; currency_exchange }, class: "btn btn-primary btn-sm" do %>
+		<i class="fa fa-plus"></i> associate exchange
+		<% end %>
+  </fieldset>
 		
   <div class="form-group">
-    <%= f.submit "submit", class: "btn btn-success" %>
+    <%= f.submit class: "btn btn-success btn-lg my-3" %> <%= link_to 'Back', :back, class: "btn btn-secondary btn-lg my-3 col-md-4"%>
   </div>
 <% end %>
