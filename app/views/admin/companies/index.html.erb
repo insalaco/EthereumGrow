@@ -12,32 +12,32 @@
       <thead>
         <tr>
           <th>Name</th>
-					<th>Token</th>
           <th>Description</th>
 					<th>Dapp</th>
 					<th>EEA Member</th>
           <th>Published</th>
+					<th>Actions</th>
         </tr>
       </thead>
       <tfoot>
         <tr>
           <th>Name</th>
-					<th>Token</th>
           <th>Description</th>
 					<th>Dapp</th>
 					<th>EEA Member</th>
           <th>Published</th>
+					<th>Actions</th>
         </tr>
       </tfoot>
       <tbody>
 				<% @companies.each do |company|%>
         <tr>
-          <td><%= link_to company.name, admin_company_path(company) %></td>
-					<td><%= company.token.name %>
+          <td><%= company.name %></td>
           <td><%= company.description %></td>
 					<td><%= company.dapp %>
 					<td><%= company.alliance %>
           <td><%= company.published %></td>
+					<td><%= link_to 'View', admin_company_path(company) %> | <%= link_to 'Edit', edit_admin_company_path(company) %> | <%= link_to 'Delete', admin_company_path(company), method: :destroy, data: { confirm: 'Are you sure?' } %> </td>
         </tr>
 				<% end %>
       </tbody>
