@@ -25,7 +25,7 @@
       </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tokens">
         <%= link_to admin_tokens_path, class: "nav-link" do %>
-          <i class="fa fa-fw fa-bank"></i> 
+          <i class="fa fa-fw fa-circle"></i> 
           <span class="nav-link-text"> Tokens</span>
         <% end %>
       </li>
@@ -57,7 +57,7 @@
       <li class="nav-item">
 				<%= link_to logout_path, class: "nav-link", method: :delete do %>
 
-          <i class="fa fa-fw fa-sign-out"></i>Logout
+          <i class="fa fa-fw fa-sign-out"></i>Logout <strong><%= current_user.email %></strong>
 					<% end %>
       </li>
 			<% end %>
