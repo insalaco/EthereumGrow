@@ -4,7 +4,6 @@
   </li>
   <li class="breadcrumb-item active"><%= @exchange.name %></li>
 </ol>
-
 <h1><%= @exchange.name %></h1>
 <hr>
 <div class="row">
@@ -16,24 +15,30 @@
 		<h2>Currency Pairs</h2>
 		<table class="table table-bordered table-striped table-hover" width="100%" cellspacing="0">
 			<tr>
-				<th> Name</th>
+				<th> Currency Pair</th>
 				<th> Token Ticker</th>
-				<th> Profile Chart</th>
 				<th> Company Name</th>
+				<th> Profile Chart</th>
+				<th> Currency Pair Actions</th>
 
 			</tr>
 			<% @currencies.each do |currency| %>
 			<tr>
 				<td><%= currency.name %></td>
-				<td><%= currency.token.name if currency.token %></td>
-				<td><%= currency.profile %>
+				<td><%= link_to currency.token.name, admin_token_path(currency.token) if currency.token %></td>				
 				<td><%= link_to currency.token.company.name, admin_company_path(currency.token.company) if currency.token %></td>
-
+				<td><%= currency.profile %></td>
+				<td><%= link_to 'View', admin_currency_path(currency) %> | <%= link_to 'Edit', edit_admin_currency_path(currency) %> | <%= link_to 'Delete', admin_currency_path(currency), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 			</tr>
-			<% end %>
-
-			
+			<% end %>			
 		</table>
 		<% end %>
+	</div>
+</div>
+
+<hr>
+<div class="row">		
+	<div class="col-md-4">
+		<%= link_to 'Edit', edit_admin_exchange_path, class: "btn btn-info my-3 col-md-3"%>  <%= link_to 'Delete', admin_exchange_path(@exchange), class: "btn btn-danger my-3 col-md-3", method: :delete, data: { confirm: 'Are you sure?' } %> <%= link_to 'Back', :back, class: "btn btn-secondary my-3 col-md-3"%>
 	</div>
 </div>

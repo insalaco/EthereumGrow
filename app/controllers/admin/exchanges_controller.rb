@@ -6,9 +6,7 @@ class Admin::ExchangesController < AdminController
   end
   
   def show
-    # currency_ids = @exchange.currency_exchanges.select(:currency_id).map(&:currency_id)
-    # @currencies = Currency.includes(:currency_exchanges).find currency_ids
-    @currencies = @exchange.currencies.select('currencies.*, currency_exchanges.profile')
+    @currencies = @exchange.currencies.select('currencies.*, currency_exchanges.profile').order(:name)
   end
   
   def new

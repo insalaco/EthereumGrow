@@ -42,6 +42,7 @@
   </div>
 
   <div class="form-group">
-    <%= f.submit 'submit', class: "form-control btn btn-success" %>
+		<%= f.submit class: "btn btn-success form-control" %> <%= link_to 'Cancel', :back, class: "btn btn-danger my-3 col-md-3"%>
+    
   </div>
 <% end %>
