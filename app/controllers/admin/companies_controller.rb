@@ -86,7 +86,6 @@ class Admin::CompaniesController < AdminController
                                       :ico_open_date,
                                       :ico_close_date,
                                       :ico_size,                                                                        
-                                      token_attributes: [:id, :name, :address],
                                       company_exchanges_attributes: [:id, :exchange_id, :_destroy],
                                       currencies_attributes: [:id, :name, :_destory])
     end

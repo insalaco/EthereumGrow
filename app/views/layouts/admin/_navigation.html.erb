@@ -5,7 +5,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dapps">
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Companies">
 				<%= link_to admin_companies_path, class: "nav-link" do %>
           <i class="fa fa-fw fa-list"></i>
           <span class="nav-link-text">Companies</span>
@@ -21,6 +21,12 @@
         <%= link_to admin_exchanges_path, class: "nav-link" do %>
           <i class="fa fa-fw fa-bank"></i> 
           <span class="nav-link-text"> Exchanges</span>
+        <% end %>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tokens">
+        <%= link_to admin_tokens_path, class: "nav-link" do %>
+          <i class="fa fa-fw fa-bank"></i> 
+          <span class="nav-link-text"> Tokens</span>
         <% end %>
       </li>
 

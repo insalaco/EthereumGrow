@@ -10,15 +10,12 @@ Rails.application.routes.draw do
     get '(page/:page)', action: :index, on: :collection, as: ''
   end
 
-
-  resources :exchanges, only: [:index, :show]
-  resources :currencies, only: [:index, :show]
   resources :companies, only: [:index, :show], concerns: :paginatable, path: 'dapps'
   # get 'enterprise-ethereum-alliance', to: 'companies#alliance'
   
   Rails.application.routes.draw do
     namespace :admin do
-      resources :users, :companies, :exchanges, :currencies, :tokens
+      resources :users, :companies, :exchanges, :currencies, :tokens        
     end
   end
   

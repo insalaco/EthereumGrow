@@ -4,7 +4,7 @@ class TokensController < ApplicationController
   # GET /tokens
   # GET /tokens.json
   def index
-    @tokens = Token.all
+    @tokens = Token.includes(:company)
   end
 
   # GET /tokens/1
