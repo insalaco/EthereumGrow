@@ -64,4 +64,3 @@ gem "font-awesome-rails"
 gem 'sitemap_generator'
 gem 'canonical-rails', github: 'jumph4x/canonical-rails'
 gem 'cocoon'
-gem "font-awesome-rails"
