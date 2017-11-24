@@ -5,20 +5,21 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
-    # @companies = Company.select("companies.*, COUNT(exchanges.id) exchange_count").left_outer_joins(:exchanges).where(published: true).group("companies.id").order(ico_size: "desc")
-    @companies = Company.includes(:token).where(published: true, dapp: true).order("LOWER(name)").page(params[:page]).per(10)
+    @companies = Company.includes(:token).where(published: true, dapp: true).order("LOWER(name)").page(params[:page]).per(20)
   end
 
   # GET /companies/1
   # GET /companies/1.json
   def show
-    @charts = @company.token.currencies.select("exchanges.name as exchange_name, currencies.name as currency_name").left_outer_joins(:exchanges).where(currency_exchanges: {profile: true})
+    @charts = @company.token.currencies
+                      .select("exchanges.name as exchange_name, currencies.name as currency_name")
+                      .left_outer_joins(:exchanges)
+                      .where(currency_exchanges: {profile: true})
   end
 
   # GET /companies/new
   def new
     @company = Company.new
-    @company.build_token
   end
 
   # GET /companies/1/edit
