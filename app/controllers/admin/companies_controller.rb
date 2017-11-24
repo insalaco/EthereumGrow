@@ -2,7 +2,7 @@ class Admin::CompaniesController < AdminController
   before_action :set_company, only: [:show , :edit, :update, :destroy]
   
   def index
-    @companies = Company.joins(:token).order("lower(companies.name)")
+    @companies = Company.left_joins(:token).order("lower(companies.name)")
   end
   
   def show
@@ -85,9 +85,7 @@ class Admin::CompaniesController < AdminController
                                       :youtube,
                                       :ico_open_date,
                                       :ico_close_date,
-                                      :ico_size,                                                                        
-                                      company_exchanges_attributes: [:id, :exchange_id, :_destroy],
-                                      currencies_attributes: [:id, :name, :_destory])
+                                      :ico_size )
     end
   
   
