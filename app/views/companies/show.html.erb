@@ -44,7 +44,12 @@ var youtube = document.querySelectorAll( ".youtube" );
 					<img src="https://drgy3zruql9d7.cloudfront.net/<%= @company.avatar %>" alt="<%= @company.name %> avatar" class="img-circle img-no-padding img-responsive">
 				</div>
 				<div class="name">
-					<h1><%= @company.name %> <small><strong>(<%= @company.token.name %>)</strong></small></h1>
+					
+					<h1><%= @company.name %> 
+						<% if @company.token.present? %>
+						<small><strong>(<%= @company.token.name %>)</strong></small>
+						<% end %>
+					</h1>
 
 					<% unless @company.ico_size.blank? %>
 					<h2 class="h3 pb-2">$<%= number_to_human(@company.ico_size, strip_insignificant_zeros: true, precision: 5) %>MM token sale</h2>
@@ -65,11 +70,13 @@ var youtube = document.querySelectorAll( ".youtube" );
 								<i class="fa fa-file-pdf-o"></i> White paper
 							<% end %>
 						</li>
+						<% if @company.token.present? %>
 						<li class="list-inline-item">
 							<%= link_to "https://etherscan.io/token/#{@company.token.address}", class: "btn btn-outline-default btn-round", target: "_blank", title: "#{@company.name} token activity on etherscan.io" do %>
 								<i class="fa fa-qrcode"></i> etherscan.io
 							<% end %>
 						</li>
+						<% end %>
 					</ul>
 				</div>
 			</div>

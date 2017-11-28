@@ -11,9 +11,9 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
-    @charts = @company.token.currencies
-                      .select("exchanges.name as exchange_name, currencies.name as currency_name")
+    @charts = @company.currencies
                       .left_outer_joins(:exchanges)
+                      .select("exchanges.name as exchange_name, currencies.name as currency_name")
                       .where(currency_exchanges: {profile: true})
   end
 
