@@ -1,7 +1,9 @@
-class Token < ApplicationRecord
-  belongs_to :company, optional: true
+class Token < ApplicationRecord  
+  
   has_many :currencies, dependent: :destroy
   has_many :exchanges, through: :currencies
   
-  validates_presence_of :name, :company, :address, uniqueness: true
+  belongs_to :company, optional: true
+  
+  validates :name, :company, uniqueness: true
 end
