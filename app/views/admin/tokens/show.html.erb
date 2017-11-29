@@ -10,12 +10,17 @@
 <div class="row">
 	<div class="col-md-12">
 		<h2>Token Address</h2>
+		<% if @token.address.blank? %>
+		<p>No address</p>
+		<% else %>
 		<p><%= @token.address %></p>
+		<% end %>
 		<h2>Company</h2>
 		<p><%= link_to @token.company.name, admin_company_path(@token.company) %></p>
 	</div>
 </div>
 
+<% unless @token.address %>
 <div class="row">
 	<div class="col-md-8">
 		<h2>Token Activity</h2>
@@ -46,6 +51,7 @@
 		</script>
 	</div>
 </div>
+<% end %>
 <div class="row">
 	<div class="col-md-5">
 	<h2>Currency Pairs</h2>
