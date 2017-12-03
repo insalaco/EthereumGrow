@@ -70,7 +70,7 @@ var youtube = document.querySelectorAll( ".youtube" );
 								<i class="fa fa-file-pdf-o"></i> White paper
 							<% end %>
 						</li>
-						<% if @company.token.address.present? %>
+						<% if @company.token.present? %>
 						<li class="list-inline-item">
 							<%= link_to "https://etherscan.io/token/#{@company.token.address}", class: "btn btn-outline-default btn-round", target: "_blank", title: "#{@company.name} token activity on etherscan.io" do %>
 								<i class="fa fa-qrcode"></i> etherscan.io

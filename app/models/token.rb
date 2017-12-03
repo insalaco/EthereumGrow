@@ -6,4 +6,5 @@ class Token < ApplicationRecord
   belongs_to :company, optional: true
   
   validates :name, :company, uniqueness: true
+  validates :address, uniqueness: true
 end
