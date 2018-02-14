@@ -67,14 +67,14 @@ companies = Company.create!(
     
     #company 2    
     {
-      name: "Angur",
+      name: "Augur",
       meta_title: "The Future of Forecasting",
       meta_description: "Augur combines the magic of prediction markets with the power of a decentralized network.",
-      avatar: "angur-avatar.jpg",
-      image: "angur.jpg",
-      description: "Angur is an open-source, decentralized, peer-to-peer prediction market platform built on Ethereum.",
+      avatar: "augur-avatar.jpg",
+      image: "augur.jpg",
+      description: "Augur is an open-source, decentralized, peer-to-peer prediction market platform built on Ethereum.",
       video: "dweuE2DC4DI",
-      video_thumb: "angur-video-thumb.jpg",
+      video_thumb: "augur-video-thumb.jpg",
       asset: "REP",             
       website: "https://augur.net",
       twitter: "https://twitter.com/AugurProject",
@@ -87,33 +87,10 @@ companies = Company.create!(
       ico_close_date: "2015-10-01",
       ico_size: "5.14",
       published: true,
-      google_keyword: "Angur"
-    },
-      
-    #company 3
-    {
-      name: "Tezos",
-      meta_title: "A New Digital Commonwealth",
-      meta_description: "Tezos is a new decentralized blockchain that governs itself by establishing a true digital commonwealth.",
-      avatar: "tezos-avatar.jpg",
-      image: "tezos.jpg",
-      description: "Self-amending cryptographic ledger. It achieves consensus not just about the state of a ledger, but about the state of its own protocol.",
-      video: "7m7EU4JWI88",
-      video_thumb: "",
-      asset: "XTZ",           
-      website: "https://www.tezos.com",
-      twitter: "tez0s",
-      slack: "https://www.tezos.com/slack.html",
-      github: "https://github.com/tezos/tezos",
-      white_paper: "https://opus-foundation.org/whitepaper.pdf",
-      ico_open_date: "2017-07-01",
-      ico_close_date: "2017-07-13",
-      ico_size: "232",
-      published: false,
-      google_keyword: "Tezos"
+      google_keyword: "Augur"
     },
     
-    #company 4
+    #company 3
     {
       name: "TenX",
       meta_title: "Convert and Spend your Virtual Currencies",
@@ -138,7 +115,7 @@ companies = Company.create!(
       google_keyword: "TenX"    
     },
     
-    #company 5
+    #company 4
     {
       name: "Storj",
       meta_title: "The Future of Cloud Storage",
@@ -167,7 +144,7 @@ companies = Company.create!(
       google_keyword: "Storj"    
     },
     
-    #company 6 
+    #company 5 
     {
       name: "Bancor",
       meta_title: "A Protocol for the Creation of Smart Tokens",
@@ -196,7 +173,7 @@ companies = Company.create!(
       google_keyword: "Bancor"     
     },
     
-    #company 7
+    #company 6
     {
       name: "Status",
       meta_title: "A Mobile Ethereum OS",
@@ -224,7 +201,7 @@ companies = Company.create!(
       google_keyword: "Status Ethereum"     
     },
     
-    # company 8 
+    # company 7 
     {
       name: "MobileGo",
       meta_title: "Crypto-centric Mobile Gaming Platform",
@@ -250,7 +227,7 @@ companies = Company.create!(
       google_keyword: "MobileGo Ethereum"
     },
     
-    #company 9
+    #company 8
     {
       name: "Basic Attention Token",
       meta_title: "Digital Advertising on the Blockchain.",
@@ -274,7 +251,7 @@ companies = Company.create!(
       google_keyword: "Basic Attention Token"     
     },
     
-    #company 10
+    #company 9
     {
       name: "Civic",
       meta_title: "Secure Identity Platform",
@@ -298,7 +275,7 @@ companies = Company.create!(
       google_keyword: "Civic Ethereum"     
     },
     
-    #company 11
+    #company 10
     {
       name: "SONM",
       meta_title: "Supercomputer Organized by Network Mining",
@@ -326,31 +303,7 @@ companies = Company.create!(
       google_keyword: "SONM"     
     },
     
-    #company 12
-    {
-      name: "Polybius",
-      meta_title: "Contemporary Banking with a Progressive Approach",
-      meta_description: "Polybius is a project aimed to create a regulated bank for the digital generation.",
-      avatar: "polybius-avatar.jpg",
-      image: "polybius.jpg",
-      description: "Polybius is a project aimed to create a regulated bank for the digital generation.",
-      video: "LEQoFuJ2Zx8",
-      video_thumb: "",
-      contact: "info@polybius.io",
-      location: "Estonia",              
-      website: "https://polybius.io",
-      facebook: "https://www.facebook.com/projectpolybius/",
-      twitter: "https://twitter.com/PolybiusBank",
-      telegram: "https://twitter.com/PolybiusBank",
-      white_paper: "https://polybius.io/media/tw_en.pdf",
-      ico_open_date: "2017-05-31",
-      ico_close_date: "2017-07-05",
-      ico_size: "31.6",
-      published: false,
-      google_keyword: "Polybius"     
-    },
-    
-    #company 13
+    #company 11
     {
       name: "OmiseGo",
       meta_title: "Unbank the Banked with Ethereum",
@@ -373,7 +326,7 @@ companies = Company.create!(
       google_keyword: "OmiseGo"    
     },
     
-    #company 14
+    #company 12
     {
       name: "Adapt Forward",
       alliance: true,
@@ -397,7 +350,7 @@ companies = Company.create!(
       google_keyword: "AdaptForward"   
     },
     
-    #company 15
+    #company 13
     {
       name: "Gnosis",
       meta_title: "Meet the Future",
@@ -421,7 +374,7 @@ companies = Company.create!(
       google_keyword: "Gnosis"     
     },
     
-    #company 16
+    #company 14
     {
       name: "district0x",
       meta_title: "A Cooperative of Decentralized Marketplaces",
@@ -445,7 +398,7 @@ companies = Company.create!(
       google_keyword: "district0x"     
     },
     
-    #company 17
+    #company 15
     {
       name: "ChronoBank",
       meta_title: "Blockchain Revolution for the Recruitment Industry",
@@ -472,7 +425,7 @@ companies = Company.create!(
       google_keyword: "ChronoBank"   
     },
     
-    #company 18
+    #company 16
     {
       name: "Lunyr",
       meta_title: "Lunyr - The Future of Knowledge Sharing",
@@ -497,7 +450,7 @@ companies = Company.create!(
       google_keyword: "Lunyr"    
     },
     
-    #company 19
+    #company 17
     {
       name: "brainbot",
       alliance: true,
@@ -510,7 +463,7 @@ companies = Company.create!(
   
     },
     
-    #company 20
+    #company 18
     {
       name: "Golem",
       meta_title: "Golem - Worldwide Super Computer",
@@ -535,7 +488,7 @@ companies = Company.create!(
       google_keyword: "Golem"     
     },
     
-    #company 21
+    #company 19
     {
       name: "Swarm Fund",
       meta_title: "Swarm Fund - Cooperative Ownership Platform for Real Assets",
@@ -585,118 +538,106 @@ tokens = Token.create!(
   
     # token 3 company 3
     {
-      name: "XTZ",
-      company_id: companies[3].id
+      name: "PAY",
+      company_id: companies[3].id,
+      address: "0xB97048628DB6B661D4C2aA833e95Dbe1A905B280"
     },
   
-    # token 4 company 4
+    # token 4, company 4
     {
-      name: "PAY",
+      name: "STORJ",
       company_id: companies[4].id,
-      address: "0xB97048628DB6B661D4C2aA833e95Dbe1A905B280"
+      address: "0xb64ef51c888972c908cfacf59b47c1afbc0ab8ac"
     },
   
     # token 5, company 5
     {
-      name: "STORJ",
+      name: "BNT",
       company_id: companies[5].id,
-      address: "0xb64ef51c888972c908cfacf59b47c1afbc0ab8ac"
+      address: "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c"
     },
   
     # token 6, company 6
     {
-      name: "BNT",
+      name: "SNT",
       company_id: companies[6].id,
-      address: "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c"
+      address: "0x744d70fdbe2ba4cf95131626614a1763df805b9e"
     },
   
     # token 7, company 7
     {
-      name: "SNT",
+      name: "MGO",
       company_id: companies[7].id,
-      address: "0x744d70fdbe2ba4cf95131626614a1763df805b9e"
+      address: "0x40395044Ac3c0C57051906dA938B54BD6557F212"
     },
   
     # token 8, company 8
     {
-      name: "MGO",
+      name: "BAT",
       company_id: companies[8].id,
-      address: "0x40395044Ac3c0C57051906dA938B54BD6557F212"
+      address: "0x0d8775f648430679a709e98d2b0cb6250d2887ef"
     },
   
     # token 9, company 9
     {
-      name: "BAT",
+      name: "CVC",
       company_id: companies[9].id,
-      address: "0x0d8775f648430679a709e98d2b0cb6250d2887ef"
+      address: "0x41e5560054824ea6b0732e656e3ad64e20e94e45"
     },
   
     # token 10, company 10
     {
-      name: "CVC",
-      company_id: companies[10].id,
-      address: "0x41e5560054824ea6b0732e656e3ad64e20e94e45"
-    },
-  
-    # token 11, company 11
-    {
       name: "SNM",
-      company_id: companies[11].id,
+      company_id: companies[10].id,
       address: "0x983f6d60db79ea8ca4eb9968c6aff8cfa04b3c63"
     },
-  
-    # token 12, company 12
-    {
-      name: "PLBT",
-      company_id: companies[12].id
-    },
-  
-    # token 13, company 13
+    
+    # token 11, company 11
     {
       name: "OMG",
-      company_id: companies[13].id,
+      company_id: companies[11].id,
       address: "0xd26114cd6EE289AccF82350c8d8487fedB8A0C07"
+    },
+  
+    # token 12, company 13
+    {
+      name: "GNO",
+      company_id: companies[13].id,
+      address: "0x6810e776880c02933d47db1b9fc05908e5386b96"
+    },
+  
+    # token 13, company 14
+    {
+      name: "DNT",
+      company_id: companies[14].id,
+      address: "0x0abdace70d3790235af448c88547603b945604ea"
     },
   
     # token 14, company 15
     {
-      name: "GNO",
+      name: "TIME",
       company_id: companies[15].id,
-      address: "0x6810e776880c02933d47db1b9fc05908e5386b96"
+      address: "0x6531f133e6deebe7f2dce5a0441aa7ef330b4e53"
     },
   
     # token 15, company 16
     {
-      name: "DNT",
-      company_id: companies[16].id,
-      address: "0x0abdace70d3790235af448c88547603b945604ea"
-    },
-  
-    # token 16, company 17
-    {
-      name: "TIME",
-      company_id: companies[17].id,
-      address: "0x6531f133e6deebe7f2dce5a0441aa7ef330b4e53"
-    },
-  
-    # token 17, company 18
-    {
       name: "LUN",
-      company_id: companies[18].id,
+      company_id: companies[16].id,
       address: "0xfa05A73FfE78ef8f1a739473e462c54bae6567D9"
     },
     
-    # token 18, company 20
+    # token 16, company 20
     {
       name: "GNT",
-      company_id: companies[20].id,
+      company_id: companies[18].id,
       address: "0xa74476443119A942dE498590Fe1f2454d7D4aC0d"
     },
     
-    # token 19, company 21
+    # token 17, company 21
     {
       name: "SUN",
-      company_id: companies[21].id,
+      company_id: companies[19].id,
       address: "0x9e88613418cf03dca54d6a2cf6ad934a78c7a17a"
     }
 
@@ -726,85 +667,68 @@ currencies = Currency.create!(
     # currency 3
     {
       name: "STORJBTC",
-      token_id: tokens[5].id
+      token_id: tokens[4].id
     },
     
     # currency 4
     {
       name: "STORJETH",
-      token_id: tokens[5].id
+      token_id: tokens[4].id
     },
     
     # currency 5
     {
       name: "STORJUSD",
-      token_id: tokens[5].id
+      token_id: tokens[4].id
     },
+    
     
     # currency 6
     {
-      name: "SJCXUSD",
-
+      name: "BNTUSD",
+      token_id: tokens[5].id
     },
     
     # currency 7
     {
-      name: "SJCXBTC",
-
+      name: "BNTETH",
+      token_id: tokens[5].id
     },
     
     # currency 8
     {
-      name: "XTZBTC",
-      token_id: tokens[3].id
+      name: "BNTBTC",
+      token_id: tokens[5].id
     },
     
     # currency 9
     {
-      name: "BNTUSD",
-      token_id: tokens[6].id
-    },
-    
-    # currency 10
-    {
-      name: "BNTETH",
-      token_id: tokens[6].id
-    },
-    
-    # currency 11
-    {
-      name: "BNTBTC",
-      token_id: tokens[6].id
-    },
-    
-    # currency 12
-    {
       name: "OMGETH",
-      token_id: tokens[13].id
+      token_id: tokens[11].id
     },
     
     # currency 13
     {
       name: "CVCETH",
-      token_id: tokens[10].id
+      token_id: tokens[9].id
     },
     
     # currency 14
     {
       name: "PAYETH",
-      token_id: tokens[4].id
+      token_id: tokens[3].id
     },
     
     # currency 15
     {
       name: "SNTETH",
-      token_id: tokens[7].id
+      token_id: tokens[6].id
     },
     
     # currency 16
     {
       name: "BATETH",
-      token_id: tokens[9].id
+      token_id: tokens[8].id
     },
     
     # currency 17
@@ -813,33 +737,28 @@ currencies = Currency.create!(
       token_id: tokens[1].id
     },
     
-    # currency 18
-    {
-      name: "WAVESETH"
-    },
-    
     # currency 19
     {
       name: "GNOETH",
-      token_id: tokens[14].id
+      token_id: tokens[12].id
     },
     
     # currency 20
     {
       name: "DNTETH",
-      token_id: tokens[15].id
+      token_id: tokens[13].id
     },
     
     # currency 21
     {
       name: "TIMEETH",
-      token_id: tokens[16].id
+      token_id: tokens[14].id
     },
     
     # currency 22
     {
       name: "LUNETH",
-      token_id: tokens[17].id
+      token_id: tokens[15].id
     },
     
     # currency 23
@@ -983,26 +902,26 @@ currency_exchanges = CurrencyExchange.create!(
       currency_id: currencies[19].id,
       exchange_id: exchanges[6].id,
       profile:     true 
-    },    
-    {
-      currency_id: currencies[20].id,
-      exchange_id: exchanges[1].id,
-      profile:     true 
-    },
-    {
-      currency_id: currencies[21].id,
-      exchange_id: exchanges[1].id,
-      profile:     true 
-    },
-    {
-      currency_id: currencies[22].id,
-      exchange_id: exchanges[1].id,
-      profile:     true 
-    },
-    {
-      currency_id: currencies[23].id,
-      exchange_id: exchanges[1].id,
-      profile:     true 
-    }    
+    }   
+    # {
+    #   currency_id: currencies[20].id,
+    #   exchange_id: exchanges[1].id,
+    #   profile:     true
+    # },
+    # {
+    #   currency_id: currencies[21].id,
+    #   exchange_id: exchanges[1].id,
+    #   profile:     true
+    # },
+    # {
+    #   currency_id: currencies[22].id,
+    #   exchange_id: exchanges[1].id,
+    #   profile:     true
+    # },
+    # {
+    #   currency_id: currencies[23].id,
+    #   exchange_id: exchanges[1].id,
+    #   profile:     true
+    # } 
   ]
 )
