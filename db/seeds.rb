@@ -810,6 +810,11 @@ exchanges = Exchange.create!(
     # exchange 6
     {
       name: "Kraken"
+    },
+    
+    # exchange 7
+    {
+      name: "Binance"
     }
   ]
 )
@@ -837,10 +842,13 @@ currency_exchanges = CurrencyExchange.create!(
       currency_id: currencies[8].id,
       exchange_id: exchanges[2].id
     },
+    
     {
-      currency_id: currencies[8].id,
-      exchange_id: exchanges[2].id
+      currency_id: currencies[7].id,
+      exchange_id: exchanges[7].id,
+      profile:     true
     },
+    
     {
       currency_id: currencies[8].id,
       exchange_id: exchanges[3].id
@@ -924,4 +932,17 @@ currency_exchanges = CurrencyExchange.create!(
     #   profile:     true
     # } 
   ]
+)  
+
+articles = Article.create!(
+  [
+    {
+      title: "CDC to Trial Blockchain With IBM in Bid to Manage Medical Data",
+      publication_date: "2018-02-27",
+      summary: "The Centers for Disease Control and Prevention (CDC) has signed an agreement with IBM Watson Health to research the use of blockchain for storing and exchanging medical data.",
+      article_url: "https://www.coindesk.com/cdc-trial-blockchain-ibm-bid-manage-medical-data/",
+      image_url: "https://media.coindesk.com/uploads/2017/10/CDC.jpg"
+    }
+  ]
 )
+
