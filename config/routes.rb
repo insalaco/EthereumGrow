@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # resources :articles, only: [:index, :show]
   resources :pages, only: :index
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   
   Rails.application.routes.draw do
     namespace :admin do
-      resources :users, :companies, :exchanges, :currencies, :tokens        
+      resources :users, :companies, :exchanges, :currencies, :tokens, :articles       
     end
   end
   

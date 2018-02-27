@@ -1,0 +1,36 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <%= link_to 'Articles', admin_articles_path %>
+  </li>
+  <li class="breadcrumb-item active"><%= @article.title %></li>
+</ol>
+<h1><%= @article.title %></h1>
+<hr>
+
+
+<p>
+  <strong>Publication date:</strong>
+  <%= @article.publication_date %>
+</p>
+
+<div class="row">
+	<div class="col-md-4">
+		<%= image_tag(@article.image_url, style: "height:100%;width:100%;") %>
+	</div>
+</div>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @article.summary %>
+</p>
+
+
+
+<p>
+  <strong>Url:</strong>
+  <%= link_to @article.article_url, @article.article_url, target: "_blank" %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_article_path(@article) %> |
+<%= link_to 'Back', admin_articles_path %>

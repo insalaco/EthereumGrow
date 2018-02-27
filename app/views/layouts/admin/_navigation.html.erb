@@ -6,6 +6,12 @@
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Companies">
+				<%= link_to admin_articles_path, class: "nav-link" do %>
+          <i class="fa fa-fw fa-list"></i>
+          <span class="nav-link-text">Articles</span>
+				<% end %>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Companies">
 				<%= link_to admin_companies_path, class: "nav-link" do %>
           <i class="fa fa-fw fa-list"></i>
           <span class="nav-link-text">Companies</span>
