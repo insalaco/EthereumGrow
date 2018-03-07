@@ -45,7 +45,7 @@ var youtube = document.querySelectorAll( ".youtube" );
 				</div>
 				<div class="name">
 					
-					<h1><%= @company.name %> 
+					<h1 style="margin-top: 15px;"><%= @company.name %> 
 						<% if @company.token.present? %>
 						<small><strong>(<%= @company.token.name %>)</strong></small>
 						<% end %>
@@ -82,7 +82,7 @@ var youtube = document.querySelectorAll( ".youtube" );
 			</div>
 			<% if @company.video.present? %>
 			<div class="row">
-				<div class="col-md-8 offset-md-2 pt-4">					
+				<div class="col-md-8 offset-md-2 pt-2">					
 					<div class="youtube" data-embed="AqcjdkPMPJA"> 
 						<div class="play-button"></div>
 					</div>
@@ -91,9 +91,9 @@ var youtube = document.querySelectorAll( ".youtube" );
 			<% end %>
 			
 			<% if @charts.present? %>			
-			<div class="row" style="height: 470px;">
+			<div class="row" style="height: 355px;">
 				<% @charts.each do |chart| %>				
-				<div class="pt-3 pb-3" style="height: 415px; width: 100%;">	
+				<div class="pb-3" style="height: 300px; width: 100%;">	
 					<div class="col-md-8 offset-md-2 h-100 d-inline-block">				
 						<h3 class="pb-2"><%= chart.currency_name.upcase.insert(-4, ' vs ') %> &mdash; <strong> <%= chart.exchange_name %></strong></h3>
 						</span>
@@ -110,7 +110,7 @@ var youtube = document.querySelectorAll( ".youtube" );
 						  "toolbar_bg": "#f1f3f6",
 						  "enable_publishing": false,
 						  "hide_top_toolbar": false,
-						  "save_image": false,
+						  "save_image": true,
 						  "hideideas": true
 						});
 						</script>						
@@ -122,16 +122,16 @@ var youtube = document.querySelectorAll( ".youtube" );
 			<% if @company.google_keyword.present? %>
 		
 			<div class="row">
-				<div style="height: 415px; width: 100%;">	
+				<div style="height: 300px; width: 100%;">	
 					<div class="col-md-8 offset-md-2">
-						<h3 class="pb-1"><%= @company.name %> Interest Over Time</h3>
+						<h3 class="pb-2"><%= @company.name %> Interest Over Time</h3>
 						<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1173_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"<%= @company.google_keyword %>","geo":"","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"q=district0x&date=today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 					</div>
 				</div>
 			</div>
 			<% end %>
 			<div class="row">
-				<div class="col-md-8 offset-md-2" style="padding-top:80px;">
+				<div class="col-md-8 offset-md-2" style="padding-top:200px;">
 					<a class="twitter-timeline border border-secondary" data-height="6000" href="<%= @company.twitter %>?ref_src=twsrc%5Etfw">Tweets by @<%= @company.twitter%></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				</div>
 			</div>
