@@ -93,7 +93,7 @@ var youtube = document.querySelectorAll( ".youtube" );
 			<% if @charts.present? %>			
 			<div class="row" style="height: 470px;">
 				<% @charts.each do |chart| %>				
-				<div class="pt-3 pb-5" style="height: 415px; width: 100%;">	
+				<div class="pt-3 pb-3" style="height: 415px; width: 100%;">	
 					<div class="col-md-8 offset-md-2 h-100 d-inline-block">				
 						<h3 class="pb-2"><%= chart.currency_name.upcase.insert(-4, ' vs ') %> &mdash; <strong> <%= chart.exchange_name %></strong></h3>
 						</span>
@@ -124,12 +124,17 @@ var youtube = document.querySelectorAll( ".youtube" );
 			<div class="row">
 				<div style="height: 415px; width: 100%;">	
 					<div class="col-md-8 offset-md-2">
-						<h3 class="pb-2"><%= @company.name %> Interest Over Time</h3>
+						<h3 class="pb-1"><%= @company.name %> Interest Over Time</h3>
 						<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1173_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"<%= @company.google_keyword %>","geo":"","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"q=district0x&date=today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 					</div>
 				</div>
 			</div>
 			<% end %>
+			<div class="row">
+				<div class="col-md-8 offset-md-2" style="padding-top:80px;">
+					<a class="twitter-timeline border border-secondary" data-height="6000" href="<%= @company.twitter %>?ref_src=twsrc%5Etfw">Tweets by @<%= @company.twitter%></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
