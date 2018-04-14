@@ -64,6 +64,10 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     debug_inspector (0.0.2)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     erubis (2.7.0)
     execjs (2.7.0)
     faraday (0.11.0)
@@ -199,6 +203,8 @@ DEPENDENCIES
   canonical-rails!
   cocoon
   coffee-rails (~> 4.2)
+  dotenv-rails
+  faraday
   font-awesome-rails
   friendly_id (~> 5.1.0)
   google-analytics-rails (= 1.1.1)

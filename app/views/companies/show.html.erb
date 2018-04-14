@@ -51,33 +51,31 @@ var youtube = document.querySelectorAll( ".youtube" );
 						<% end %>
 					</h1>
 
-					<% unless @company.ico_size.blank? %>
-					<h2 class="h3 pb-2">$<%= number_to_human(@company.ico_size, strip_insignificant_zeros: true, precision: 5) %>MM token sale</h2>
-					<% end %>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6 offset-md-3 text-center">
+				<div class="col-md-6 offset-md-3 pt-2 text-center">
           <p class="pb-2"><%= @company.description %> </p>
           <ul class="list-unstyled list-inline">
-						<li class="list-inline-item mb-3">
-							<%= link_to "#{@company.website}", class: "btn btn-outline-default btn-round", target: "_blank", title: "#{@company.name} website" do %>
+						<li class="list-inline-item mb-2">
+							<%= link_to "#{@company.website}", class: "btn btn-outline-default btn-round btn-sm", target: "_blank", title: "#{@company.name} website" do %>
 								<i class="fa fa-globe"></i> Website
 							<% end %>
 						</li>
-						<li class="list-inline-item mb-3">
-							<%= link_to "#{@company.white_paper}", class: "btn btn-outline-default btn-round", target: "_blank", title: "#{@company.name} white paper" do %>
+						<li class="list-inline-item mb-2">
+							<%= link_to "#{@company.white_paper}", class: "btn btn-outline-default btn-round btn-sm", target: "_blank", title: "#{@company.name} white paper" do %>
 								<i class="fa fa-file-pdf-o"></i> White paper
 							<% end %>
 						</li>
 						<% if @company.token.present? %>
 						<li class="list-inline-item">
-							<%= link_to "https://etherscan.io/token/#{@company.token.address}", class: "btn btn-outline-default btn-round", target: "_blank", title: "#{@company.name} token activity on etherscan.io" do %>
-								<i class="fa fa-qrcode"></i> etherscan.io
+							<%= link_to "https://etherscan.io/token/#{@company.token.address}", class: "btn btn-outline-default btn-sm btn-round", target: "_blank", title: "#{@company.name} token activity on etherscan.io" do %>
+								<i class="fa fa-qrcode"></i> Explorer
 							<% end %>
 						</li>
 						<% end %>
 					</ul>
+					<%= render 'affiliate_link' %>
 				</div>
 			</div>
 			<% if @company.video.present? %>
@@ -118,7 +116,10 @@ var youtube = document.querySelectorAll( ".youtube" );
 				</div>
 				<% end %>
 			</div>
+
+	
 			<% end %>
+			<%= render 'affiliate_link' %>
 			<% if @company.google_keyword.present? %>
 		
 			<div class="row">

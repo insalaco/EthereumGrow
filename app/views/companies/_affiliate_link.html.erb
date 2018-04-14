@@ -1,0 +1,7 @@
+<% if @company.binance_affiliate_link == true %>
+<div class="row">
+	<div class="col-md-12 text-center">
+		<a href="https://www.binance.com/trade.html?symbol=<%= @company.token.name %>_ETH&ref=12098320" class="btn btn-success btn-lg mb-3" target="_blank">Buy <%= @company.name %> (<%= @company.token.name %>) on Binance.com</a>
+	</div>
+</div>
+<% end %>

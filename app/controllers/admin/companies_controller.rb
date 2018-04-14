@@ -85,7 +85,9 @@ class Admin::CompaniesController < AdminController
                                       :youtube,
                                       :ico_open_date,
                                       :ico_close_date,
-                                      :ico_size )
+                                      :ico_size,
+                                      :binance_affiliate_link
+                                       )
     end
   
   
