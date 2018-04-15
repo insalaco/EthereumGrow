@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require tether.min
 //= require bootstrap.min
-//= require paper-kit
 //= require cocoon
 
 
