@@ -5,7 +5,7 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
-    @companies = Company.includes(:token).where(published: true, dapp: true).order("created_at DESC").page(params[:page]).per(20)
+    @companies = Company.includes(:token).where(published: true, dapp: true).order("LOWER(name)").page(params[:page]).per(20)
   end
 
   # GET /companies/1
