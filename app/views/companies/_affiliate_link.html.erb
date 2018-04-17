@@ -4,4 +4,12 @@
 		<a href="https://www.binance.com/trade.html?symbol=<%= @company.token.name %>_ETH&ref=12098320" class="btn btn-success btn-lg mb-3" target="_blank">Buy $<%= @company.token.name %> on Binance.com</a>
 	</div>
 </div>
+<% elsif @company.hitbtc_affiliate_link == true %>
+<div class="row">
+	<div class="col-md-12 text-center">
+		<a href="https://hitbtc.com/<%= @company.token.name %>-to-ETH?ref_id=5ad600737c2db" class="btn btn-success btn-lg mb-3" target="_blank">Buy $<%= @company.token.name %> on HitBTC.com</a>
+	</div>
+</div>
+
+
 <% end %>

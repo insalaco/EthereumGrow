@@ -82,7 +82,7 @@ companies = Company.create!(
       github: "AugurProject",
       youtube: "UCnQRWIWIT8ExlegLTajjhiQ",
       reddit: "Augur",
-      white_paper: "http://docs.augur.net/",
+      white_paper: "http://www.augur.net/whitepaper.pdf",
       ico_open_date: "2015-08-17",
       ico_close_date: "2015-10-01",
       ico_size: "5.14",

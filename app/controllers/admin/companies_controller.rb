@@ -86,7 +86,8 @@ class Admin::CompaniesController < AdminController
                                       :ico_open_date,
                                       :ico_close_date,
                                       :ico_size,
-                                      :binance_affiliate_link
+                                      :binance_affiliate_link,
+                                      :hitbtc_affiliate_link
                                        )
     end
   
