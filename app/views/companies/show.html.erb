@@ -89,11 +89,11 @@ var youtube = document.querySelectorAll( ".youtube" );
 			<% end %>
 			
 			<% if @charts.present? %>			
-			<div class="row" style="height: 355px;">
+			<div class="row" style="height: 355px; margin-bottom: 10px;">
 				<% @charts.each do |chart| %>				
 				<div class="pb-3" style="height: 300px; width: 100%;">	
 					<div class="col-md-8 offset-md-2 h-100 d-inline-block">				
-						<h3 class="pb-2"><%= chart.currency_name.upcase.insert(-4, ' vs ') %> &mdash; <strong> <%= chart.exchange_name %></strong></h3>
+						<h3 class="pb-2"><%= chart.currency_name.upcase.insert(-4, ' vs ') %></h3>
 						</span>
 						<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 						<script type="text/javascript">
